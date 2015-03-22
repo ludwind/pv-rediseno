@@ -11,12 +11,12 @@ get_header(); ?>
 
 
 			<?php
-			
-			global $wpdb;
-			$table_name = $wpdb->prefix . "imlisteningto";
-			$wpdb->insert( $table_name, array( 'album' => $_POST['album'], 'artist' => $_POST['artist'] ) );
-			?>
 
+			global $wpdb;
+			$table_name = "usuarios_plusvida";
+			$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
+																					'fecha' => $_POST['fecha'], 'tipo-dia' => $_POST['tipo-dia']) );
+			?>
 
 
 

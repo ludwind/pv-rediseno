@@ -61,7 +61,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 body {
 	line-height: 1;
+	background-color:#e2dfd0;
 }
+
 ol,
 ul {
 	list-style: none;
@@ -1471,8 +1473,7 @@ img#wpstats {
 	}
 	.site {
 		margin: 0 auto;
-		max-width: 960px;
-		max-width: 68.571428571rem;
+		max-width: 1140px;
 		overflow: hidden;
 	}
 	.site-content {
@@ -1636,9 +1637,7 @@ img#wpstats {
 
 /* Minimum width of 960 pixels. */
 @media screen and (min-width: 960px) {
-	body {
-		background-color: #e6e6e6;
-	}
+
 	body .site {
 		padding: 0 40px;
 		padding: 0 2.857142857rem;
