@@ -8,15 +8,31 @@ get_header(); ?>
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
+<?php
+$usuario = get_current_user_id( );
+$fechaDePeso =  $wpdb->get_col( "SELECT fecha FROM pesos_plusvida WHERE usuario=$usuario" );
+/////////////////////// si el peso ya existe y hay que sobre escribirlo
+if (in_array($_POST['fecha'], $fechaDePeso)){?>
+<script>
+	confirm("¡Peso ya guardado! ¿Deseas sobre escribirlo?");
+</script>
+<?php
 
+?>
+¡Peso sobre-escrito exitosamente!
 
-			<?php
+<?php
+/////////////////////////// si el peso no existe y solo lo guardará
+ }	else{
+		global $wpdb;
+		$table_name = "pesos_plusvida";
+		$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
+																				'fecha' => $_POST['fecha'], 'tipodia' => $_POST['tipodia']) );?>
+Guardado exitosamente
 
-			global $wpdb;
-			$table_name = "usuarios_plusvida";
-			$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
-																					'fecha' => $_POST['fecha'], 'tipo-dia' => $_POST['tipo-dia']) );
-			?>
+<input type="hidden" name="guardarpeso" value="pesoguardado"/>
+
+<?php } ?>
 
 
 

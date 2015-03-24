@@ -44,8 +44,33 @@ to maintain vertical rhythm:
 }*/
 
 
+/*------------------------ Estilos CEMACO --------------------------- */
+
+/*-------------- Header ------------ */
 .head-front {width: 100%; background-color:#e9e8e4; margin: 35px 0 0;}
 
+
+/*---------------- Grafico ------------------ */
+.barGraph {
+		background: url(images/horizontal_grid_line_50_pixel.png) bottom left;
+		border-bottom: 3px solid #333;
+		font: 9px Helvetica, Geneva, sans-serif;
+		margin: 1em 0;
+		padding: 0;
+		position: relative;
+		}
+
+.barGraph li {
+
+		color: #FFF;	list-style: none;	text-align: center;
+		display:inline-block; vertical-align:bottom;
+		}
+.barrag { border: 1px solid #555;	border-bottom: none;bottom: 0; margin: 0;
+	padding: 0 0 0 0; width: 39px;}
+.barGraph li span{color:#000;}	
+
+.tipodia1{background-color:#EBF8A4}
+.tipodia2{background-color:#F68268}
 
 
 /* =Reset
