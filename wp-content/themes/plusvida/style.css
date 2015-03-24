@@ -41,12 +41,11 @@ to maintain vertical rhythm:
 .my-new-div {
 	margin: 24px 0;
 	margin: 1.714285714rem 0; ( 24 / $rembase )
-}
+}*/
 
----------- Further reading
 
-http://snook.ca/archives/html_and_css/font-size-with-rem
-http://blog.typekit.com/2011/11/09/type-study-sizing-the-legible-letter/
+.head-front {width: 100%; background-color:#e9e8e4; margin: 35px 0 0;}
+
 
 
 /* =Reset

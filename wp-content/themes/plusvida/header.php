@@ -41,15 +41,15 @@
 <div id="page" class="hfeed site">
 
 <header class="head-front">
-<img src="wp-content/themes/plusvida/img/home/head-img.jpg"/>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="wp-content/themes/plusvida/img/home/head-img.jpg"/></a>
 </header>
 
 
 	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+		<!--<hgroup>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+		</hgroup>-->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
