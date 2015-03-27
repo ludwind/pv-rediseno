@@ -10,6 +10,7 @@ get_header(); ?>
 
 <?php
 $usuario = get_current_user_id( );
+$fechaPorGuardar = $_POST['fecha'];
 $fechaDePeso =  $wpdb->get_col( "SELECT fecha FROM pesos_plusvida WHERE usuario=$usuario" );
 /////////////////////// si el peso ya existe y hay que sobre escribirlo
 if (in_array($_POST['fecha'], $fechaDePeso)){?>
@@ -17,6 +18,12 @@ if (in_array($_POST['fecha'], $fechaDePeso)){?>
 	confirm("¡Peso ya guardado! ¿Deseas sobre escribirlo?");
 </script>
 <?php
+global $wpdb;
+
+$wpdb->delete("SELECT * FROM pesos_plusvida WHERE usuario=$u AND fecha=$f",$usuario, $fechaPorGuardar );
+
+	//$wpdb->get_col( "DELETE fecha FROM pesos_plusvida WHERE usuario=$usuario AND fecha=$fechaPorGuardar" );
+
 
 ?>
 ¡Peso sobre-escrito exitosamente!
