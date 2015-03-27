@@ -18,14 +18,18 @@ if (in_array($_POST['fecha'], $fechaDePeso)){?>
 	confirm("¡Peso ya guardado! ¿Deseas sobre escribirlo?");
 </script>
 <?php
-global $wpdb;
+global $wbpd;
 
-$wpdb->delete("SELECT * FROM pesos_plusvida WHERE usuario=$u AND fecha=$f",$usuario, $fechaPorGuardar );
-
-	//$wpdb->get_col( "DELETE fecha FROM pesos_plusvida WHERE usuario=$usuario AND fecha=$fechaPorGuardar" );
+$wpdb->query($wpdb->prepare("DELETE FROM pesos_plusvida WHERE usuario = %d",$usuario));
 
 
-?>
+
+
+$table_name = "pesos_plusvida";
+$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
+																		'fecha' => $_POST['fecha'], 'tipodia' => $_POST['tipodia']) );?>
+
+
 ¡Peso sobre-escrito exitosamente!
 
 <?php

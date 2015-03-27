@@ -40,9 +40,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
+<!--
 <header class="head-front">
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="wp-content/themes/plusvida/img/home/head-img.jpg"/></a>
 </header>
+-->
 
 
 	<header id="masthead" class="site-header" role="banner">
