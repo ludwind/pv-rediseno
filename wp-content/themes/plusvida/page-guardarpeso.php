@@ -20,7 +20,7 @@ if (in_array($_POST['fecha'], $fechaDePeso)){?>
 <?php
 global $wbpd;
 
-$wpdb->query($wpdb->prepare("DELETE FROM pesos_plusvida WHERE usuario = %d",$usuario));
+$wpdb->query($wpdb->prepare("DELETE FROM pesos_plusvida WHERE usuario = '%d' AND fecha = '%c'", $usuario, $fechaPorGuardar));
 
 
 
