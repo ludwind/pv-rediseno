@@ -21,29 +21,30 @@ get_header(); ?>
 
 
 <!-- -------------- Grafico ----------------- -->
+
+Seleeciona días:
+<form action="" method=post>
+	<select name="rangodias">
+	<option value="1">1 día</option>
+	<option value="15">15 días</option>
+	</select>
+	<input type=submit value="Go">
+</form>
+
 <ul class="barGraph">
-
 <?php
+	//$ordernarPor = //$_POST['rangodias'];
+	if(!empty($_POST['rangodias']))
+		$ordernarPor = $_POST['rangodias'];
+	else
+		$ordernarPor = '1';
 
 
-
-
-//$array = [[1, 2],[3, 4],];
-//foreach ($array as list($a, $b)) {
-		// $a contiene el primer elemento del array interior,
-		// y $b contiene el segundo elemento.
-	//	echo "A: $a; B: $b\n";}
-
-
-
-	//$user_count = $wpdb->get_var( "SELECT peso FROM usuarios_plusvida WHERE usuario='echo get_current_user_id( )'" );
-	//echo "<p>User count is {$user_count}</p>";
 	$usuario = get_current_user_id( );
-	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC" );
-
-
-	if (is_array($graficodb))
-	{
+	$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc limit $ordernarPor
+) tmp order by tmp.fecha asc" );
+//	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC limit 2" );
+	if (is_array($graficodb))	{
 	    foreach ($graficodb as $datosgrafico)
 	    { ?> <li><div class="barrag set1 tipodia<?php echo $datosgrafico->tipodia ?>" style="height:<?php echo $datosgrafico->peso ?>px">
 				<?php echo $datosgrafico->peso; ?></div></br><span><?php echo $datosgrafico->fecha ?></span></li>
