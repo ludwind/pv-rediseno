@@ -43,11 +43,64 @@ to maintain vertical rhythm:
 	margin: 1.714285714rem 0; ( 24 / $rembase )
 }*/
 
+@font-face {
+    font-family: 'housegrind_personal_use_onlRg';
+    src: url('housegrind_personal_use_only-webfont.eot');
+    src: url('housegrind_personal_use_only-webfont.eot?#iefix') format('embedded-opentype'),
+         url('housegrind_personal_use_only-webfont.woff2') format('woff2'),
+         url('housegrind_personal_use_only-webfont.woff') format('woff'),
+         url('housegrind_personal_use_only-webfont.ttf') format('truetype'),
+         url('housegrind_personal_use_only-webfont.svg#housegrind_personal_use_onlRg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url('Roboto-Thin-webfont.eot');
+    src: url('Roboto-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Thin-webfont.woff') format('woff'),
+         url('Roboto-Thin-webfont.ttf') format('truetype'),
+         url('Roboto-Thin-webfont.svg#robotothin') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto_condensedbold';
+    src: url('RobotoCondensed-Bold-webfont.eot');
+    src: url('RobotoCondensed-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('RobotoCondensed-Bold-webfont.woff') format('woff'),
+         url('RobotoCondensed-Bold-webfont.ttf') format('truetype'),
+         url('RobotoCondensed-Bold-webfont.svg#roboto_condensedbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /*------------------------ Estilos CEMACO --------------------------- */
 
 /*-------------- Header ------------ */
 .head-front {width: 100%; background-color:#e9e8e4; margin: 35px 0 0;}
+.head-front aside {float: right; width:250px; padding:38px 0 0;}
+.head-front aside ul {list-style:none; width:100%;}
+.head-front aside ul li {list-style:none; width: 100%; min-height: 45px; font-family: 'housegrind_personal_use_onlRg';}
+.head-front aside ul li span {padding:0 0 0 15px; font-size:25px;}
+.head-front aside ul li a{text-decoration:none;}
+.head-front aside ul li img{float:left; margin: -4px 0 0 0;}
+
+.mainmenu{margin: -2px 0 0 0;}
+	.mainmenu ul{list-style:none; width:100%; margin:0; padding:0;font-size:0;  }
+  .mainmenu ul li{list-style:none; display:inline-block;width: 14.8%; height: 61px;vertical-align:top; text-align:center;padding:14px 0 0;}
+	.mainmenu ul li a{ font-family: 'robotothin';color:#fff; text-transform:uppercase; margin:0; color:#fff; text-decoration:none;font-size:20px; }
+	.mmazulclaro {background-color:#748bad; border-top: 5px solid #3269a6; }
+	.mmazulobscuro {background-color:#395a83; border-top: 5px solid #384883;}
+  .mmunalinea{ height: 51px !important;  padding: 24px 0 0 !important; }
+  .mainmenu ul li:last-child{ width: 26%;}
+  .mainmenu ul li:hover{font-family: 'roboto_condensedbold'; background-color:#858585; border-top: 5px solid #b5b5b5; color: #395a83 !important;}
+body.home li.home, body.postid-15 li.postid-15, body.postid-16 li.postid-16, body.postid-17 li.postid-17, body.postid-8 li.postid-8,
+ body.postid-18 li.postid-18 {font-family: 'roboto_condensedbold'; background-color:#858585 !important ; border-top: 5px solid #b5b5b5; color: #395a83 !important;}
+
+.sliderarea{width: 100%; background-color:#e9e8e4;text-align:left;}
+.sliderarea section {}
 
 
 /*---------------- Grafico ------------------ */
@@ -67,7 +120,7 @@ to maintain vertical rhythm:
 		}
 .barrag { border: 1px solid #555;	border-bottom: none;bottom: 0; margin: 0;
 	padding: 0 0 0 0; width: 39px;}
-.barGraph li span{color:#000;}	
+.barGraph li span{color:#000;}
 
 .tipodia1{background-color:#EBF8A4}
 .tipodia2{background-color:#F68268}
@@ -85,7 +138,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 body {
 	line-height: 1;
-	background-color:#e2dfd0;
+	background-color:#e2dfd0 !important;
 }
 
 ol,

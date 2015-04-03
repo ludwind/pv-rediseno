@@ -16,6 +16,12 @@
 
 get_header(); ?>
 
+<div class="sliderarea">
+<section><?php echo do_shortcode("[huge_it_slider id='1']"); ?></section>
+
+
+</div>
+
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 		<?php if ( have_posts() ) : ?>

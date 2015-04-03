@@ -40,28 +40,57 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 
-<!--
+
 <header class="head-front">
+<!-- --- header login  user -------- -->
+<?php if ( is_user_logged_in() ) {?>
+<img src="wp-content/themes/plusvida/img/home/head-img-user.jpg"/>
+<?php } ?>
+<!-- --- header public -------------- -->
+<?php if ( !is_user_logged_in() ) {?>
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="wp-content/themes/plusvida/img/home/head-img.jpg"/></a>
+<?php } ?>
+
+<aside><ul>
+	<li><a href="https://twitter.com/" target="_new"><img src="wp-content/themes/plusvida/img/home/redes-twitter.png"/><span>Twitter</span></a></li>
+	<li><a href="https://www.facebook.com/pages/Plus-Vida/514691545241261" target="_new">
+			<img src="wp-content/themes/plusvida/img/home/redes-facebook.png"/><span>Facebook</span></a></li>
+	<li><a href="https://plus.google.com" target="_new"><img src="wp-content/themes/plusvida/img/home/redes-google-plus.png"/><span>Google+</span></a></li>
+</aside></ul>
+
+
+<!-- --- menu login  user -------- -->
+<?php if ( is_user_logged_in() ) {?>
+
+<?php } ?>
+<!-- --- menu public -------------- -->
+<?php if ( !is_user_logged_in() ) {?>
+	<div class="mainmenu"><ul>
+		<li class="home mmazulobscuro mmunalinea"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Inicio</a></li>
+		<li class="postid-15 mmazulclaro postid-15"><a href="?paginas-website=de-que-se-trata">¿De qué se trata?</a></li>
+		<li class="postid-16 mmazulobscuro"><a href="?paginas-website=como-funciona">¿Cómo funciona?</a></li>
+		<li class="postid-17 mmazulclaro mmunalinea"><a href="?paginas-website=contacto">Contacto</a></li>
+		<li class="postid-8 mmazulobscuro"><a href="?paginas-website=login">Ingreso a miembros</a></li>
+		<li class="postid-18 mmazulclaro mmunalinea"><a href="?paginas-website=aun-no-eres-miembro">¿Aún no eres miembro?</a></li>
+	</div></ul>
+<?php } ?>
 </header>
--->
 
-
-	<header id="masthead" class="site-header" role="banner">
-		<!--<hgroup>
+<!--	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>-->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<!--<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 			<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 
-		<?php if ( get_header_image() ) : ?>
+		<!--	<?php if ( get_header_image() ) : ?>
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 		<?php endif; ?>
 	</header><!-- #masthead -->
 
-	<div id="main" class="wrapper">
+	<!--<div id="main" class="wrapper">-->
