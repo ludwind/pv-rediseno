@@ -76,6 +76,18 @@ to maintain vertical rhythm:
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Roboto-Regular-webfont.eot');
+    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Regular-webfont.woff') format('woff'),
+         url('Roboto-Regular-webfont.ttf') format('truetype'),
+         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /*------------------------ Estilos CEMACO --------------------------- */
 
 /*-------------- Header ------------ */
@@ -99,9 +111,62 @@ to maintain vertical rhythm:
 body.home li.home, body.postid-15 li.postid-15, body.postid-16 li.postid-16, body.postid-17 li.postid-17, body.postid-8 li.postid-8,
  body.postid-18 li.postid-18 {font-family: 'roboto_condensedbold'; background-color:#858585 !important ; border-top: 5px solid #b5b5b5; color: #395a83 !important;}
 
-.sliderarea{width: 100%; background-color:#e9e8e4;text-align:left;}
-.sliderarea section {}
+.sliderarea{width: 100%; background-color:#e9e8e4;text-align:left;
+          min-height: 430px; font-family: 'robotoregular';}
+.sliderarea section {float: left;}
+.sliderarea aside {float:right; width:25%;}
+.sliderarea ul{}
+  .sliderarea aside ul li{ padding:29px 18px 67px; line-height: 22px; color:#395a83;}
+  .sliderarea aside ul li:first-child{border-bottom:1px solid #c9c9c9;}
+  .sliderarea aside ul li a{clear:both; padding: 5px 10px; background-color:#748bad; color:#fff;
+                      float:right; margin:30px 0 0 0; text-decoration: none;}
+  .sliderarea aside ul li a:hover {opacity:0.7;}
+.sliderarea a:hover {opacity:0.7;}
+.sliderarea h1 {font-family: 'robotoregular'; font-size:20px; padding: 0 0 7px 0; color:#000;}
 
+.bienvenidoinicio{ width:100%; margin: 30px 0 0; line-height:22px; font-family: 'robotoregular';
+                  color:#395a83;}
+.bienvenidoinicio ul li{ width:29%; display:inline-block; vertical-align: top; padding:20px;}
+.bienvenidoinicio ul li img {display:inline-block;}
+.bienvenidoinicio ul li h1{font-size:30px; vertical-align: top;
+                margin:10px 0 0 20px; color:#748bad; display:inline-block;}
+.bienvenidoinicio ul li:first-child h1 {margin:10px 0 23px; color:#3b74a5;font-size:40px;}
+.bienvenidoinicio ul li:last-child h1 {color:#395a83; margin:10px 0 0 20px;font-size:30px; clear:both;}
+.bienvenidoinicio ul li span {color:#000; width:100%; display:list-item; font-size:16px; margin:0 0 5px;}
+.bienvenidoinicio ul li ul li { width:100%; display:list-item; padding:0; list-style:circle;
+                                margin: 0 0 0 25px;}
+  .bienvenidoinicio ul li a{background-color:#395a83; color:#fff; font-size:18px; display:list-item;
+                              padding:10px 12px; margin:15px 0; width:137px; text-decoration:none;}
+  .bienvenidoinicio ul li:first-child a{background-color:#748bad;}
+  .bienvenidoinicio ul li:last-child a{ background-color:#748bad;}
+  .bienvenidoinicio ul li a:hover{opacity:0.7;}
+.bienvenidoinicio ul li ul li a{font-decoration:none; color:#395a83; text-decoration:none;
+                              background-color:#fff !important; margin:0; padding:0; font-size:15px;
+                              }
+.espaciador{width: 100%; height: 10px;}
+
+.suscribe{ width:96%; background-color:#3b74a5; padding:20px; margin:11px 0 0 0;}
+.suscribe ul li { width:65%; display: inline-block; vertical-align:top; padding: 14px 0 0;}
+.suscribe ul li:first-child{ width:31%; font-family: 'housegrind_personal_use_onlRg';
+                        color:#d6f5ff; font-size:45px; text-align:center; line-height:34px; padding: 0;}
+.suscribe ul li:first-child span { color:#fff; font-size:40px; margin:12px 0 0;}
+.suscribeinput{ color:#395a83; font-family: 'robotothin';display:inline-block; height: 45px !important;
+    margin: 6px 0 0; width: 79% !important; font-size:16px;}
+.boton-suscripcion{ color:#395a83 !important; font-family: 'robotothin' !important; width: 28%; display:inline-block;
+                      float:right; margin:-66px 0 0; background-color:#f7f8f0 !important;
+                      font-size: 21px !important;}
+
+footer{ width:100%; }
+  footer ul{display:inline-block; width:100%; padding:40px 0 ;}
+  footer ul li{display:inline-block; list-style:none; background-color:#fcfcfa;border-top: 2px solid #3f7dc2;
+              width:66%; padding:20px; vertical-align:top; padding:20px 0 0 20px;  }
+  footer ul li:last-child{margin: 0 0 0 10px; width:25%; font-size:20px; padding:43px 0 0 56px;}
+    footer ul li ul{padding:0;}
+    footer ul li ul li{border-top: 0px; padding:4px 0 19px 32px; background-image: url(img/home/bullet.png);
+          background-repeat: no-repeat; background-position:0 -0.5px; width: 26%; display:inline-block;}
+    footer ul li ul li:last-child{margin:0; font-size:14px; padding:4px 0 19px 32px;}
+    footer ul li ul li a{text-decoration:none; color:#a7a7a7;}
+footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 
 /*---------------- Grafico ------------------ */
 .barGraph {
@@ -735,28 +800,7 @@ section[role="banner"] {
 	width: 53.66666666666%; /* define a width to avoid dropping a wider submit button */
 }
 
-/* Footer */
-footer[role="contentinfo"] {
-	border-top: 1px solid #ededed;
-	clear: both;
-	font-size: 12px;
-	font-size: 0.857142857rem;
-	line-height: 2;
-	max-width: 960px;
-	max-width: 68.571428571rem;
-	margin-top: 24px;
-	margin-top: 1.714285714rem;
-	margin-left: auto;
-	margin-right: auto;
-	padding: 24px 0;
-	padding: 1.714285714rem 0;
-}
-footer[role="contentinfo"] a {
-	color: #686868;
-}
-footer[role="contentinfo"] a:hover {
-	color: #21759b;
-}
+
 
 
 /* =Main content and comment content
@@ -1746,10 +1790,7 @@ img#wpstats {
 		color: #000;
 		font-size: 10pt;
 	}
-	footer a[rel=bookmark]:link:after,
-	footer a[rel=bookmark]:visited:after {
-		content: " [" attr(href) "] "; /* Show URLs */
-	}
+
 	a {
 		text-decoration: none;
 	}
@@ -1813,11 +1854,7 @@ img#wpstats {
 	.entry-title {
 		font-size: 21pt;
 	}
-	footer.entry-meta,
-	footer.entry-meta a {
-		color: #444;
-		font-size: 10pt;
-	}
+
 	.author-description {
 		float: none;
 		width: auto;

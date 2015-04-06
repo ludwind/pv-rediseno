@@ -19,54 +19,75 @@ get_header(); ?>
 <div class="sliderarea">
 <section><?php echo do_shortcode("[huge_it_slider id='1']"); ?></section>
 
+<aside><ul>
+	<li>
+		<h1>¡Contáctanos ahora!</h1>
+La mejor manera de encontra la vida saludable que búscas, contactanos y recibirás
+la mejor asesoria y atención personalizada
+<a href="?paginas-website=contacto">Contacto ></a>
+	</li>
 
+	<li>
+		<h1>¿Necesitas ayuda?</h1>
+Si aún tienes dudas sobre nuestro sistema y procesos, contáctanos para
+poder resolver todas tus dudas y atención personalizada
+<a href="?paginas-website=contacto">Contacto ></a>
+	</li>
+</ul></aside>
 </div>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
-		<?php if ( have_posts() ) : ?>
+<div class="bienvenidoinicio"><ul>
+<li>
+	<h1>¡Bienvenido!</h1>
+	<div class="espaciador"></div>
+<span>Si buscas un sistema efectivo y real para mejorar tu estilo de vida, estas en
+el lugar indicado ¡no busques más!</span>
+PlusVida es más que un metodo de adelgazamiento, somos un proceso para mejorar tu estilo de vida,
+brindandote no solamente mejor salud y reducir tu peso también brindamos asesoria personalizada para darte
+las herramientas necesarias para vivir mejor
+<a href="?paginas-website=aun-no-eres-miembro">empezar ahora ></a>
+</li>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
+<li>
+	<img src="wp-content/themes/plusvida/img/home/check.png"/><h1>Beneficios</h1>
+	<div class="espaciador"></div>
+<ul>
+	<li>Descenderás rápido de peso hasta llegar al peso saludable</li>
+	<li>Reducirás drásticamente tus tallas</li>
+	<li>Aprenderás la medida adecuada de alimentos a ingerir de por vida</li>
+	<li>Identificarás las "alarmas" para evitar el efecto rebote</li>
+	<li>Sin medicamentos, cirugías ni técnicas "milagrosas"</li>
+	<li>Tu oportunidad de cambiar y mejorar tu calidad de vida para siempre</li>
+</ul>
+<a href="?paginas-website=contacto">contáctanos ></a>
+</li>
 
-			<?php twentytwelve_content_nav( 'nav-below' ); ?>
+<li>
+	<img src="wp-content/themes/plusvida/img/home/testimonios.png"/><h1>Testimonios</h1>
+	<div class="espaciador"></div>
+<span>Ellos ya cambiaron sus vidas. Tu también puedes hacerlo! Ingresa para leer las experiencias
+de nuestros pacientes:</span>
+<ul>
+	<?php
+	query_posts('cat=0$posts_per_page=-1'); // query to show all posts independant from what is in the center;
+	if (have_posts()) :
+	   while (have_posts()) :
+	      the_post(); ?>
+	<li>
+	      <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+	</li>
+	<?php  endwhile;
+	endif;
+	wp_reset_query();
+	?></ul>
+<a href="?paginas-website=contacto">contáctanos ></a>
+</li>
+</ul></div>
 
-		<?php else : ?>
+<div class="suscribe"><ul>
+	<li>Consejos y</br><span>Promociones</span></li>
+	<li><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?></li>
+</ul></div>
 
-			<article id="post-0" class="post no-results not-found">
 
-			<?php if ( current_user_can( 'edit_posts' ) ) :
-				// Show a different message to a logged-in user who can add posts.
-			?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'No posts to display', 'twentytwelve' ); ?></h1>
-				</header>
-
-				<div class="entry-content">
-					<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'twentytwelve' ), admin_url( 'post-new.php' ) ); ?></p>
-				</div><!-- .entry-content -->
-
-			<?php else :
-				// Show the default message to everyone else.
-			?>
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'Nothing Found', 'twentytwelve' ); ?></h1>
-				</header>
-
-				<div class="entry-content">
-					<p><?php _e( 'Apologies, but no results were found. Perhaps searching will help find a related post.', 'twentytwelve' ); ?></p>
-					<?php get_search_form(); ?>
-				</div><!-- .entry-content -->
-			<?php endif; // end current_user_can() check ?>
-
-			</article><!-- #post-0 -->
-
-		<?php endif; // end have_posts() check ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

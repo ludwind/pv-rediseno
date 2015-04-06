@@ -9,13 +9,23 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-	</div><!-- #main .wrapper -->
-	<footer id="colophon" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'twentytwelve_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentytwelve' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentytwelve' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentytwelve' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
+	<footer>
+<ul>
+	<li><ul>
+		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Inicio</a></li>
+		<li><a href="?paginas-website=como-funciona">¿Cómo funciona?</a></li>
+		<li><a href="?paginas-website=login">Ingreso a miembros</a></li>
+		<li><a href="?paginas-website=de-que-se-trata">¿De qué se trata?</a></li>
+		<li><a href="?paginas-website=contacto">Contacto</a></li>
+		<li><a href="?paginas-website=aun-no-eres-miembro">¿Aún no eres miembro?</a></li>
+	</ul></li>
+
+	<li><a href="mailto:contacto@plusvida.org">contacto@plusvida.org</a></li>
+</ul>
+<section>Plusvida © 2015</section>
 	</footer><!-- #colophon -->
+
+	</div><!-- #main .wrapper -->
 </div><!-- #page -->
 
 <!-- ---------------- DATE PICKER ------------------ -->
