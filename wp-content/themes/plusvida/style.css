@@ -147,7 +147,7 @@ body.home li.home, body.postid-15 li.postid-15, body.postid-16 li.postid-16, bod
                               }
 .espaciador{width: 100%; height: 10px;}
 
-.suscribe{ width:96%; background-color:#3b74a5; padding:20px; margin:11px 0 0 0;}
+.suscribe{ width:96%; background-color:#3b74a5; padding:20px; margin:17px 0 0 0;}
 .suscribe ul li { width:65%; display: inline-block; vertical-align:top; padding: 14px 0 0;}
 .suscribe ul li:first-child{ width:31%; font-family: 'housegrind_personal_use_onlRg';
                         color:#d6f5ff; font-size:45px; text-align:center; line-height:34px; padding: 0;}
@@ -1583,8 +1583,35 @@ img#wpstats {
 	width: device-width;
 }
 
+/* Smaller screens | <1120px */
+@media only screen and (max-width: 1200px) {
+  .head-front aside{float:inherit;}
+}
 
+/* Tablets (landscape) | <960px */
+@media only screen and (max-width: 60em) {
 
+}
+
+/* Tablets (portrait) | <800px */
+@media only screen and (max-width: 50em) {
+
+}
+
+/* Phablets (portrait) | <640px */
+@media only screen and (max-width: 40em) {
+
+}
+
+/* Smartphones | <480px */
+@media only screen and (max-width: 30em) {
+
+}
+
+/* Smartphones | <320px */
+@media only screen and (max-width: 20em) {
+
+}
 
 /* Minimum width of 600 pixels. */
 @media screen and (min-width: 600px) {
