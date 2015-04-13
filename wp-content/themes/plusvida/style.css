@@ -91,6 +91,7 @@ to maintain vertical rhythm:
 /*------------------------ Estilos CEMACO --------------------------- */
 
 /*-------------- Header ------------ */
+.imghead{width:844px;}
 .head-front {width: 100%; background-color:#e9e8e4; margin: 35px 0 0;}
 .head-front aside {float: right; width:250px; padding:38px 0 0;}
 .head-front aside ul {list-style:none; width:100%;}
@@ -1585,16 +1586,29 @@ img#wpstats {
 
 /* Smaller screens | <1120px */
 @media only screen and (max-width: 1200px) {
-  .head-front aside{float:inherit;}
+  .head-front aside{width: 200px;}
+  .imghead { width: 719px;}
+  .head-front aside{padding: 27px 0 0;}
+}
+
+@media only screen and (max-width: 1000px) {
+  .head-front aside{ width: 187px; padding: 16px 0 0;}
+  .imghead{width:666px;}
 }
 
 /* Tablets (landscape) | <960px */
 @media only screen and (max-width: 60em) {
-
+  .imghead {width: 571px;}
+  .head-front aside { padding: 23px 0 0; width: 152px;}
+  .head-front aside ul li span {  font-size: 19px;  padding: 0 0 0 5px;}
+  .head-front aside ul li img {margin: -2px 0 0; width: 28px;}
+  .head-front aside ul li { min-height: 30px;}
 }
 
 /* Tablets (portrait) | <800px */
 @media only screen and (max-width: 50em) {
+  .imghead{width:100%;}
+  .head-front aside{float:inherit;}
 
 }
 
