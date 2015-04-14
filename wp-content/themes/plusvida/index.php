@@ -17,7 +17,8 @@
 get_header(); ?>
 
 <div class="sliderarea">
-<section><?php echo do_shortcode("[huge_it_slider id='1']"); ?></section>
+<section><?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '25' ); }
+if ( function_exists( 'soliloquy' ) ) { soliloquy( 'slider-homepage', 'slug' ); } ?></section>
 
 <aside><ul>
 	<li>

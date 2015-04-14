@@ -1586,7 +1586,7 @@ img#wpstats {
 
 /* Smaller screens | <1120px */
 @media only screen and (max-width: 1200px) {
-  .head-front aside{width: 200px;}
+  .head-front aside{width: 178px;}
   .imghead { width: 719px;}
   .head-front aside{padding: 27px 0 0;}
   .bienvenidoinicio {width:100%; clear:both;}
@@ -1596,6 +1596,13 @@ img#wpstats {
   .bienvenidoinicio ul li h1{margin: 0 0 0 8px;}
   .bienvenidoinicio ul li img {margin: -10px 0 0;}
   .bienvenidoinicio ul li:last-child h1 {font-size: 28px; margin: 1px 0 0 10px;}
+  .sliderarea{min-height: 350px;}
+  .sliderarea section { width: 75%;}
+  .sliderarea aside ul li{line-height: 17px;padding: 10px 18px 48px;}
+  .suscribe { padding: 8px; width: 98%;}
+  .suscribe ul li:first-child{font-size: 37px; padding: 7px 0 0;}
+  .suscribe ul li:first-child span{font-size: 35px;}
+
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1603,6 +1610,13 @@ img#wpstats {
   .imghead{width:666px;}
   .bienvenidoinicio ul li{width: 25%;}
   .bienvenidoinicio ul li:last-child h1 { font-size: 27px;}
+  .sliderarea section { width: 74%;}
+  .sliderarea aside { width: 26%;}
+  .sliderarea aside ul li{line-height: 15px;}
+  .sliderarea aside ul li a {margin: 23px 0 0;}
+  .sliderarea h1{font-size: 17px;}
+  .sliderarea { min-height: 327px;}
+
 }
 
 /* Tablets (landscape) | <960px */
@@ -1617,6 +1631,14 @@ img#wpstats {
   .bienvenidoinicio ul li h1{font-size: 23px;}
   .bienvenidoinicio ul li img{width: 33px;}
   .bienvenidoinicio ul li:last-child h1 {font-size: 23px;}
+  .sliderarea { min-height: 281px;}
+  .sliderarea h1 { font-size: 15px; padding: 0 0 4px;}
+  .sliderarea aside ul li { font-size: 12px; line-height: 14px; padding: 10px 18px 42px;}
+  .sliderarea aside ul li a { margin: 6px 0 0;}
+  .suscribe ul li:first-child{ font-size: 33px; padding: 17px 0 0; line-height: 27px;}
+  .suscribe ul li:first-child span {font-size: 32px;}
+  .suscribeinput{width: 73% !important;}
+
 }
 
 /* Tablets (portrait) | <800px */
@@ -1629,11 +1651,21 @@ img#wpstats {
   .mainmenu ul li a {font-size: 14px;}
   .mainmenu ul li {height: 50px; padding: 12px 0 0;}
   .mmunalinea {height: 45px !important; padding: 17px 0 0 !important;}
-  .sliderarea {min-height: 390px;}
-  .sliderarea aside ul li { font-size: 13px; line-height: 16px; padding: 10px 0px 51px; }
-  .sliderarea h1 { font-size: 17px; padding: 0 0 4px;}
+  .sliderarea {min-height: 232px;}
+  .sliderarea section {width: 67%;}
+  .sliderarea aside { width: 32%;}
+  .sliderarea aside ul li { font-size: 11px; line-height: 13px; padding: 10px 0 26px; }
+  .sliderarea h1 { font-size:13px; padding: 0 0 4px;}
   .sliderarea aside ul li a { margin: 7px 9px 0 0;}
-
+  .bienvenidoinicio ul li{line-height: 14px; min-height: 334px;padding:10px 38px 8px 7px;}
+  .bienvenidoinicio ul li h1 {font-size: 20px;}
+  .bienvenidoinicio ul li:first-child h1{font-size: 27px;}
+  .bienvenidoinicio ul li:last-child h1 { font-size: 18px; margin: 1px 0 0 4px;}
+  .bienvenidoinicio ul li a{font-size: 14px;width: 107px;}
+  .suscribe ul li:first-child{width: 100%; padding: 6px 0 0;}
+  .suscribe ul li:first-child br{display:inline-block;margin: 0;padding: 0; width: 0;height: 0;position: absolute;}
+  .suscribe ul li:first-child span{display: inline-block; margin:0 0 0 8px;}
+  .suscribe ul li{width: 100%;}
 }
 
 /* Phablets (portrait) | <640px */
@@ -1643,12 +1675,16 @@ img#wpstats {
   .mainmenu ul li a { font-size: 17px;}
   .mmunalinea {height: 27px !important; padding: 10px 0 0 !important;}
   .mainmenu ul li:last-child { width: 100%;}
-  .sliderarea aside {float: inherit; width: 100%;}
   .sliderarea ul {clear: both; width: 100%;}
+  .sliderarea aside {float: inherit; width: 100%;}
   .sliderarea aside ul li { display: inline-block; padding:10px 12px 10px; width: 43%;}
   .sliderarea aside ul li:first-child { border-right: 1px solid #c9c9c9; border-bottom:0px solid #000;}
-  .bienvenidoinicio{display:none;}
-
+  .sliderarea section {width: 100%;}
+  .bienvenidoinicio ul li{width: 100%;line-height: 14px;min-height: 0; padding: 0 38px 21px 0;}
+  .bienvenidoinicio ul li span {font-size: 13px; }
+  .bienvenidoinicio ul li:first-child h1 { font-size: 20px; }
+  .bienvenidoinicio ul li a { font-size: 13px; width: 100px;padding: 7px 12px;}
+  .suscribe{display:none;}
 }
 
 /* Smartphones | <480px */
@@ -1658,11 +1694,14 @@ img#wpstats {
   .sliderarea aside ul li {width: 93%;}
   .sliderarea aside ul li:first-child{border:none;}
   .sliderarea aside ul li a { margin: 20px 9px 0 0;}
+
+
 }
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
   .head-front aside ul li img { width: 42%; }
+
 }
 
 /* Minimum width of 600 pixels. */
