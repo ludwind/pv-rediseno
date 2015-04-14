@@ -1589,11 +1589,20 @@ img#wpstats {
   .head-front aside{width: 200px;}
   .imghead { width: 719px;}
   .head-front aside{padding: 27px 0 0;}
+  .bienvenidoinicio {width:100%; clear:both;}
+  .bienvenidoinicio ul li {font-size: 12px; padding:20px 46px 20px 17px; width:26%; }
+  .bienvenidoinicio ul li:first-child h1 { font-size: 36px; margin: 0 0 6px;}
+  .bienvenidoinicio ul li span {font-size: 14px;}
+  .bienvenidoinicio ul li h1{margin: 0 0 0 8px;}
+  .bienvenidoinicio ul li img {margin: -10px 0 0;}
+  .bienvenidoinicio ul li:last-child h1 {font-size: 28px; margin: 1px 0 0 10px;}
 }
 
 @media only screen and (max-width: 1000px) {
   .head-front aside{ width: 187px; padding: 16px 0 0;}
   .imghead{width:666px;}
+  .bienvenidoinicio ul li{width: 25%;}
+  .bienvenidoinicio ul li:last-child h1 { font-size: 27px;}
 }
 
 /* Tablets (landscape) | <960px */
@@ -1603,28 +1612,57 @@ img#wpstats {
   .head-front aside ul li span {  font-size: 19px;  padding: 0 0 0 5px;}
   .head-front aside ul li img {margin: -2px 0 0; width: 28px;}
   .head-front aside ul li { min-height: 30px;}
+  .bienvenidoinicio ul li{padding: 20px 38px 20px 17px; line-height: 18px; min-height: 353px;}
+  .bienvenidoinicio ul li:first-child h1 { font-size: 32px;margin: 0;}
+  .bienvenidoinicio ul li h1{font-size: 23px;}
+  .bienvenidoinicio ul li img{width: 33px;}
+  .bienvenidoinicio ul li:last-child h1 {font-size: 23px;}
 }
 
 /* Tablets (portrait) | <800px */
 @media only screen and (max-width: 50em) {
   .imghead{width:100%;}
-  .head-front aside{float:inherit;}
+  .head-front aside{float:inherit; width: 100%;}
+  .head-front aside ul li { display: inline-block; width:32%; text-align:center; padding: 0 0 21px;}
+  .head-front aside ul li img {float:inherit; width: 16%;}
+  .head-front aside ul li span { font-size: 26px; padding: 0 0 0 9px;}
+  .mainmenu ul li a {font-size: 14px;}
+  .mainmenu ul li {height: 50px; padding: 12px 0 0;}
+  .mmunalinea {height: 45px !important; padding: 17px 0 0 !important;}
+  .sliderarea {min-height: 390px;}
+  .sliderarea aside ul li { font-size: 13px; line-height: 16px; padding: 10px 0px 51px; }
+  .sliderarea h1 { font-size: 17px; padding: 0 0 4px;}
+  .sliderarea aside ul li a { margin: 7px 9px 0 0;}
 
 }
 
 /* Phablets (portrait) | <640px */
 @media only screen and (max-width: 40em) {
+  .head-front aside ul li span { font-size: 21px; }
+  .mainmenu ul li {width: 100%; height: 28px; padding: 9px 0 0;}
+  .mainmenu ul li a { font-size: 17px;}
+  .mmunalinea {height: 27px !important; padding: 10px 0 0 !important;}
+  .mainmenu ul li:last-child { width: 100%;}
+  .sliderarea aside {float: inherit; width: 100%;}
+  .sliderarea ul {clear: both; width: 100%;}
+  .sliderarea aside ul li { display: inline-block; padding:10px 12px 10px; width: 43%;}
+  .sliderarea aside ul li:first-child { border-right: 1px solid #c9c9c9; border-bottom:0px solid #000;}
+  .bienvenidoinicio{display:none;}
 
 }
 
 /* Smartphones | <480px */
 @media only screen and (max-width: 30em) {
-
+  .head-front aside ul li span { display: none; }
+  .head-front aside ul li img { width: 33%;}
+  .sliderarea aside ul li {width: 93%;}
+  .sliderarea aside ul li:first-child{border:none;}
+  .sliderarea aside ul li a { margin: 20px 9px 0 0;}
 }
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-
+  .head-front aside ul li img { width: 42%; }
 }
 
 /* Minimum width of 600 pixels. */
