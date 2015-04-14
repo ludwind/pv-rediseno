@@ -9,6 +9,12 @@
  * @since Twenty Twelve 1.0
  */
 ?>
+
+<div class="suscribe"><ul>
+	<li>Consejos y</br><span>Promociones</span></li>
+	<li><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?></li>
+</ul></div>
+
 	<footer>
 <ul>
 	<li><ul>
