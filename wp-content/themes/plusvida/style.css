@@ -106,7 +106,7 @@ to maintain vertical rhythm:
 	.mmazulclaro {background-color:#748bad; border-top: 5px solid #3269a6; }
 	.mmazulobscuro {background-color:#395a83; border-top: 5px solid #384883;}
   .mmunalinea{ height: 51px !important;  padding: 24px 0 0 !important; }
-  .mainmenu ul li:last-child{ width: 26%;}
+  .mainmenu ul li:last-child{ width: 25.9%;}
   .mainmenu ul li:hover{font-family: 'roboto_condensedbold'; background-color:#858585; border-top: 5px solid #b5b5b5; color: #395a83 !important;}
 body.home li.home, body.postid-15 li.postid-15, body.postid-16 li.postid-16, body.postid-17 li.postid-17, body.postid-8 li.postid-8,
  body.postid-18 li.postid-18 {font-family: 'roboto_condensedbold'; background-color:#858585 !important ; border-top: 5px solid #b5b5b5; color: #395a83 !important;}
@@ -154,9 +154,9 @@ body.home li.home, body.postid-15 li.postid-15, body.postid-16 li.postid-16, bod
                         color:#d6f5ff; font-size:45px; text-align:center; line-height:34px; padding: 0;}
 .suscribe ul li:first-child span { color:#fff; font-size:40px; margin:12px 0 0;}
 .suscribeinput{ color:#395a83; font-family: 'robotothin';display:inline-block; height: 45px !important;
-    margin: 6px 0 0; width: 79% !important; font-size:16px;}
+    margin: -1px 0 0; width: 79% !important; font-size:16px;}
 .boton-suscripcion{ color:#395a83 !important; font-family: 'robotothin' !important; width: 28%; display:inline-block;
-                      float:right; margin:-66px 0 0; background-color:#f7f8f0 !important;
+                      float:right; margin:-55px 0 0; background-color:#f7f8f0 !important;
                       font-size: 21px !important;}
 
 footer{ width:100%; }
@@ -205,7 +205,7 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
       .loginpv section input{background-color:#c1e2ff; color:#000; float:right; width:250px;
         margin:-7px 0 0;}
       .loginpv section p{   clear: both; height: 33px; padding: 6px 0 0;}
-      .loginpv section h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:50px;
+      .loginpv section h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:48px;
         text-align:center; margin:0 0 10px;}
       .login-remember label{ padding:0 0 0 156px !important; }
       #rememberme {float:inherit !important; width: 0px !important;}
@@ -215,7 +215,7 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
               width:165px !important;}
   .loginpv aside {background-color:#3b74a5;width:40%; display:inline-block; color:#fff; font-size:16px;
       vertical-align:top; text-align:center; padding: 48px 78px;}
-    .loginpv aside h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:48px;
+    .loginpv aside h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:46px;
       text-align:center; margin:0 0 10px;}
       .loginpv aside a{color:#000; background-color:#bbbbbb; font-size:16px;
               border-raius:0;  0 40%; padding: 15px 20px; text-decoration:none;
@@ -232,11 +232,18 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
   .contactop ul{list-style:none;}
     .contactop ul li{ list-style:none; display:inline-block; width:45%; vertical-align:top;}
     .contactop ul li:first-child{border-right: 4px solid #3a74a5}
-    .contactop ul li input{background-color:#ebf2f9; width:250px !important; float:left !important;}
-    .contactop ul li label{color:#395a83;}
+    .contactop ul li input, .contactop ul li textarea{background-color:#ebf2f9; width:60% !important;
+        display:inline-block !important; border:0 !important;}
+    .contactop ul li label{color:#395a83; font-size: 14px; display:inline-block !important; width: 30% !important;
+        margin-bottom: 0 !important; font-weight: normal !important; vertical-align: top !important;}
+    .contactop ul li span{ font-size: 15px; margin: 0 0 10px; width:100%; height: 40px; display:list-item;
+        list-style:none; clear:both;}
 
-.boton-contacto{ background-color:#748bad !important;}
-.boton-inscribete{background-color:#6bb37d !important;}
+.field-wrap, #ninja_forms_required_items { margin-bottom: 7px !important; vertical-align: top; }
+.boton-contacto{ background-color:#748bad !important; background-image:none !important; color:#fff !important;
+        font-size:17px !important; width:100px !important; height: 50px !important; margin:15px 17% !important;}
+.boton-inscribete{background-color:#6bb37d !important; background-image:none !important;color:#fff !important;
+        font-size:17px !important; width:100px !important; height: 50px !important; margin: 15px 17% !important;}
 
 /*---------------- Grafico ------------------ */
 .barGraph {
