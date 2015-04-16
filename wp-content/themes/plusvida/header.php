@@ -71,7 +71,7 @@
 		<li class="postid-16 mmazulobscuro"><a href="?paginas-website=como-funciona">¿Cómo funciona?</a></li>
 		<li class="postid-17 mmazulclaro mmunalinea"><a href="?paginas-website=contacto">Contacto</a></li>
 		<li class="postid-8 mmazulobscuro"><a href="?paginas-website=login">Ingreso a miembros</a></li>
-		<li class="postid-18 mmazulclaro mmunalinea"><a href="?paginas-website=aun-no-eres-miembro">¿Aún no eres miembro?</a></li>
+		<li class="postid-18 mmazulclaro mmunalinea"><a href="?paginas-website=contacto">¿Aún no eres miembro?</a></li>
 	</div></ul>
 <?php } ?>
 </header>

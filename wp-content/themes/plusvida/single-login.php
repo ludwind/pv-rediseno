@@ -11,44 +11,54 @@
 
 get_header(); ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
 
-			<?php
-			if ( ! is_user_logged_in() ) { // Display WordPress login form:
-					$args = array(
-							'redirect' => admin_url(),
-							'form_id' => 'loginform-custom',
-							'label_username' => __( 'Username custom text' ),
-							'label_password' => __( 'Password custom text' ),
-							'label_remember' => __( 'Remember Me custom text' ),
-							'label_log_in' => __( 'Log In custom text' ),
-							'remember' => true
-					);
-					wp_login_form( $args );
-			} else { // If logged in:
-					wp_loginout( '?paginas-website=login' ); // Display "Log Out" link.
-					echo " | ";
-					wp_register('', ''); // Display "Site Admin" link.
-			}
-			?>
+<div class="loginpv">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+<section>
+	<h1>¿eres usuario?</h1>
 
-				<?php get_template_part( 'content', get_post_format() ); ?>
 
-				<nav class="nav-single">
-					<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentytwelve' ); ?></h3>
-					<span class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentytwelve' ) . '</span> %title' ); ?></span>
-					<span class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentytwelve' ) . '</span>' ); ?></span>
-				</nav><!-- .nav-single -->
+				<?php
+				if ( ! is_user_logged_in() ) { // Display WordPress login form:
+						$args = array(
+								'redirect' => admin_url(),
+								'form_id' => 'loginform-custom',
+								'label_username' => __( 'Usuario' ),
+								'label_password' => __( 'Contraseña' ),
+								'label_remember' => __( 'Recuerdame' ),
+								'label_log_in' => __( 'Ingresar >' ),
+								'remember' => true
+						);
+						wp_login_form( $args );
+				} else { // If logged in:
+						wp_loginout( '?paginas-website=login' ); // Display "Log Out" link.
+						echo " | ";
+						wp_register('', ''); // Display "Site Admin" link.
+				}
+				?>
 
-				<?php comments_template( '', true ); ?>
+</section>
 
-			<?php endwhile; // end of the loop. ?>
+<aside>
+<h1>¿no eres usuario?</h1>
+No esperes más para empezar tu cambio de vida
+<a href="?paginas-website=aun-no-eres-miembro">empieza ahora ></a>
+</aside>
 
-		</div><!-- #content -->
-	</div><!-- #primary -->
+</div>
 
-<?php get_sidebar(); ?>
+
+<div class="contenidofront">
+<ul class="login-img-banner">
+	<li><img src="wp-content/themes/plusvida/img/login/login-img1.jpg"/></li>
+	<li><img src="wp-content/themes/plusvida/img/login/login-img2.jpg"/></li>
+	<li><img src="wp-content/themes/plusvida/img/login/login-img3.jpg"/></li>
+	<li><img src="wp-content/themes/plusvida/img/login/login-img4.jpg"/></li>
+</ul>
+</div>
+
+
+<div class="login-blackout"></div>
+
+
 <?php get_footer(); ?>

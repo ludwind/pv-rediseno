@@ -26,11 +26,11 @@ get_header(); ?>
 </aside>
 
 </div>
-
+<div class="contenidofront">
 
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content-paginas-website', get_post_format() ); ?>
-
+</div>
 
 
 				<?php comments_template( '', true ); ?>
