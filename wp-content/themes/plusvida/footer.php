@@ -24,7 +24,7 @@
 		<li><a href="?paginas-website=login">Ingreso a miembros</a></li>
 		<li><a href="?paginas-website=de-que-se-trata">¿De qué se trata?</a></li>
 		<li><a href="?paginas-website=contacto">Contacto</a></li>
-		<li><a href="?paginas-website=aun-no-eres-miembro">¿Aún no eres miembro?</a></li>
+		<li><a href="?paginas-website=contacto#incribete">¿Aún no eres miembro?</a></li>
 	</ul></li>
 
 	<li><a href="mailto:contacto@plusvida.org">contacto@plusvida.org</a></li>

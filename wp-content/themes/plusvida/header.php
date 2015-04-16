@@ -28,6 +28,7 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
  <!-- ---------------- DATE PICKER ------------------ -->
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -71,7 +72,7 @@
 		<li class="postid-16 mmazulobscuro"><a href="?paginas-website=como-funciona">¿Cómo funciona?</a></li>
 		<li class="postid-17 mmazulclaro mmunalinea"><a href="?paginas-website=contacto">Contacto</a></li>
 		<li class="postid-8 mmazulobscuro"><a href="?paginas-website=login">Ingreso a miembros</a></li>
-		<li class="postid-18 mmazulclaro mmunalinea"><a href="?paginas-website=contacto">¿Aún no eres miembro?</a></li>
+		<li class="postid-18 mmazulclaro mmunalinea"><a href="?paginas-website=contacto#incribete">¿Aún no eres miembro?</a></li>
 	</div></ul>
 <?php } ?>
 </header>
