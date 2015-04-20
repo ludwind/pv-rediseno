@@ -17,21 +17,19 @@
 get_header(); ?>
 
 <div class="sliderarea">
-<section><?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '25' ); }
-if ( function_exists( 'soliloquy' ) ) { soliloquy( 'slider-homepage', 'slug' ); } ?></section>
+<section><a href="?paginas-website=contacto"><?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '25' ); }
+if ( function_exists( 'soliloquy' ) ) { soliloquy( 'slider-homepage', 'slug' ); } ?></a></section>
 
 <aside><ul>
 	<li>
 		<h1>¡Contáctanos ahora!</h1>
-La mejor manera de encontra la vida saludable que búscas, contactanos y recibirás
-la mejor asesoria y atención personalizada
+La mejora manera de encontrar la vida saludable que buscas. Contáctanos y recibirás la mejor asesoría y atención personalizada.
 <a href="?paginas-website=contacto">Contacto ></a>
 	</li>
 
 	<li>
 		<h1>¿Necesitas ayuda?</h1>
-Si aún tienes dudas sobre nuestro sistema y procesos, contáctanos para
-poder resolver todas tus dudas y atención personalizada
+Si aún tienes dudas o preguntas, contáctanos para poder asesorarte.
 <a href="?paginas-website=contacto">Contacto ></a>
 	</li>
 </ul></aside>
@@ -43,10 +41,10 @@ poder resolver todas tus dudas y atención personalizada
 	<div class="espaciador"></div>
 <span>Si buscas un sistema efectivo y real para mejorar tu estilo de vida, estas en
 el lugar indicado ¡no busques más!</span>
-PlusVida es más que un metodo de adelgazamiento, somos un proceso para mejorar tu estilo de vida,
-brindandote no solamente mejor salud y reducir tu peso también brindamos asesoria personalizada para darte
-las herramientas necesarias para vivir mejor
-<a href="?paginas-website=aun-no-eres-miembro">empezar ahora ></a>
+PlusVida es más que un método de adelgazamiento. Es LA forma de cambiar y mejorar tu estilo de vida.
+ No sólo te ayudaremos a bajar peso y reducir medidas. También recibirás las herramientas necesarias
+ para alcanzar una mayor calidad de vida!
+<a href="?paginas-website=contacto">empezar ahora ></a>
 </li>
 
 <li>

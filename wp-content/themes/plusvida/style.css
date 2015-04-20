@@ -14,34 +14,7 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/* =Notes
---------------------------------------------------------------
-This stylesheet uses rem values with a pixel fallback. The rem
-values (and line heights) are calculated using two variables:
 
-$rembase:     14;
-$line-height: 24;
-
----------- Examples
-
-* Use a pixel value with a rem fallback for font-size, padding, margins, etc.
-	padding: 5px 0;
-	padding: 0.357142857rem 0; (5 / $rembase)
-
-* Set a font-size and then set a line-height based on the font-size
-	font-size: 16px
-	font-size: 1.142857143rem; (16 / $rembase)
-	line-height: 1.5; ($line-height / 16)
-
----------- Vertical spacing
-
-Vertical spacing between most elements should use 24px or 48px
-to maintain vertical rhythm:
-
-.my-new-div {
-	margin: 24px 0;
-	margin: 1.714285714rem 0; ( 24 / $rembase )
-}*/
 
 @font-face {
     font-family: 'housegrind_personal_use_onlRg';
@@ -181,7 +154,7 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
     padding: 49px 31px 0;}
 .front-headtitular aside article {font-family: 'housegrind_personal_use_onlRg';
     color: #04dfff; font-size: 56px; margin: 0 0 4px; }
-.front-headtitular aside article span {color: #fff; }
+.front-headtitular aside article span {color: #fff;padding:0 0 0 17px ;}
 .front-botonlink{width:100%; padding:20px 0 0; clear:both;}
 .front-headtitular aside a{background-color:#f7f8f0; color:#395a83; padding:5px 10px;
       clear:both; margin:20px 0 0; text-decoration:none;}
