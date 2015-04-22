@@ -186,7 +186,7 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
       #wp-submit{color:#395a83 !important; background-color:#f7f8f0 !important; font-size:16px !important;
               border-raius:0 !important; margin: 0 27% !important; padding: 5px 10px; height:47px;
               width:165px !important;}
-  .loginpv aside {background-color:#3b74a5;width:40%; display:inline-block; color:#fff; font-size:16px;
+  .loginpv aside {background-color:#3b74a5;width:39%; display:inline-block; color:#fff; font-size:16px;
       vertical-align:top; text-align:center; padding: 48px 78px;}
     .loginpv aside h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:46px;
       text-align:center; margin:0 0 10px;}
@@ -1650,6 +1650,13 @@ img#wpstats {
   .suscribe ul li:first-child{font-size: 37px; padding: 7px 0 0;}
   .suscribe ul li:first-child span{font-size: 35px;}
   footer ul li{ width: 64%;}
+  .front-headtitular aside{width: 44%; padding:16px 31px 0; font-size: 17px;}
+    .front-headtitular aside article{font-size: 49px;}
+  .front-headtitular section { width:48%;}
+    .front-headtitular section img{ width:100%;}
+    .front-botonlink{padding:27px 0 0;}
+  .loginpv aside{padding:31px 28px; width:43%;}
+  .loginpv section{padding:21px 43px 32px; width:40%;}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1664,7 +1671,7 @@ img#wpstats {
   .sliderarea h1{font-size: 17px;}
   .sliderarea { min-height: 327px;}
   footer ul li:last-child{padding: 43px 22px 0 35px;}
-
+  .contenidofront{font-size: 16px;}
 }
 
 /* Tablets (landscape) | <960px */
@@ -1689,6 +1696,14 @@ img#wpstats {
   footer ul li {width: 61%;}
   footer ul li:last-child{font-size: 16px;}
   footer ul li ul li{width: 39%;}
+  .front-headtitular aside{padding:18px 31px 0; width: 42%; }
+  .front-headtitular aside article {font-size: 38px;line-height: 31px;}
+  .front-botonlink{padding: 20px 0 0;}
+  .contactop ul li{width: 44%;}
+  .loginpv section {  padding: 21px 18px 32px;  width: 47%; }
+  .loginpv aside{padding: 31px 13px;}
+  .loginpv aside a{margin: 27px 21% 0;}
+  .login-img-banner li{ width: 23.6%;}
 }
 
 /* Tablets (portrait) | <800px */
@@ -1717,12 +1732,24 @@ img#wpstats {
   .suscribe ul li:first-child br{display:inline-block;margin: 0;padding: 0; width: 0;height: 0;position: absolute;}
   .suscribe ul li:first-child span{display: inline-block; margin:0 0 0 8px;}
   .suscribe ul li{width: 100%;}
-  .boton-suscripcion{font-size: 16px !important; margin: -60px 0 0;}
+  .boton-suscripcion{font-size: 16px !important; margin:-48px 0 0;}
   .suscribeinput{width: 80% !important;height: 41px !important;margin: 3px 0 0;}
   footer ul li { width: 57%;}
   footer ul li ul li{ width: 100%;}
   footer ul li ul li:last-child {width: 100%;}
   footer ul li:last-child { font-size: 14px; padding: 43px 31px 0 17px;}
+  .front-headtitular aside{width: 39%;font-size: 13px; padding:5px 27px 0;}
+  .front-headtitular aside article{}
+  .front-botonlink {padding: 17px 0 0;}
+  .contenidofront{font-size: 14px;padding: 10px 0 0;}
+  .contactop ul li{ width: 100%;}
+  .contactop ul li:first-child{border-right: 0px solid #fff; margin: 0 0 50px 0;}
+  .loginpv section { padding: 21px 99px 32px; width: 66%;  }
+  #wp-submit{margin: 0 31% !important;}
+  .loginpv aside{padding: 31px 50px;width: 83%;}
+  .loginpv aside a{margin: 27px 29% 0;}
+  .login-img-banner li{width: 24.5%;}
+    .login-img-banner li img{ width:100%;}
 }
 
 /* Phablets (portrait) | <640px */
@@ -1735,7 +1762,7 @@ img#wpstats {
   .mainmenu ul li:last-child { width: 100%;}
   .sliderarea ul {clear: both; width: 100%;}
   .sliderarea aside {float: inherit; width: 100%;}
-  .sliderarea aside ul li { display: inline-block; padding:10px 12px 10px; width: 43%;}
+  .sliderarea aside ul li { display: inline-block; padding:10px 12px 10px; width: 43%;vertical-align:top;}
   .sliderarea aside ul li:first-child { border-right: 1px solid #c9c9c9; border-bottom:0px solid #000;}
   .sliderarea section {width: 100%;}
   .bienvenidoinicio ul li{width: 100%;line-height: 14px;min-height: 0; padding: 0 38px 21px 0;}
@@ -1748,6 +1775,14 @@ img#wpstats {
   footer ul li { width: 97%;}
   footer ul li:last-child {padding: 19px 31px 31px 16px;width: 86%; text-align: center;}
   footer ul li ul li:last-child {text-align:left;}
+  .front-headtitular section{width: 100%;}
+  .front-headtitular aside {width: 93%; padding:12px 13px 27px;}
+  .contenidofront img{ width:100% !important; height: auto !important; clear:both;}
+  .contactop ul li{margin: 0; padding: 0;}
+  .contactop ul li:first-child{margin: 0 0 50px; padding: 0;}
+  .loginpv section { padding: 21px 10px 32px; width: 95%;  }
+  .loginpv aside { padding: 31px 10px; width: 95%;}
+  .login-img-banner li { width: 24.1%;}
 }
 
 /* Smartphones | <480px */
@@ -1767,12 +1802,21 @@ img#wpstats {
   footer ul{width: 91%;}
   footer ul li ul li {}
   footer ul li ul li:last-child{}
+  .entry-content{padding: 0 10px;}
+  .loginpv section h1{font-size: 33px;}
+  .loginpv section input{float: inherit; margin: 10px 0 0;  width: 93%;}
+  .loginpv section p{height: auto;}
+  #wp-submit{margin: 19px 18% !important;}
+  .loginpv aside h1{font-size: 28px;}
+  .loginpv aside a { margin: 18px 13% 0;}
 }
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
   .head-front aside ul li img { width: 42%; }
   footer section { margin: -17px 0 0 20px; padding: 0 0 14px; }
+  .boton-suscripcion {margin: -47px 0 0;}
+  .front-headtitular aside{font-size: 15px;}
 }
 
 /* Minimum width of 600 pixels. */

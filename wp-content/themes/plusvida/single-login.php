@@ -42,7 +42,7 @@ get_header(); ?>
 <aside>
 <h1>¿no eres usuario?</h1>
 No esperes más para empezar tu cambio de vida
-<a href="?paginas-website=aun-no-eres-miembro">empieza ahora ></a>
+<a href="?paginas-website=contacto">empieza ahora ></a>
 </aside>
 
 </div>
