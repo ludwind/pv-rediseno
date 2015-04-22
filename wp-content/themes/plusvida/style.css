@@ -218,6 +218,17 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 .boton-inscribete{background-color:#6bb37d !important; background-image:none !important;color:#fff !important;
         font-size:17px !important; width:100px !important; height: 50px !important; margin: 15px 17% !important;}
 
+/*---------------- Usuiarios ------------------ */
+/*---------tabs--------- */
+  ul#tabs { list-style-type: none; margin: 10px 0 0; padding: 0 0 0.3em 0; }
+  ul#tabs li { display: inline; font-family: 'robotothin';color:#fff; text-transform:uppercase; margin:0; text-decoration:none;font-size:20px;  }
+  ul#tabs li a { color: #fff; padding: 0.3em; text-decoration: none; }
+  ul#tabs li a:hover { background-color:#e9e8e4;}
+  ul#tabs li a.selected { color: #000; background-color: #e9e8e4 !important; border-top: 5px solid #e2dfd0 !important;}
+  div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+  div.tabContent.hide { display: none; }
+  #tabsazulclaro {background-color:#748bad !important; border-top: 5px solid #3269a6 !important; }
+	#tabsazulobscuro {background-color:#395a83 !important; border-top: 5px solid #384883 !important;}
 /*---------------- Grafico ------------------ */
 .barGraph {
 		background: url(images/horizontal_grid_line_50_pixel.png) bottom left;

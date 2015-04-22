@@ -38,7 +38,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> onload="init()">
 <div id="page" class="hfeed site">
 
 
@@ -62,7 +62,14 @@
 
 <!-- --- menu login  user -------- -->
 <?php if ( is_user_logged_in() ) {?>
+	<ul id="tabs">
+		<li><a class="selected " href="#mipeso" id="tabsazulobscuro">Mi Peso</a></li>
+		<li><a class="" href="#grabaciones" id="tabsazulclaro">Grabaciones</a></li>
+		<li><a class="" href="#conferencias" id="tabsazulobscuro">Conferencias</a></li>
+		<li><a class="" href="#drpusvida" id="tabsazulclaro">dr. plusvida</a></li>
+		<li><a class="" href="#contacto" id="tabsazulobscuro">Contacto</a></li>
 
+	</ul>
 <?php } ?>
 <!-- --- menu public -------------- -->
 <?php if ( !is_user_logged_in() ) {?>
