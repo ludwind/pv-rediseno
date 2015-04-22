@@ -9,12 +9,20 @@
  * @since Twenty Twelve 1.0
  */
 ?>
-<?php if (!is_single('36')) { ?>
-<div class="suscribe"><ul>
-	<li>Consejos y</br><span>Promociones</span></li>
-	<li><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?></li>
-</ul></div>
+<!-- --- suscribe -------- -->
+<?php if ( is_user_logged_in() ) {?>
 <?php } ?>
+<?php if ( !is_user_logged_in() ) {?>
+	<?php if (!is_single('36')) { ?>
+	<div class="suscribe"><ul>
+		<li>Consejos y</br><span>Promociones</span></li>
+		<li><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?></li>
+	</ul></div>
+	<?php } ?>
+<?php } ?>
+
+
+
 
 	<footer>
 <ul>
