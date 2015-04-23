@@ -9,6 +9,41 @@ get_header(); ?>
 <div class="tabContent" id="mipeso">
 <header>gráfica general de peso</header>
 <aside>
+
+	primer_peso_plusvida
+
+	medida-peso
+	primer-peso
+
+
+	<?php
+
+	$usuario = get_current_user_id( );
+	$fechaPorGuardar = $_POST['fecha'];
+	$table_name = "pesos_plusvida";
+	$fechaDePeso =  $wpdb->get_col( "SELECT fecha FROM pesos_plusvida WHERE usuario=$usuario" );
+	/////////////////////// si el peso ya existe y hay que sobre escribirlo
+	if (in_array($_POST['fecha'], $fechaDePeso)){?>
+	<script>
+		confirm("¡Peso ya guardado! ¿Deseas sobre escribirlo?");
+	</script>
+	<?php
+	global $wbpd;
+	$wpdb->show_errors();
+	//$wpdb->query($wpdb->prepare("DELETE FROM pesos_plusvida WHERE usuario = '%d' AND fecha = '%c'", $usuario, $fechaPorGuardar));
+	$wpdb->delete( $table_name, array( 'fecha' => $fechaPorGuardar, 'usuario' => $usuario));
+	//echo $fechaPorGuardar;
+
+
+	$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
+																			'fecha' => $_POST['fecha'], 'tipodia' => $_POST['tipodia']) );?>
+
+	<?php }	else{?>
+
+	<?php } ?>
+
+
+
 	<span>Ingresa tu peso diario para poder visualizar el avance que haz obtenido</span>
 	<form action="?page_id=12" method="post" class="formulario-pesos">
 		<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>

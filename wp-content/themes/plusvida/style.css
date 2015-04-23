@@ -232,7 +232,7 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 	#tabsazulobscuro {background-color:#395a83 !important; border-top: 5px solid #384883 !important;}
   .userlinkspv { font-family: 'robotothin';color:#fff; text-transform:uppercase;
       border-top: 5px solid #384883 !important; background-color:#748bad !important;
-      display: inline-block;margin: 0 0 0 -3px;padding:8px 4px 11px 0; width: 25.6%; color:#fff; text-align:center;}
+      display: inline-block;margin: 0 0 0 -3px;padding:8px 4px 11px 0; width: 25%; color:#fff; text-align:center;}
       .userlinkspv span{font-size:16px;}
       .userlinkspv a{color:#fff; font-size:10px;}
       .userlinkspv ul li{display:inline-block; margin: 5.5px 5px;}
