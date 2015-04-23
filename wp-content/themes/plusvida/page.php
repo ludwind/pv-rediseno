@@ -5,10 +5,72 @@
 
 get_header(); ?>
 
-
-
+<div class="usuasriostabs">
 <div class="tabContent" id="mipeso">
-Mi peso
+<header>gráfica general de peso</header>
+<aside>
+	<span>Ingresa tu peso diario para poder visualizar el avance que haz obtenido</span>
+	<form action="?page_id=12" method="post" class="formulario-pesos">
+		<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>
+	<section><lable>Peso:</lable> <input class="intextpvpesos" vtype="number" name="peso" min="1" max="350"/><div class="medidapeso">lbs.</div></section></br>
+		<section><lable>Fecha:</lable> <input class="intextpvpesos" type="text" name="fecha" id="datepicker"></section></br>
+
+		<section>	<span>Tipo de dia:</span></br>
+			<input type="radio" name="tipodia" value="1" checked class="tipodiapv ">
+			<div class="biencuidado"> Día bien cuidado</div><br>
+			<input type="radio" name="tipodia" value="2" class="tipodiapv ">
+			<div class="desborde"> Día con desborde</div><br>
+		</section></br>
+		<input type='hidden' id='myInput' name='previus' value='<?= $_SERVER['REQUEST_URI']; ?>' />
+	<input type="submit" value="Guardar >">
+	</form>
+</aside>
+<section>
+
+	Seleciona días:
+	<form action="" method=post>
+		<select name="rangodias">
+		<option value="1">1 día</option>
+		<option value="15" selected>15 días</option>
+		<option value="30">30 día</option>
+		<option value="45">45 día</option>
+		</select>
+		<input type=submit value="Go">
+	</form>
+
+	<ul class="barGraph">
+	<?php
+		//$ordernarPor = //$_POST['rangodias'];
+		if(!empty($_POST['rangodias']))
+			$ordernarPor = $_POST['rangodias'];
+		else
+			$ordernarPor = '15';
+
+
+		$usuario = get_current_user_id( );
+		$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc limit $ordernarPor
+	) tmp order by tmp.fecha asc" );
+	//	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC limit 2" );
+		if (is_array($graficodb))	{
+				foreach ($graficodb as $datosgrafico)
+				{ ?> <li><div class="barrag set1 tipodia<?php echo $datosgrafico->tipodia ?>" style="height:<?php echo $datosgrafico->peso ?>px">
+					<?php echo $datosgrafico->peso; ?></div></br><span><?php echo $datosgrafico->fecha ?></span></li>
+						<?php }
+		}
+		else if (!is_array($datosgrafico))
+		{
+			echo $datosgrafico;
+		}
+		else
+		{
+			echo 'No tienes ningún peso guardado aún';
+		}
+
+
+	?> </ul>
+	<!-- -------------- Grafico ----------------- -->
+
+</section>
 </div>
 
 <div class="tabContent hide" id="grabaciones">
@@ -26,73 +88,22 @@ dr plusvida
 <div class="tabContent hide" id="contacto">
 contacto
 </div>
-
+</div>
 
 
 	<div id="primary" class="site-content">
 		<div id="content" role="main">
 
-			<form action="?page_id=12" method="post">
-				<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>
-			Peso: <input type="number" name="peso" min="1" max="350"/></br>
-			Fecha: <input type="text" name="fecha" id="datepicker"></br>
-			Tipo de dia:</br>
-				<input type="radio" name="tipodia" value="1" checked> Día bien cuidado<br>
-				<input type="radio" name="tipodia" value="2"> Día con desborde<br>
-			</br>
-			<input type="submit">
-			</form>
+
 
 
 			<!-- -------------- Boton-pdf ----------------- -->
-			<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'my link', 'my login text'); ?>"
+			<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'my link', 'my login text'); ?>
 			<!-- -------------- Boton-pdf ----------------- -->
 
 
 
 <!-- -------------- Grafico ----------------- -->
-
-Seleeciona días:
-<form action="" method=post>
-	<select name="rangodias">
-	<option value="1">1 día</option>
-	<option value="15">15 días</option>
-	</select>
-	<input type=submit value="Go">
-</form>
-
-<ul class="barGraph">
-<?php
-	//$ordernarPor = //$_POST['rangodias'];
-	if(!empty($_POST['rangodias']))
-		$ordernarPor = $_POST['rangodias'];
-	else
-		$ordernarPor = '1';
-
-
-	$usuario = get_current_user_id( );
-	$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc limit $ordernarPor
-) tmp order by tmp.fecha asc" );
-//	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC limit 2" );
-	if (is_array($graficodb))	{
-	    foreach ($graficodb as $datosgrafico)
-	    { ?> <li><div class="barrag set1 tipodia<?php echo $datosgrafico->tipodia ?>" style="height:<?php echo $datosgrafico->peso ?>px">
-				<?php echo $datosgrafico->peso; ?></div></br><span><?php echo $datosgrafico->fecha ?></span></li>
-					<?php }
-	}
-	else if (!is_array($datosgrafico))
-	{
-		echo $datosgrafico;
-	}
-	else
-	{
-		echo 'No tienes ningún peso guardado aún';
-	}
-
-
-?> </ul>
-<!-- -------------- Grafico ----------------- -->
-
 
 
 

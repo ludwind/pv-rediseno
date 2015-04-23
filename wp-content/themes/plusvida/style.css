@@ -220,15 +220,40 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 
 /*---------------- Usuiarios ------------------ */
 /*---------tabs--------- */
-  ul#tabs { list-style-type: none; margin: 10px 0 0; padding: 0 0 0.3em 0; }
+  ul#tabs { list-style-type: none; margin:25px 0 17px; padding: 0 0 0.3em 0; font-size:0px; display:inline-block;
+    vertical-align: top; }
   ul#tabs li { display: inline; font-family: 'robotothin';color:#fff; text-transform:uppercase; margin:0; text-decoration:none;font-size:20px;  }
-  ul#tabs li a { color: #fff; padding: 0.3em; text-decoration: none; }
+  ul#tabs li a { color: #fff; padding: 0.3em; text-decoration: none; padding:18px 27.2px; }
   ul#tabs li a:hover { background-color:#e9e8e4;}
   ul#tabs li a.selected { color: #000; background-color: #e9e8e4 !important; border-top: 5px solid #e2dfd0 !important;}
-  div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+  div.tabContent { }
   div.tabContent.hide { display: none; }
   #tabsazulclaro {background-color:#748bad !important; border-top: 5px solid #3269a6 !important; }
 	#tabsazulobscuro {background-color:#395a83 !important; border-top: 5px solid #384883 !important;}
+  .userlinkspv { font-family: 'robotothin';color:#fff; text-transform:uppercase;
+      border-top: 5px solid #384883 !important; background-color:#748bad !important;
+      display: inline-block;margin: 0 0 0 -3px;padding:8px 4px 11px 0; width: 25.6%; color:#fff; text-align:center;}
+      .userlinkspv span{font-size:16px;}
+      .userlinkspv a{color:#fff; font-size:10px;}
+      .userlinkspv ul li{display:inline-block; margin: 5.5px 5px;}
+.usuasriostabs{}
+  .usuasriostabs header{background-color:#3b74a5;font-family: 'housegrind_personal_use_onlRg'; color:#fff;
+      font-size:40px; padding: 20px 0 20px 25px;}
+#mipeso {border:1px solid #3b74a5;}
+#mipeso aside{width:30%; background-color:#e8f0f7; padding:20px; display:inline-block;}
+#mipeso aside span{color:#3b74a5;font-size: 15px;}
+#mipeso aside section{margin: 0 0; padding:9px 0; width:100%;  }
+#mipeso aside section span {    clear: both; display: block;margin: 6px 0 -5px;width: 100%;  }
+#mipeso section {width:65%; display:inline-block;}
+.medidapeso{float:right;}
+.formulario-pesos{width:100% clear:both; margin:20px 0;}
+.intextpvpesos { background-color: #c1e2ff; border: 0 none; clear: both; float: right; margin:-6px 0 0;
+    width: 73%;}
+.tipodiapv{ margin: 5px 0 5px 10px;}
+  .biencuidado{color:#3b74a5 !important; display:inline-block;}
+  .desborde{color:#d61e1e !important; display:inline-block;}
+
+
 /*---------------- Grafico ------------------ */
 .barGraph {
 		background: url(images/horizontal_grid_line_50_pixel.png) bottom left;
@@ -248,8 +273,8 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 	padding: 0 0 0 0; width: 39px;}
 .barGraph li span{color:#000;}
 
-.tipodia1{background-color:#EBF8A4}
-.tipodia2{background-color:#F68268}
+.tipodia1{background-color:#3b74a5;}
+.tipodia2{background-color:#d61e1e;}
 
 
 /* =Reset

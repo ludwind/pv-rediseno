@@ -11,7 +11,7 @@ get_header(); ?>
 <?php
 
 $usuario = get_current_user_id( );
-$fechaPorGuardar = '2015,03,09';//$_POST['fecha'];
+$fechaPorGuardar = $_POST['fecha'];
 $table_name = "pesos_plusvida";
 $fechaDePeso =  $wpdb->get_col( "SELECT fecha FROM pesos_plusvida WHERE usuario=$usuario" );
 /////////////////////// si el peso ya existe y hay que sobre escribirlo
@@ -24,7 +24,7 @@ global $wbpd;
 $wpdb->show_errors();
 //$wpdb->query($wpdb->prepare("DELETE FROM pesos_plusvida WHERE usuario = '%d' AND fecha = '%c'", $usuario, $fechaPorGuardar));
 $wpdb->delete( $table_name, array( 'fecha' => $fechaPorGuardar, 'usuario' => $usuario));
-echo $fechaPorGuardar;
+//echo $fechaPorGuardar;
 
 
 $wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
@@ -56,5 +56,10 @@ Guardado exitosamente
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+	<SCRIPT Language=JavaScript>
+	window.onload = function() {
+		history.back()
+	};
+	</SCRIPT>
+	<?php get_sidebar(); ?>
 <?php get_footer(); ?>
