@@ -56,10 +56,7 @@ Guardado exitosamente
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-	<SCRIPT Language=JavaScript>
-	window.onload = function() {
-		history.back()
-	};
-	</SCRIPT>
-	<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+
+	<?php
+	header('Location: ' . $_SERVER['HTTP_REFERER']);
+	get_footer(); ?>

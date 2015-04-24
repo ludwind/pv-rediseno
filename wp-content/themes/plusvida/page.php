@@ -1,3 +1,4 @@
+
 <?php
 /**
  *
@@ -8,61 +9,66 @@ get_header(); ?>
 <div class="usuasriostabs">
 <div class="tabContent" id="mipeso">
 <header>gráfica general de peso</header>
-<aside>
 
-	primer_peso_plusvida
-
-	medida-peso
-	primer-peso
 
 
 	<?php
-
 	$usuario = get_current_user_id( );
-	$fechaPorGuardar = $_POST['fecha'];
-	$table_name = "pesos_plusvida";
-	$fechaDePeso =  $wpdb->get_col( "SELECT fecha FROM pesos_plusvida WHERE usuario=$usuario" );
-	/////////////////////// si el peso ya existe y hay que sobre escribirlo
-	if (in_array($_POST['fecha'], $fechaDePeso)){?>
-	<script>
-		confirm("¡Peso ya guardado! ¿Deseas sobre escribirlo?");
-	</script>
-	<?php
-	global $wbpd;
-	$wpdb->show_errors();
-	//$wpdb->query($wpdb->prepare("DELETE FROM pesos_plusvida WHERE usuario = '%d' AND fecha = '%c'", $usuario, $fechaPorGuardar));
-	$wpdb->delete( $table_name, array( 'fecha' => $fechaPorGuardar, 'usuario' => $usuario));
-	//echo $fechaPorGuardar;
+	$table_name = "primer_peso_plusvida";
+	$usuarioFechaInicial =  $wpdb->get_results( "SELECT usuario FROM primer_peso_plusvida WHERE usuario=$usuario" );
+	if (count($usuarioFechaInicial) == 0) { ?>
 
+<aside class="asidesinpesos">
+	<h1>¡Bienvenido a PlusVida!</h1>
+	<span>comienza grabando tu peso inicial y medida que utilizaras para pesarte durante
+		 el programa (libras o kilos):</span>
 
-	$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
-																			'fecha' => $_POST['fecha'], 'tipodia' => $_POST['tipodia']) );?>
+<form action="?page_id=48" method="post" class="formulario-pesos form-primer-peso">
+		<input type="hidden" name="usuario-inicial" value="<?php echo get_current_user_id( ); ?>"/>
+		<section><lable>Peso Inicial:</lable> <input class="intextpvpesos" vtype="number" name="primer-peso" min="1" max="350"/></section></br>
+		<section><lable>Tipo de medida:</lable>
+			<select name="medida">
+			<option value="lbrs">Libras</option>
+			<option value="kls">Kilogramos</option>
+		</select></section></br>
 
-	<?php }	else{?>
+		<input type="submit" value="Guardar >" class="guardarpeso">
+		</form>
 
-	<?php } ?>
+</aside>
 
+		<?php }	else{
+$medidaGuardada =  $wpdb->get_var( "SELECT medidapeso FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
+$primerPeso =  $wpdb->get_var( "SELECT primerpeso FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
+$primerafecha =  $wpdb->get_var( "SELECT fecha FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
 
+			?>
+<!-- -------------------------- Registro de pesos normales ------------------- -->
+<aside>
+				<span>Ingresa tu peso diario para poder visualizar el avance que haz obtenido</span>
+				<form action="?page_id=12" method="post" class="formulario-pesos">
+					<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>
 
-	<span>Ingresa tu peso diario para poder visualizar el avance que haz obtenido</span>
-	<form action="?page_id=12" method="post" class="formulario-pesos">
-		<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>
-	<section><lable>Peso:</lable> <input class="intextpvpesos" vtype="number" name="peso" min="1" max="350"/><div class="medidapeso">lbs.</div></section></br>
-		<section><lable>Fecha:</lable> <input class="intextpvpesos" type="text" name="fecha" id="datepicker"></section></br>
+				<section><lable>Peso:</lable>	<div class="medidapeso"> <?php echo "{$medidaGuardada}";?></div>
+					 <input class="intextpvpesos pesoconmedida" vtype="number" name="peso" min="1" max="350"/></section></br>
+					<section><lable>Fecha:</lable> <input class="intextpvpesos" type="text" name="fecha" id="datepicker">
+					</section></br>
 
-		<section>	<span>Tipo de dia:</span></br>
-			<input type="radio" name="tipodia" value="1" checked class="tipodiapv ">
-			<div class="biencuidado"> Día bien cuidado</div><br>
-			<input type="radio" name="tipodia" value="2" class="tipodiapv ">
-			<div class="desborde"> Día con desborde</div><br>
-		</section></br>
-		<input type='hidden' id='myInput' name='previus' value='<?= $_SERVER['REQUEST_URI']; ?>' />
-	<input type="submit" value="Guardar >">
-	</form>
+					<section>	<span>Tipo de dia:</span></br>
+						<input type="radio" name="tipodia" value="1" checked class="tipodiapv ">
+						<div class="biencuidado"> Día bien cuidado</div><br>
+						<input type="radio" name="tipodia" value="2" class="tipodiapv ">
+						<div class="desborde"> Día con desborde</div><br>
+					</section></br>
+					<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+				<input type="submit" value="Guardar >" class="guardarpeso">
+				</form>
 </aside>
 <section>
 
-	Seleciona días:
+<!----------------- selector de días ----------------- -->
+<div class="selectordedias"><aside>
+	<span>Seleciona días:</span>
 	<form action="" method=post>
 		<select name="rangodias">
 		<option value="1">1 día</option>
@@ -71,20 +77,27 @@ get_header(); ?>
 		<option value="45">45 día</option>
 		</select>
 		<input type=submit value="Go">
-	</form>
+</form></aside></div>
+<!----------------- selector de días ----------------- -->
 
+<!----------------- grafico in ------------- -->
 	<ul class="barGraph">
+
+<!---------- primer_peso -------- -->
+<li><div class="barrag set1 tipodia0" style="height:<?php echo "{$primerPeso}";?>px">
+	<?php echo "{$primerPeso}";?></div></br><span><?php echo "{$primerafecha}";?></span></li>
+<!---------- primer_peso -------- -->
+
+<!---------- Todos los pesos -------- -->
 	<?php
 		//$ordernarPor = //$_POST['rangodias'];
 		if(!empty($_POST['rangodias']))
 			$ordernarPor = $_POST['rangodias'];
 		else
 			$ordernarPor = '15';
-
-
 		$usuario = get_current_user_id( );
-		$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc limit $ordernarPor
-	) tmp order by tmp.fecha asc" );
+		$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc
+			limit $ordernarPor ) tmp order by tmp.fecha asc" );
 	//	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC limit 2" );
 		if (is_array($graficodb))	{
 				foreach ($graficodb as $datosgrafico)
@@ -100,12 +113,19 @@ get_header(); ?>
 		{
 			echo 'No tienes ningún peso guardado aún';
 		}
+	?>
+<!---------- Fin todos los pesos -------- -->
+	</ul>
+<!-- -------------- Fin grafico ----------------- -->
 
 
-	?> </ul>
-	<!-- -------------- Grafico ----------------- -->
+	<!-- -------------- Boton-pdf ----------------- -->
+	<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'my link', 'my login text'); ?>
+	<!-- -------------- Boton-pdf ----------------- -->
 
 </section>
+		<?php }?>
+
 </div>
 
 <div class="tabContent hide" id="grabaciones">
@@ -132,9 +152,7 @@ contacto
 
 
 
-			<!-- -------------- Boton-pdf ----------------- -->
-			<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'my link', 'my login text'); ?>
-			<!-- -------------- Boton-pdf ----------------- -->
+
 
 
 
