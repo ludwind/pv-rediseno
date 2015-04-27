@@ -240,11 +240,12 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
   .usuasriostabs header{background-color:#3b74a5;font-family: 'housegrind_personal_use_onlRg'; color:#fff;
       font-size:40px; padding: 20px 0 20px 25px;}
 #mipeso {border:1px solid #3b74a5;}
-#mipeso aside{width:30%; background-color:#e8f0f7; padding:20px; display:inline-block;}
+#mipeso aside{width:20%; background-color:#e8f0f7; padding:74px 20px; display:inline-block;
+      line-height:18px;}
 #mipeso aside span{color:#3b74a5;font-size: 15px;}
 #mipeso aside section{margin: 0 0; padding:9px 0; width:100%;  }
 #mipeso aside section span {    clear: both; display: block;margin: 6px 0 -5px;width: 100%;  }
-#mipeso section {width:65%; display:inline-block; vertical-align:top;}
+#mipeso section {width:76%; display:inline-block; vertical-align:top;}
 .medidapeso{float:right;}
 .formulario-pesos{width:100% clear:both; margin:20px 0;}
 .intextpvpesos { background-color: #c1e2ff; border: 0 none; float: right; margin:-6px 0 0; width: 73%;}
@@ -259,9 +260,10 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 .guardarpeso{border-radius:0 !important; background-image: none !important; background-color: #dcdcdc !important;
               color: #395a83 !important; font-family: 'robotoregular' !important; font-size:18px !important;
               padding:10px 20px !important; margin: 20px 0 0 !important; }
-.pesoconmedida{width: 63%; margin:-6px 16px 0 0;}
+.pesoconmedida{width: 63%; margin:-6px 7px 0 0;}
 .selectordedias{width:100%; height:30px; }
-.selectordedias aside {width:33% !important; float:right; background-color:#fff !important; }
+.selectordedias aside {width:42% !important; float:right; background-color:#fff !important;
+      padding: 5px 0 0 0 !important;}
 .selectordedias aside span{color: #000000;display:inline-block}
 .selectordedias aside form{display:inline-block;}
 .selectordedias aside form select{background-color:#c6ddf1;}
@@ -272,18 +274,66 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 		border-bottom: 3px solid #333;font: 9px; font-family: 'robotoregular';
 		margin: 25px auto 0;padding: 0;	position: relative; min-height:350px;
     border-bottom: 2px solid #cdcdcd ;
-    border-left:2px solid #cdcdcd; width:95%; margin: 0 auto;
+    border-left:2px solid #cdcdcd; width:93%; margin:23px auto 0;
 		}
 
 .barGraph li {	color: #FFF;	list-style: none;	text-align: center; border-right: 2px solid #e9e9e9;
-		display:inline-block; vertical-align:bottom; min-height:350px;}
-.barrag { border: 1px solid #555;	border-bottom: none;bottom: 0; margin: 0;
-	padding: 0 0 0 0; width: 39px; vertical-align:bottom; margin: 0 auto;}
-.barGraph li span{color:#000;}
+		display:inline-block; vertical-align:bottom; min-height:350px;
+    background-image: url(img/usuarios/backgrafico.png);}
+    .barGraph li:hover{opacity:0.8;}
+.barrap{vertical-align:bottom; bottom:0; position:relative;position:absolute;
+bottom:-17px;}
+.barrag { border: 1px solid #555;	border-bottom: none;bottom: 0;
+	padding: 0; width:73%;; vertical-align:bottom; margin: 0 auto 5px;}
+.barGraph li p{ margin:5px 0 0;}
+.barGraph li footer {margin: 10px 0 0;}
+
+.ancho-grafico14 {width:48px; font-size: 9px;}
+.ancho-grafico29 { font-size: 6px; width: 21px;}
+  .ancho-grafico29 p{display:none;}
+.ancho-grafico89 {font-size: 3px; width: 6px;}
+  .ancho-grafico89 p{display:none;}
+.tipodiatexto1{color:#3b74a5 !important;}
+.tipodiatexto2{color:#d61e1e !important;}
+.tipodiatexto0{color:#ababab !important;}
 
 .tipodia1{background-color:#3b74a5;}
 .tipodia2{background-color:#d61e1e;}
 .tipodia0{background-color:#ababab;}
+
+.tooltips {
+  position: relative;
+  display: inline;
+}
+.tooltips span {
+  position: absolute; width:60px; font-size:11px;
+  color: #FFFFFF;
+  background: #000000;
+  height: 80px;
+  line-height: 30px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+}
+.tooltips span:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 80%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-top: 8px solid #000000;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+.tooltips:hover span {
+  visibility: visible;
+  opacity: 0.8;
+  bottom: 150px;
+  left: 120%;
+  margin-left: -76px;
+  z-index: 999;
+}
 
 
 /* =Reset

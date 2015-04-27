@@ -42,6 +42,10 @@ $medidaGuardada =  $wpdb->get_var( "SELECT medidapeso FROM primer_peso_plusvida 
 $primerPeso =  $wpdb->get_var( "SELECT primerpeso FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
 $primerafecha =  $wpdb->get_var( "SELECT fecha FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
 
+if(!empty($_POST['rangodias']))
+	$ordernarPor = $_POST['rangodias'];
+else
+	$ordernarPor = '14';
 			?>
 <!-- -------------------------- Registro de pesos normales ------------------- -->
 <aside>
@@ -68,15 +72,14 @@ $primerafecha =  $wpdb->get_var( "SELECT fecha FROM primer_peso_plusvida WHERE u
 
 <!----------------- selector de días ----------------- -->
 <div class="selectordedias"><aside>
-	<span>Seleciona días:</span>
+	<span>Ver por el rango de:</span>
 	<form action="" method=post>
 		<select name="rangodias">
-		<option value="1">1 día</option>
-		<option value="15" selected>15 días</option>
-		<option value="30">30 día</option>
-		<option value="45">45 día</option>
+		<option value="14" selected>15 días</option>
+		<option value="29">1 mes</option>
+		<option value="89">3 meses</option>
 		</select>
-		<input type=submit value="Go">
+		<input type=submit value="Aplicar">
 </form></aside></div>
 <!----------------- selector de días ----------------- -->
 
@@ -84,25 +87,32 @@ $primerafecha =  $wpdb->get_var( "SELECT fecha FROM primer_peso_plusvida WHERE u
 	<ul class="barGraph">
 
 <!---------- primer_peso -------- -->
-<li><div class="barrag set1 tipodia0" style="height:<?php echo "{$primerPeso}";?>px">
-	<?php echo "{$primerPeso}";?></div></br><span><?php echo "{$primerafecha}";?></span></li>
+<li class="tooltips tipodiatexto0 ancho-grafico<?php echo $ordernarPor?>">
+	<span><?php echo "{$primerafecha}";?><br>
+		<?php echo "{$primerPeso}";?> <?php echo "{$medidaGuardada}";?></span>
+	<div class="barrap">
+	<div class="barrag set1 tipodia0" style="height:<?php echo "{$primerPeso}";?>px">
+	</div><p><?php echo "{$primerafecha}";?></p>
+	<footer><?php echo "{$primerPeso}";?> <?php echo "{$medidaGuardada}";?></footer></div></li>
 <!---------- primer_peso -------- -->
 
 <!---------- Todos los pesos -------- -->
 	<?php
-		//$ordernarPor = //$_POST['rangodias'];
-		if(!empty($_POST['rangodias']))
-			$ordernarPor = $_POST['rangodias'];
-		else
-			$ordernarPor = '15';
+
 		$usuario = get_current_user_id( );
 		$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc
 			limit $ordernarPor ) tmp order by tmp.fecha asc" );
 	//	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC limit 2" );
 		if (is_array($graficodb))	{
 				foreach ($graficodb as $datosgrafico)
-				{ ?> <li><div class="barrag set1 tipodia<?php echo $datosgrafico->tipodia ?>" style="height:<?php echo $datosgrafico->peso ?>px">
-					<?php echo $datosgrafico->peso; ?></div></br><span><?php echo $datosgrafico->fecha ?></span></li>
+				{ ?> <li class="tooltips tipodiatexto<?php echo $datosgrafico->tipodia ?> ancho-grafico<?php echo $ordernarPor?>">
+					<span><?php echo $datosgrafico->fecha ?><br>
+						<?php echo $datosgrafico->peso; ?><?php echo "{$medidaGuardada}";?></span>
+					<div class="barrap">
+					<div class="barrag set1 tipodia<?php echo $datosgrafico->tipodia ?>"
+						style="height:<?php echo $datosgrafico->peso ?>px">
+				</div><p><?php echo $datosgrafico->fecha ?></p><footer><?php echo $datosgrafico->peso; ?>
+					<?php echo "{$medidaGuardada}";?></footer></div></li>
 						<?php }
 		}
 		else if (!is_array($datosgrafico))
@@ -120,16 +130,20 @@ $primerafecha =  $wpdb->get_var( "SELECT fecha FROM primer_peso_plusvida WHERE u
 
 
 	<!-- -------------- Boton-pdf ----------------- -->
-	<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'my link', 'my login text'); ?>
+	<?php //if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'Imprimir PDF', 'my login text'); ?>
 	<!-- -------------- Boton-pdf ----------------- -->
 
 </section>
 		<?php }?>
 
+
 </div>
 
+<!-- -------------------------- Audios ------------------- -->
 <div class="tabContent hide" id="grabaciones">
-mis grabaciones
+<header>Audio Conferencias</header>
+<?php echo do_shortcode( '[html5tap id=51]' ) ?>
+
 </div>
 
 <div class="tabContent hide" id="conferencias">

@@ -22,6 +22,10 @@
  * @since Twenty Twelve 1.0
  */
 
+@ini_set( 'upload_max_size' , '300M' );
+@ini_set( 'post_max_size', '300M');
+@ini_set( 'max_execution_time', '900' );
+
 
 $subRole = get_role( 'subscriber' );
 $subRole->add_cap( 'read_private_pages' );

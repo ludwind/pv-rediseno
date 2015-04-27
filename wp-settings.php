@@ -9,7 +9,8 @@
  *
  * @package WordPress
  */
-
+if ( !defined('WP_MEMORY_LIMIT') )
+	define('WP_MEMORY_LIMIT', '500M');
 /**
  * Stores the location of the WordPress directory of functions, classes, and core content.
  *
