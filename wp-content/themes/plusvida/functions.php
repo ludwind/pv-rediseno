@@ -31,9 +31,20 @@ $subRole = get_role( 'subscriber' );
 $subRole->add_cap( 'read_private_pages' );
 $subRole->add_cap( 'read_private_posts' );
 
+
+add_action('wp_logout','go_home');
+function go_home(){
+  wp_redirect( home_url() );
+  exit();
+}
+
 // Set up the content width value based on the theme's design and stylesheet.
 if ( ! isset( $content_width ) )
 	$content_width = 625;
+
+
+	if (!current_user_can('manage_options') ) { show_admin_bar(false); }
+
 
 /**
  * Twenty Twelve setup.

@@ -16,6 +16,28 @@
 
 get_header(); ?>
 
+<?php if ( is_user_logged_in() ) {
+
+	$logoutUrl = wp_logout_url( home_url() );
+
+	function Redirect($url, $permanent = false)
+	{
+	    if (headers_sent() === false)
+	    {
+	    	header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
+	    }
+
+	    exit();
+	}
+
+	Redirect($logoutUrl, false);
+
+	?>
+	<meta http-equiv="Location" content="<?php echo wp_logout_url( home_url() ); ?>">
+<?php } ?>
+
+
+
 <div class="sliderarea">
 <section><a href="?paginas-website=contacto"><?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '25' ); }
 if ( function_exists( 'soliloquy' ) ) { soliloquy( 'slider-homepage', 'slug' ); } ?></a></section>

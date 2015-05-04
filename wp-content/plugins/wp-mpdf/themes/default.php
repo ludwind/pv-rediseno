@@ -115,9 +115,9 @@
 				<div class="description">' .  get_bloginfo('description') . '</div>
 			</div>
 			</div>
-			<div id="content" class="widecolumn">';
+			<div id="content" class="widecolumn">';?>
 
-			if(have_posts()) :
+			<?php if(have_posts()) :
 				if(is_search()) $pdf_output .=  '<div class="post"><h2 class="pagetitle">Search Results</h2></div>';
 			if(is_archive()) {
 				global $wp_query;
@@ -153,10 +153,46 @@
 				} else {
 					$comment_link = $post->comment_count . ' Comments &#187;';
 				}
-
+				$nombreUsuario = wp_get_current_user();
+				$fechaDeHoy = date('d, m, y');
 				$pdf_output .= '<bookmark content="'.the_title('','', false).'" level="1" /><tocentry content="'.the_title('','', false).'" level="1" />';
-				$pdf_output .= '<div class="post">
-				<h2><a href="' . get_permalink() . '" rel="bookmark" title="Permanent Link to ' . the_title('','', false) . '">' . the_title('','', false) . '</a></h2>';
+				$pdf_output .= '<div class="post plusvidapdf">
+				<h2>¡Hola '. $nombreUsuario->display_name .'!</h2>
+				<span>Reporte de tu peso a la fecha '.$fechaDeHoy.'<span></p>';
+
+////////////////////////////////////////////////////////Grafico
+
+////////////////////// rango de dias
+if(!empty($_POST['rangodias']))
+	$ordernarPor = $_POST['rangodias'];
+else
+	$ordernarPor = '14';
+
+//////////////// Query grafico
+$usuario = get_current_user_id( );
+$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc
+	limit $ordernarPor ) tmp order by tmp.fecha asc" );
+if (is_array($graficodb))	{
+		foreach ($graficodb as $datosgrafico)
+		{
+///////////////////////// display grafico
+			$pdf_output .= $datosgrafico->tipodia;
+///////////////////////// display grafico
+} 	}
+		else if (!is_array($datosgrafico))
+		{
+			$pdf_output .=  $datosgrafico;
+		}
+		else
+		{
+			echo 'No tienes ningún peso guardado aún';
+		}
+
+
+
+
+
+
 
 
 				// no authors and dates on static pages

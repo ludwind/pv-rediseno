@@ -26,6 +26,20 @@
 
 	<footer>
 <ul>
+
+<!-- ---------- footer users -------------- -->
+	<?php if ( is_user_logged_in() ) {?>
+		<li><ul>
+			<li><a href="<?php echo wp_logout_url( home_url() ); ?>">Inicio</a></li>
+			<li><a href="<?php echo wp_logout_url( home_url('?paginas-website=de-que-se-trata') ); ?>">¿Cómo funciona?</a></li>
+			<li><a href="<?php echo wp_logout_url( home_url('?paginas-website=login') ); ?>">Ingreso a miembros</a></li>
+			<li><a href="<?php echo wp_logout_url( home_url('?paginas-website=de-que-se-trata') ); ?>">¿De qué se trata?</a></li>
+			<li><a href="<?php echo wp_logout_url( home_url('?paginas-website=contacto') ); ?>">Contacto</a></li>
+			<li><a href="<?php echo wp_logout_url( home_url('?paginas-website=contacto#incribete') ); ?>">¿Aún no eres miembro?</a></li>
+		</ul></li>
+	<?php } ?>
+<!-- ----------- footer public -------------- -->
+	<?php if ( !is_user_logged_in() ) {	 ?>
 	<li><ul>
 		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Inicio</a></li>
 		<li><a href="?paginas-website=como-funciona">¿Cómo funciona?</a></li>
@@ -34,6 +48,7 @@
 		<li><a href="?paginas-website=contacto">Contacto</a></li>
 		<li><a href="?paginas-website=contacto#incribete">¿Aún no eres miembro?</a></li>
 	</ul></li>
+<?php } ?>
 
 	<li><a href="mailto:contacto@plusvida.org">contacto@plusvida.org</a></li>
 </ul>

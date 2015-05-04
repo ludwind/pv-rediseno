@@ -73,7 +73,7 @@
 	<span>hola, <?php global $current_user; if ( isset($current_user) ) { echo $current_user->user_login;}?></span>
 	<ul>
 		<li><a href="<?php echo wp_logout_url( home_url() ); ?>">Cerrar sesión</a></li>
-		<li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">inicio</a></li>
+		<li><a href="<?php echo wp_logout_url( home_url() ); ?>">inicio</a></li>
 	</ul>
 <div>
 <?php } ?>

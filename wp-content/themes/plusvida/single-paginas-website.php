@@ -6,9 +6,16 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  *
- */
+ */?>
 
-get_header(); ?>
+
+<?php if ( is_user_logged_in() ) {?>
+	<meta http-equiv="Location" content="<?php echo wp_logout_url( home_url() ); ?>">
+<?php } ?>
+
+<?php get_header(); ?>
+
+
 
 <div class="front-headtitular">
 

@@ -3195,7 +3195,7 @@ function _deprecated_function( $function, $version, $replacement = null ) {
 	 *
 	 * @param bool $trigger Whether to trigger the error for deprecated functions. Default true.
 	 */
-	if ( WP_DEBUG && apply_filters( 'deprecated_function_trigger_error', true ) ) {
+	if ( WP_DEBUG && apply_filters( 'deprecated_function_trigger_error', false ) ) {
 		if ( function_exists( '__' ) ) {
 			if ( ! is_null( $replacement ) )
 				trigger_error( sprintf( __('%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead.'), $function, $version, $replacement ) );

@@ -8,13 +8,15 @@ Author URI: http://www.contutto.com/
 Edit Author: Florian Krauthan for wp-mpdf
 */
 
+.plusvidapdf{}
+
 body {
 	text-align: center;
 	padding: 0;
 	margin: 0;
 	height: 100%;
 	width: 100%;
-	
+
 	color: black;
 }
 
@@ -328,4 +330,3 @@ a {
 	text-decoration: none;
 }
 /* End Various Tags & Classes*/
-

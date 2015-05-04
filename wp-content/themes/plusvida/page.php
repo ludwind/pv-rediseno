@@ -82,7 +82,11 @@ else
 		<input type=submit value="Aplicar">
 </form></aside></div>
 <!----------------- selector de días ----------------- -->
-
+<div class="estalasdepeso"><ul>
+	<li>300 <?php echo "{$medidaGuardada}";?></li>
+	<li>200 <?php echo "{$medidaGuardada}";?></li>
+	<li>100 <?php echo "{$medidaGuardada}";?></li>
+</ul></div>
 <!----------------- grafico in ------------- -->
 	<ul class="barGraph">
 
@@ -102,7 +106,7 @@ else
 		$usuario = get_current_user_id( );
 		$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc
 			limit $ordernarPor ) tmp order by tmp.fecha asc" );
-	//	$graficodb =  $wpdb->get_results( "SELECT * FROM pesos_plusvida WHERE usuario=$usuario ORDER BY fecha ASC limit 2" );
+	
 		if (is_array($graficodb))	{
 				foreach ($graficodb as $datosgrafico)
 				{ ?> <li class="tooltips tipodiatexto<?php echo $datosgrafico->tipodia ?> ancho-grafico<?php echo $ordernarPor?>">
@@ -127,10 +131,8 @@ else
 <!---------- Fin todos los pesos -------- -->
 	</ul>
 <!-- -------------- Fin grafico ----------------- -->
-
-
 	<!-- -------------- Boton-pdf ----------------- -->
-	<?php //if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'Imprimir PDF', 'my login text'); ?>
+<div class="imprimirpdf">	<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'Guardar en PDF >', 'my login text'); ?></div>
 	<!-- -------------- Boton-pdf ----------------- -->
 
 </section>
@@ -139,23 +141,58 @@ else
 
 </div>
 
-<!-- -------------------------- Audios ------------------- -->
+<!-- -------------------------- Audios --------------------------- -->
 <div class="tabContent hide" id="grabaciones">
 <header>Audio Conferencias</header>
-<?php echo do_shortcode( '[html5tap id=51]' ) ?>
-
+<div class="reproductor"><section><div id="audiojs_wrapper0" classname="audiojs" class="audiojs">
+	<audio src="audio.js_files/01-dead-wrong-intro.mp3" preload=""></audio>
+	          <div class="play-pause"><p class="play"></p><p class="pause"></p><p class="loading"></p><p class="error"></p></div>
+						<div class="scrubber"><div style="width: 5.26193px;" class="progress"></div>
+						<div style="width: 14.6113px;" class="loaded"></div></div><div class="time"><em class="played">00:04</em>/<strong class="duration">03:57</strong></div>
+						<div class="error-message"></div></div>
+</section></div>
+<div class="playlist">
+	<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date', 	'order' => 'ASC')); $checkbox = 0;?>
+<ol><?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>"><?php $listado = ++$checkbox; echo $listado;?>. <?php the_title(); ?></a>
+				</li><aside><input type="checkbox" id="option<?php echo $listado;?>"></aside><div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+</ol></div>
+<!--<div id="shortcuts"><div><h1>Keyboard shortcuts:</h1>	<p><em>→</em> Next track</p><p><em>←</em> Previous track</p><p><em>Space</em> Play/pause</p></div></div>-->
 </div>
 
+<!-- -------------------------- Conferencias go to meeting ------------------------------ -->
 <div class="tabContent hide" id="conferencias">
-conferencias
+	<header>Conferencias o reuniones en linea</header>
+	<section>
+		<img src="wp-content/themes/plusvida/img/usuarios/gotomeeting-logo.jpg"/>
+		<p>Ingresa el número de reunión que te hemos brindando personalmente:</p>
+		<center><script src="http://www.citrixonlinecdn.com/dtsimages/im/support/en/meetNowG.js" language="javascript" type="text/javascript"></script></center>
+	</section>
 </div>
 
+<!-- -------------------------- Recomendaciones del doctor PlusVida ------------------------------ -->
 <div class="tabContent hide" id="drpusvida">
-dr plusvida
+	<header>Recomendaciones Dr. PlusVida</header>
+<div class="recomendaciones-drpv">
+	<?php $tiporecomendacion = get_field("recomendacionesdrpv");
+	$recomendaciones = get_posts(array('showposts' => -1,'post_type' => 'recomendacionesdrpv', 'tax_query' => array(
+		array( 'taxonomy' => 'porantiguedad', 'field' => 'slug', 'terms' => $tiporecomendacion )  )));?>
+	<ul><?php foreach ( $recomendaciones as $post ) : setup_postdata( $post ); ?><li>
+		<?php the_content( ); ?>
+	</li> <?php endforeach; wp_reset_postdata();?></ul></div>
 </div>
 
+<!-- -------------------------- Contacto usuarios ------------------------------ -->
 <div class="tabContent hide" id="contacto">
-contacto
+	<header>Contáctanos</header>
+	<div class="contactousuarios"><ul>
+		<li><h1>disponibles para ti</h1>Puedes contactarnos por cualquier duda sobre
+nuestros servicios y tratamientos </br>Escríbenos:  <a href="mailto:contacto@plusvida.org">contacto@plusvida.org</a></li>
+		<li><span>¿Tienes preguntas? escríbenos:</span></p>
+			<div class="contactoform-usuario"><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 12 ); } ?></div></li>
+	</ul></div>
 </div>
 </div>
 
@@ -164,19 +201,7 @@ contacto
 		<div id="content" role="main">
 
 
-
-
-
-
-
-
 <!-- -------------- Grafico ----------------- -->
-
-
-
-
-
-
 
 <?php
 ///////////////////// Grafico php
@@ -225,19 +250,93 @@ function printGraph()
 
 
 
-
-
-
-
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
 <?php get_footer(); ?>
 
-<!------------------------------ Tabs Script ------------------------------- -->
+<!------------------------------ Audio Player ------------------------------- -->
+<!--<script src="wp-content/themes/plusvida/js/jquery.js"></script>-->
+<script src="wp-content/themes/plusvida/js/audio.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
 
 <script type="text/javascript">
-//<![CDATA[
+
+$(function() {
+		// Setup the player to autoplay the next track
+		var a = audiojs.createAll({
+			trackEnded: function() {
+				var next = $('ol li.playing').next();
+				if (!next.length) next = $('ol li').first();
+				next.addClass('playing').siblings().removeClass('playing');
+				audio.load($('a', next).attr('data-src'));
+				audio.play();
+			}
+		});
+
+		// Load in the first track
+		var audio = a[0];
+				first = $('ol a').attr('data-src');
+		$('ol li').first().addClass('playing');
+		audio.load(first);
+
+		// Load in a track on click
+		$('ol li').click(function(e) {
+			e.preventDefault();
+			$(this).addClass('playing').siblings().removeClass('playing');
+			audio.load($('a', this).attr('data-src'));
+			audio.play();
+		});
+		// Keyboard shortcuts
+		$(document).keydown(function(e) {
+			var unicode = e.charCode ? e.charCode : e.keyCode;
+				// right arrow
+			if (unicode == 39) {
+				var next = $('li.playing').next();
+				if (!next.length) next = $('ol li').first();
+				next.click();
+				// back arrow
+			} else if (unicode == 37) {
+				var prev = $('li.playing').prev();
+				if (!prev.length) prev = $('ol li').last();
+				prev.click();
+				// spacebar
+			} else if (unicode == 32) {
+				audio.playPause();
+			}
+		})
+	});
+
+	/////////////////// checkbox //////////////////////////
+
+	$("#checkAll").on("change", function() {
+        $(':checkbox').not(this).prop('checked', this.checked);
+      });
+
+      $(":checkbox").on("change", function(){
+        var checkboxValues = {};
+        $(":checkbox").each(function(){
+          checkboxValues[this.id] = this.checked;
+        });
+        $.cookie('checkboxValues', checkboxValues, { expires: 7, path: '/' })
+      });
+
+      function repopulateCheckboxes(){
+        var checkboxValues = $.cookie('checkboxValues');
+        if(checkboxValues){
+          Object.keys(checkboxValues).forEach(function(element) {
+            var checked = checkboxValues[element];
+            $("#" + element).prop('checked', checked);
+          });
+        }
+      }
+
+      $.cookie.json = true;
+      repopulateCheckboxes();
+
+////////////////////////////// Tabs Script ///////////////////////////////////////
+
 
 var tabLinks = new Array();
 var contentDivs = new Array();
