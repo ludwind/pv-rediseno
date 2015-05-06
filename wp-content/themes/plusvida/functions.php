@@ -31,6 +31,16 @@ $subRole = get_role( 'subscriber' );
 $subRole->add_cap( 'read_private_pages' );
 $subRole->add_cap( 'read_private_posts' );
 
+add_action( 'wp_login_failed', 'my_front_end_login_fail' );  // hook failed login
+
+function my_front_end_login_fail( $username ) {
+   $referrer = $_SERVER['HTTP_REFERER'];  // where did the post submission come from?
+   // if there's a valid referrer, and it's not the default log-in screen
+   if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+      wp_redirect( esc_url( home_url( '?paginas-website=usuario-o-contrasena-incorrecta' )  ));
+      exit;
+   }
+}
 
 add_action('wp_logout','go_home');
 function go_home(){

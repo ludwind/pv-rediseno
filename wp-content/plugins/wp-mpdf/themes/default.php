@@ -167,6 +167,8 @@ if(!empty($_POST['rangodias']))
 	$ordernarPor = $_POST['rangodias'];
 else
 	$ordernarPor = '14';
+//////////////////////////// inicio gráfico
+	$pdf_output .= '<ul class="barGraph">';
 
 //////////////// Query grafico
 $usuario = get_current_user_id( );
@@ -188,7 +190,7 @@ if (is_array($graficodb))	{
 			echo 'No tienes ningún peso guardado aún';
 		}
 
-
+		$pdf_output .= '</ul>';
 
 
 
