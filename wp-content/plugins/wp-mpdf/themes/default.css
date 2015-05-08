@@ -10,6 +10,63 @@ Edit Author: Florian Krauthan for wp-mpdf
 
 .plusvidapdf{}
 
+/*	--------- Grafico ------------------ */
+
+	  .imprimirpdf{width:100%; min-height: 50px; text-align:right; margin: 50px 0 0 0; }
+	  .imprimirpdf a{background-color:#dcdcdc; color:#3b74a5; padding:10px 15px;margin:0 25px 0 0; text-decoration:none;}
+	  #mipeso {border:1px solid #3b74a5;}
+	  #mipeso aside{width:20%; background-color:#e8f0f7; padding:78px 20px; display:inline-block;
+	        line-height:18px;}
+	  #mipeso aside span{color:#3b74a5;font-size: 15px;}
+	  #mipeso aside section{margin: 0 0; padding:9px 0; width:100%;  }
+	  #mipeso aside section span {    clear: both; display: block;margin: 6px 0 -5px;width: 100%;  }
+	  #mipeso section {width:76%; display:inline-block; vertical-align:top;}
+	  .medidapeso{float:right;}
+	  .formulario-pesos{width:100% clear:both; margin:20px 0;}
+	  .intextpvpesos { background-color: #c1e2ff; border: 0 none; float: right; margin:-6px 0 0; width: 73%;}
+	  .tipodiapv{ margin: 5px 0 5px 10px;}
+	    .biencuidado{color:#3b74a5 !important; display:inline-block;}
+	    .desborde{color:#d61e1e !important; display:inline-block;}
+	    .asidesinpesos{ width:96.5% !important; text-align:center;padding: 50px 25%;}
+	      .asidesinpesos h1 {font-family: 'housegrind_personal_use_onlRg'; color:#3B74A5; font-size:45px;}
+	      .asidesinpesos span{color:#000 !important; padding: 10px 0 0 !important; width:100%; clear:both;
+	        display:block;}
+	        .form-primer-peso{max-width: 500px; margin:20px auto 0;}
+	  .guardarpeso{border-radius:0 !important; background-image: none !important; background-color: #dcdcdc !important;
+	                color: #395a83 !important; font-family: 'robotoregular' !important; font-size:18px !important;
+	                padding:10px 20px !important; margin: 20px 0 0 !important; }
+	  .pesoconmedida{width: 63%; margin:-6px 7px 0 0;}
+	  .selectordedias{width:100%; height:30px; }
+	  .selectordedias aside {width:37% !important; float:right; background-color:#fff !important;
+	        padding: 5px 0 0 0 !important;}
+	  .selectordedias aside span{color: #000000;display:inline-block}
+	  .selectordedias aside form{display:inline-block;}
+	  .selectordedias aside form select{background-color:#c6ddf1;}
+	.barGraph {
+
+			}
+
+	.barGraph li {	}
+
+	.barrap{}
+	.barrag { }
+	.barGraph li p{ margin:5px 0 0;}
+	.barGraph li footer {margin: 10px 0 0;}
+
+	.ancho-grafico14 {width:55px; }
+	.ancho-grafico29 {width:18px;}
+	  .ancho-grafico29 p{display:none;}
+	.ancho-grafico89 { width: 1px;}
+	  .ancho-grafico89 p{display:none;}
+	.tipodiatexto1{color:#3b74a5 !important;}
+	.tipodiatexto2{color:#d61e1e !important;}
+	.tipodiatexto0{color:#ababab !important;}
+
+	.tipodia1{background-color:#3b74a5;}
+	.tipodia2{background-color:#d61e1e;}
+	.tipodia0{background-color:#ababab;}
+
+
 body {
 	text-align: center;
 	padding: 0;

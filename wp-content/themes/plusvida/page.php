@@ -106,7 +106,7 @@ else
 		$usuario = get_current_user_id( );
 		$graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc
 			limit $ordernarPor ) tmp order by tmp.fecha asc" );
-	
+
 		if (is_array($graficodb))	{
 				foreach ($graficodb as $datosgrafico)
 				{ ?> <li class="tooltips tipodiatexto<?php echo $datosgrafico->tipodia ?> ancho-grafico<?php echo $ordernarPor?>">

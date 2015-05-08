@@ -158,27 +158,51 @@
 				$pdf_output .= '<bookmark content="'.the_title('','', false).'" level="1" /><tocentry content="'.the_title('','', false).'" level="1" />';
 				$pdf_output .= '<div class="post plusvidapdf">
 				<h2>¡Hola '. $nombreUsuario->display_name .'!</h2>
-				<span>Reporte de tu peso a la fecha '.$fechaDeHoy.'<span></p>';
+				<span>Reporte de tu peso, hoy '.$fechaDeHoy.'.<span></p>';
 
 ////////////////////////////////////////////////////////Grafico
+//////////////////// primeras variables
+$usuario = get_current_user_id( );
+$medidaGuardada =  $wpdb->get_var( "SELECT medidapeso FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
+$primerPeso =  $wpdb->get_var( "SELECT primerpeso FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
+$primerafecha =  $wpdb->get_var( "SELECT fecha FROM primer_peso_plusvida WHERE usuario=$usuario LIMIT 1" );
+
 
 ////////////////////// rango de dias
 if(!empty($_POST['rangodias']))
 	$ordernarPor = $_POST['rangodias'];
 else
 	$ordernarPor = '14';
+
 //////////////////////////// inicio gráfico
-	$pdf_output .= '<ul class="barGraph">';
+	$pdf_output .= '
+	<table valign="bottom">
+	<tr>
+		<td></td>
+	';
+
+//////////////// Primer peso
+$pdf_output .=
+'<td class="tipodiatexto0">
+	<div class="barrap">
+	<table><tr><td class="barrag set1 tipodia0 ancho-grafico'.$ordernarPor.'" style="height:'.$primerPeso.'px">
+	</td></tr></table><p>'.$primerafecha.'</p>
+	<footer>'.$primerPeso.$medidaGuardada.'</footer></div></td>';
 
 //////////////// Query grafico
-$usuario = get_current_user_id( );
 $graficodb =  $wpdb->get_results( "SELECT * FROM (select * from pesos_plusvida WHERE usuario=$usuario order by fecha desc
 	limit $ordernarPor ) tmp order by tmp.fecha asc" );
 if (is_array($graficodb))	{
 		foreach ($graficodb as $datosgrafico)
 		{
+
 ///////////////////////// display grafico
-			$pdf_output .= $datosgrafico->tipodia;
+		$pdf_output .=
+			'<td class="tipodiatexto'.$datosgrafico->tipodia.' ancho-grafico'.$ordernarPor.'">
+				<div class="barrap">
+				<table><tr><td class="tipodia'.$datosgrafico->tipodia.' ancho-grafico'.$ordernarPor.'" style="height:'.$datosgrafico->peso.'px;"></td></tr></table>
+					<p>'.$datosgrafico->fecha.'</p><footer>'.$datosgrafico->peso.$medidaGuardada.'</footer></div></td>';
+
 ///////////////////////// display grafico
 } 	}
 		else if (!is_array($datosgrafico))
@@ -190,7 +214,7 @@ if (is_array($graficodb))	{
 			echo 'No tienes ningún peso guardado aún';
 		}
 
-		$pdf_output .= '</ul>';
+		$pdf_output .= '</tr></table>';
 
 
 
