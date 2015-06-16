@@ -43,11 +43,11 @@
 
 
 <header class="head-front">
-<!-- --- header login  user -------- -->
+<!-- --- header login  user --------
 <?php if ( is_user_logged_in() ) {?>
 <img src="wp-content/themes/plusvida/img/home/head-img-user.jpg" class="imghead"/>
 <?php } ?>
-<!-- --- header public -------------- -->
+<!-- --- header public -------------- 
 <?php if ( !is_user_logged_in() ) {?>
 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="wp-content/themes/plusvida/img/home/head-img.jpg" class="imghead"/></a>
 <?php } ?>

@@ -135,6 +135,21 @@ else
 <div class="imprimirpdf">	<?php if(function_exists('mpdf_pdfbutton')) mpdf_pdfbutton(false, 'Guardar en PDF >', 'my login text'); ?></div>
 	<!-- -------------- Boton-pdf ----------------- -->
 
+
+
+
+<div class="misregistros">
+<!-- ------------------ Listar mis registros -------------------- -->
+	<?php
+	$user_ID = $current_user->user_login;
+	$files = glob( './pdf/'.$user_ID.'/*.*' );
+	foreach ( $files as $file )	{
+	echo'<a href="./' . $file . '">'. basename( $file ) . '</a><br />';
+	}	?>
+<!-- ------------------ Listar mis registros -------------------- -->
+<div>
+
+
 </section>
 		<?php }?>
 
