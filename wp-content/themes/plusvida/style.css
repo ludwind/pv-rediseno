@@ -178,10 +178,11 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
       .loginpv section input{background-color:#c1e2ff; color:#000; float:right; width:250px;
         margin:-7px 0 0;}
       .loginpv section p{   clear: both; height: 33px; padding: 6px 0 0;}
+      .loginpv section p label{padding: 0 !important;}
       .loginpv section h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:48px;
         text-align:center; margin:0 0 10px;}
       .login-remember label{ padding:0 0 0 156px !important; }
-      #rememberme {float:inherit !important; width: 0px !important;}
+      #rememberme {  float: left; width: 16px !important; margin: 0 0 0 113px; padding: 0; display: inline-block;}
       .login-submit {}
       #wp-submit{color:#395a83 !important; background-color:#f7f8f0 !important; font-size:16px !important;
               border-raius:0 !important; margin: 0 27% !important; padding: 5px 10px; height:47px;
@@ -245,7 +246,7 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 .estalasdepeso{display:inline-block; float:left;}
   .estalasdepeso ul{padding: 30px 5px 30px 0;}
     .estalasdepeso ul li{display:list-item; list-style:none; padding:50px 0 !important; font-size:9px; color:#3b74a5;}
-  .imprimirpdf{width:100%; min-height: 50px; text-align:right; margin: 50px 0 0 0; }
+  .imprimirpdf{ float:right; margin: 50px 0 0 0;vertical-align: top }
   .imprimirpdf a{background-color:#dcdcdc; color:#3b74a5; padding:10px 15px;margin:0 25px 0 0; text-decoration:none;}
   #mipeso {border:1px solid #3b74a5;}
   #mipeso aside{width:20%; background-color:#e8f0f7; padding:78px 20px; display:inline-block;
@@ -342,10 +343,24 @@ bottom:-17px;}
 }
 
 /*---------- mis registros ------------- */
-.misregistros{width:100%; clear:both;  margin:20px 0 0 0;}
-
-
-
+.misregistros{width:100%; clear:both;  margin:20px 0;}
+  .misregistros h1 {font-family: 'robotothin'; font-size:30px;border-bottom:1px #000 solid;
+    padding:0 0 5px;}
+  .misregistros a {color:#36648b; list-style:circle; text-decoration:none; padding: 5px 0;
+    width: 100%; clear:both; }
+.popupregistrosb {background-color:#6290B7; color:#fff; padding:13.5px 15px;
+  text-decoration:none; float:right; margin:37px 14px 0;}
+.modalDialog { position: fixed; top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0,0,0,0.8);  z-index: 99999;  opacity:0;  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;  transition: opacity 400ms ease-in; pointer-events: none;}
+.modalDialog:target { opacity:1; pointer-events: auto;}
+.modalDialog > div { width: 400px; position: relative; margin: 10% auto; padding: 5px 20px 13px 20px;
+  background: #fff;}
+.close { background: #606061; color: #FFFFFF; line-height: 25px; position: absolute; right: -12px;
+  text-align: center; top: -10px; width: 24px; text-decoration: none; font-weight: bold;
+  -webkit-border-radius: 12px; -moz-border-radius: 12px; border-radius: 12px; -moz-box-shadow: 1px 1px 3px #000;
+  -webkit-box-shadow: 1px 1px 3px #000;  box-shadow: 1px 1px 3px #000;}
+.close:hover { background: #00d9ff; }
 
 /*---------------- Audios ------------------ */
 #grabaciones{ background-color: #e9e8e4; padding:0 0 35px 0;}
@@ -1839,6 +1854,11 @@ img#wpstats {
 	width: device-width;
 }
 
+@media only screen and (max-width: 1300px) {
+  ul#tabs li a {padding: 18px 24.5px;}
+  .userlinkspv{margin:-1px 0 0 -3px;}
+}
+
 /* Smaller screens | <1120px */
 @media only screen and (max-width: 1200px) {
   .head-front aside{width: 178px;}
@@ -1865,11 +1885,15 @@ img#wpstats {
     .front-botonlink{padding:27px 0 0;}
   .loginpv aside{padding:31px 28px; width:43%;}
   .loginpv section{padding:21px 43px 32px; width:40%;}
+  .userlinkspv{padding:8px 6px 11px 0;width: 20%;margin:-2px 0 0 -4px;}
+  ul#tabs{margin:21px 0 17px;}
+  ul#tabs li a{padding:18px 25.8px; font-size:16px;}
+  .userlinkspv span{font-size: 13px;}
 }
 
 @media only screen and (max-width: 1000px) {
   .head-front aside{ width: 187px; padding: 16px 0 0;}
-  .imghead{width:666px;}
+  .imghead{width:666px; display:none;}
   .bienvenidoinicio ul li{width: 25%;}
   .bienvenidoinicio ul li:last-child h1 { font-size: 27px;}
   .sliderarea section { width: 74%;}

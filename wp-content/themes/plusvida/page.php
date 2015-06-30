@@ -137,17 +137,30 @@ else
 
 
 
+	<!-- ------------------ Listar mis registros -------------------- -->
 
-<div class="misregistros">
+	<a href="#openModal" class="popupregistrosb">ver mis registros  ></a>
+
+	<div id="openModal" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<div class="misregistros">
+				<h1>Mis registros</h1>
+				<?php
+				$user_ID = $current_user->user_login;
+				$files = glob( './pdf/'.$user_ID.'/*.*' );
+				foreach ( $files as $file )	{
+				echo'</br><a target="_blank" href="./' . $file . '">'. basename( $file ) . '</a><br />';
+				}	?>
+			<div>
+		</div>
+	</div>
 <!-- ------------------ Listar mis registros -------------------- -->
-	<?php
-	$user_ID = $current_user->user_login;
-	$files = glob( './pdf/'.$user_ID.'/*.*' );
-	foreach ( $files as $file )	{
-	echo'<a href="./' . $file . '">'. basename( $file ) . '</a><br />';
-	}	?>
-<!-- ------------------ Listar mis registros -------------------- -->
-<div>
+
+
+
+
+
 
 
 </section>
@@ -182,7 +195,7 @@ else
 	<header>Conferencias o reuniones en linea</header>
 	<section>
 		<img src="wp-content/themes/plusvida/img/usuarios/gotomeeting-logo.jpg"/>
-		<p>Ingresa el número de reunión que te hemos brindando personalmente:</p>
+		<p>Ingresa el siguiente número reunión "533-448-909":</p>
 		<center><script src="http://www.citrixonlinecdn.com/dtsimages/im/support/en/meetNowG.js" language="javascript" type="text/javascript"></script></center>
 	</section>
 </div>
