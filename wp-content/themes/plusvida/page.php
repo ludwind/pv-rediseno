@@ -181,7 +181,7 @@ else
 </section></div>
 <div class="playlist">
 	<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
-<?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date', 	'order' => 'ASC')); $checkbox = 0;?>
+<?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date', 	'order' => 'DESC')); $checkbox = 0;?>
 <ol><?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>"><?php $listado = ++$checkbox; echo $listado;?>. <?php the_title(); ?></a>
 				</li><aside><input type="checkbox" id="option<?php echo $listado;?>"></aside><div class="lineadivisoria-audios"></div>

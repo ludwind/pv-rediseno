@@ -62,20 +62,21 @@
 
 <!-- --- menu login  user -------- -->
 <?php if ( is_user_logged_in() ) {?>
-	<ul id="tabs" class="menu-users">
+<div class="menu-users">	<ul id="tabs">
 		<li><a class="selected " href="#mipeso" id="tabsazulobscuro">Mi Peso</a></li>
 		<li><a class="" href="#grabaciones" id="tabsazulclaro">Grabaciones</a></li>
 		<li><a class="" href="#conferencias" id="tabsazulobscuro">Conferencias</a></li>
 		<li><a class="" href="#drpusvida" id="tabsazulclaro">dr. plusvida</a></li>
 		<li><a class="" href="#contacto" id="tabsazulobscuro">Contacto</a></li>
-	</ul>
-<div class="userlinkspv">
-	<span>hola, <?php global $current_user; if ( isset($current_user) ) { echo $current_user->user_login;}?></span>
-	<ul>
-		<li><a href="<?php echo wp_logout_url( home_url() ); ?>">Cerrar sesión</a></li>
-		<li><a href="<?php echo wp_logout_url( home_url() ); ?>">inicio</a></li>
-	</ul>
-<div>
+		<div class="userlinkspv">
+			<span>hola, <?php global $current_user; if ( isset($current_user) ) { echo $current_user->display_name;}?></span>
+			<ul>
+				<li><a href="<?php echo wp_logout_url( home_url() ); ?>">Cerrar sesión</a></li>
+				<li><a href="<?php echo wp_logout_url( home_url() ); ?>">inicio</a></li>
+			</ul>
+		</div>
+	</ul></div>
+
 <?php } ?>
 <!-- --- menu public -------------- -->
 <?php if ( !is_user_logged_in() ) {?>

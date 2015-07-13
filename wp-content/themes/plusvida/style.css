@@ -221,9 +221,11 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 
 /*---------------- Usuiarios ------------------ */
 /*---------tabs--------- */
-  ul#tabs { list-style-type: none; margin:25px 0 17px; padding: 0 0 0.3em 0; font-size:0px; display:inline-block;
-    vertical-align: top; }
-  ul#tabs li { display: inline; font-family: 'robotothin';color:#fff; text-transform:uppercase; margin:0; text-decoration:none;font-size:20px;  }
+.menu-users{width:100%; margin:-3px 0 0px;background-color:#748bad;border-top: 5px solid #384883;min-height: 63px;}
+  ul#tabs { list-style-type: none;  padding:14px 0 0; font-size:0px; display:inline-block;
+    vertical-align: top;margin:0; }
+  ul#tabs li { display: inline-block; font-family: 'robotothin';color:#fff; text-transform:uppercase; margin:8px 0 0;
+                width: auto;text-decoration:none;font-size:20px;  }
   ul#tabs li a { color: #fff; padding: 0.3em; text-decoration: none; padding:18px 27.2px; }
   ul#tabs li a:hover { background-color:#e9e8e4;}
   ul#tabs li a.selected { color: #000; background-color: #e9e8e4 !important; border-top: 5px solid #e2dfd0 !important;}
@@ -231,12 +233,14 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
   div.tabContent.hide { display: none; }
   #tabsazulclaro {background-color:#748bad !important; border-top: 5px solid #3269a6 !important; }
 	#tabsazulobscuro {background-color:#395a83 !important; border-top: 5px solid #384883 !important;}
-  .userlinkspv { font-family: 'robotothin';color:#fff; text-transform:uppercase;
-      border-top: 5px solid #384883 !important; background-color:#748bad !important;
-      display: inline-block;margin: 0 0 0 -3px;padding:8px 4px 11px 0; width: 25%; color:#fff; text-align:center;}
+  .userlinkspv { font-family: 'robotothin';color:#fff; text-transform:uppercase;float: right;
+      display: inline-block;margin:0 25px 5px 0;padding:0 4px 5px 0; width: 21%; color:#fff; text-align:center;}
+      .userlinkspvin{}
+      .userlinkspv ul{ display:inline-block;}
+      .userlinkspv ul li a{background:none !important; padding:0 !important; margin:0 0 0 8px !important; border:none;}
       .userlinkspv span{font-size:16px;}
       .userlinkspv a{color:#fff; font-size:10px;}
-      .userlinkspv ul li{display:inline-block; margin: 5.5px 5px;}
+      .userlinkspv ul li{display:inline-block; margin:0 !important;}
 .usuasriostabs{}
   .usuasriostabs header{background-color:#3b74a5;font-family: 'housegrind_personal_use_onlRg'; color:#fff;
       font-size:40px; padding: 20px 0 20px 25px;}
@@ -1855,14 +1859,13 @@ img#wpstats {
 }
 
 @media only screen and (max-width: 1300px) {
-  ul#tabs li a {padding: 18px 24.5px;}
-  .userlinkspv{margin:-1px 0 0 -3px;}
+  ul#tabs li a{padding: 18px 26.2px;}
 }
 
 /* Smaller screens | <1120px */
 @media only screen and (max-width: 1200px) {
   .head-front aside{width: 178px;}
-  .imghead { width: 719px;}
+  .imghead { width: 760px;}
   .head-front aside{padding: 27px 0 0;}
   .bienvenidoinicio {width:100%; clear:both;}
   .bienvenidoinicio ul li {font-size: 12px; padding:20px 46px 20px 17px; width:26%; }
@@ -1885,15 +1888,25 @@ img#wpstats {
     .front-botonlink{padding:27px 0 0;}
   .loginpv aside{padding:31px 28px; width:43%;}
   .loginpv section{padding:21px 43px 32px; width:40%;}
-  .userlinkspv{padding:8px 6px 11px 0;width: 20%;margin:-2px 0 0 -4px;}
-  ul#tabs{margin:21px 0 17px;}
-  ul#tabs li a{padding:18px 25.8px; font-size:16px;}
-  .userlinkspv span{font-size: 13px;}
+  ul#tabs li a { padding: 18px 18.2px;}
+}
+
+@media only screen and (max-width: 1100px) {
+  .imghead { width: 662px; }
+  ul#tabs{padding:10px 32px 0 0;}
+  ul#tabs li a { font-size: 17px; padding: 18px 17.2px;}
+  .userlinkspv{margin: 0 22px 5px 0;}
+  .userlinkspv span { font-size: 14px;}
+  .userlinkspv ul li a{font-size: 12px !important;}
+  .menu-users{min-height: 58px;}
+  .head-front aside{padding:27px 32px 0;}
+  .head-front aside ul li{min-height: 38px;}
+  .head-front aside ul li span{font-size: 20px;}
 }
 
 @media only screen and (max-width: 1000px) {
   .head-front aside{ width: 187px; padding: 16px 0 0;}
-  .imghead{width:666px; display:none;}
+  .imghead{width:666px;}
   .bienvenidoinicio ul li{width: 25%;}
   .bienvenidoinicio ul li:last-child h1 { font-size: 27px;}
   .sliderarea section { width: 74%;}
@@ -1904,6 +1917,7 @@ img#wpstats {
   .sliderarea { min-height: 327px;}
   footer ul li:last-child{padding: 43px 22px 0 35px;}
   .contenidofront{font-size: 16px;}
+  ul#tabs li a{padding: 18px 14.2px;}
 }
 
 /* Tablets (landscape) | <960px */
@@ -1936,6 +1950,10 @@ img#wpstats {
   .loginpv aside{padding: 31px 13px;}
   .loginpv aside a{margin: 27px 21% 0;}
   .login-img-banner li{ width: 23.6%;}
+  ul#tabs li a{font-size: 14px;}
+  .userlinkspv{margin: 0 0 5px;}
+  .userlinkspv span{font-size: 12px;}
+
 }
 
 /* Tablets (portrait) | <800px */
@@ -1986,6 +2004,7 @@ img#wpstats {
 
 /* Phablets (portrait) | <640px */
 @media only screen and (max-width: 40em) {
+  .imghead{display:none;}
   .head-front{margin:0;}
   .head-front aside ul li span { font-size: 21px; }
   .mainmenu ul li {width: 100%; height: 28px; padding: 9px 0 0;}
