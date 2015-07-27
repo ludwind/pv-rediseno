@@ -59,7 +59,7 @@
 	<li><a href="https://plus.google.com" target="_new"><img src="wp-content/themes/plusvida/img/home/redes-google-plus.png"/><span>Google+</span></a></li>
 </aside></ul>
 
-
+<?php if(!is_page('909')) { ?>
 <!-- --- menu login  user -------- -->
 <?php if ( is_user_logged_in() ) {?>
 <div class="menu-users">	<ul id="tabs">
@@ -88,7 +88,7 @@
 		<li class="postid-8 mmazulobscuro"><a href="?paginas-website=login">Ingreso a miembros</a></li>
 		<li class="postid-18 mmazulclaro mmunalinea"><a href="?paginas-website=contacto#incribete">¿Aún no eres miembro?</a></li>
 	</div></ul>
-<?php } ?>
+<?php } ?><?php } ?>
 </header>
 
 <!--	<header id="masthead" class="site-header" role="banner">

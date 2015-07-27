@@ -181,10 +181,13 @@ else
 </section></div>
 <div class="playlist">
 	<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
-<?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date', 	'order' => 'DESC')); $checkbox = 0;?>
+<?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC')); $checkbox = 0;?>
 <ol><?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-				<li><a href="#" data-src="<?php the_field("audio"); ?>"><?php $listado = ++$checkbox; echo $listado;?>. <?php the_title(); ?></a>
-				</li><aside><input type="checkbox" id="option<?php echo $listado;?>"></aside><div class="lineadivisoria-audios"></div>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>"><?php $listado = ++$checkbox; echo $listado;?>.
+					 <?php the_title(); ?></a>
+				</li><aside><input type="checkbox" id="option<?php echo $listado;?>"></aside>
+				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 </ol></div>
 <!--<div id="shortcuts"><div><h1>Keyboard shortcuts:</h1>	<p><em>→</em> Next track</p><p><em>←</em> Previous track</p><p><em>Space</em> Play/pause</p></div></div>-->
@@ -343,18 +346,18 @@ $(function() {
       });
 
       $(":checkbox").on("change", function(){
-        var checkboxValues = {};
+        var audiosEscuchados = {};
         $(":checkbox").each(function(){
-          checkboxValues[this.id] = this.checked;
+          audiosEscuchados[this.id] = this.checked;
         });
-        $.cookie('checkboxValues', checkboxValues, { expires: 7, path: '/' })
+        $.cookie('audiosEscuchados', audiosEscuchados, { expires: 900 })
       });
 
       function repopulateCheckboxes(){
-        var checkboxValues = $.cookie('checkboxValues');
-        if(checkboxValues){
-          Object.keys(checkboxValues).forEach(function(element) {
-            var checked = checkboxValues[element];
+        var audiosEscuchados = $.cookie('audiosEscuchados');
+        if(audiosEscuchados){
+          Object.keys(audiosEscuchados).forEach(function(element) {
+            var checked = audiosEscuchados[element];
             $("#" + element).prop('checked', checked);
           });
         }

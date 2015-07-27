@@ -61,7 +61,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 
-/*------------------------ Estilos CEMACO --------------------------- */
+/*------------------------ Estilos Plusvida --------------------------- */
 /*-------------- Header ------------ */
 .imghead{width:844px;}
 .head-front {width: 100%; background-color:#e9e8e4; margin: 35px 0 0;}
@@ -466,6 +466,16 @@ li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; lin
   .contactousuarios-mensaje{background-color:#e2e9f0 !important; width: 68% !important; }
     .boton-enviar-contactousuario{  background-color: #748bad !important; background-image: none !important;
     color: #fff !important; font-size: 18px !important; margin: 20px 35% !important; padding: 7px 0 !important;  width: 171px !important;}
+
+/*---------------- Bloqueo de usuarios ------------------ */
+.usuarios-bloqueados{font-family: "robotoregular";background-color: #3b74a5;width:100%; text-align:center; padding:75px 0; }
+.usuarios-bloqueados section{color: #fff;}
+  .usuarios-bloqueados section h1{ font-family: "housegrind_personal_use_onlRg"; font-size: 46px;margin:0 0 5px;}
+    .usuarios-bloqueados section span{color: #04dfff;}
+    .usuarios-bloqueados a{ background-color: #f7f8f0; clear: both; color: #395a83; margin: 20px auto 0;
+          padding: 10px 25px; text-decoration: none;}
+    .usuarios-bloqueados article{width:100%;clear:both;display:block; padding:30px 0 0;}
+
 
 
 /* =Reset
