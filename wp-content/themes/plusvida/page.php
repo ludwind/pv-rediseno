@@ -183,6 +183,7 @@ else
 	<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC')); $checkbox = 0;?>
+
 <ol><?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>"><?php $listado = ++$checkbox; echo $listado;?>.
 					 <?php the_title(); ?></a>
@@ -190,6 +191,7 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 </ol></div>
+
 <!--<div id="shortcuts"><div><h1>Keyboard shortcuts:</h1>	<p><em>→</em> Next track</p><p><em>←</em> Previous track</p><p><em>Space</em> Play/pause</p></div></div>-->
 </div>
 
