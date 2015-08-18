@@ -157,12 +157,6 @@ else
 	</div>
 <!-- ------------------ Listar mis registros -------------------- -->
 
-
-
-
-
-
-
 </section>
 		<?php }?>
 
@@ -181,16 +175,48 @@ else
 </section></div>
 <div class="playlist">
 	<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
-<?php $myposts = get_posts(array('showposts' => -1,'post_type' => 'audioconferencias', 'orderby' => 'date',
-	'order' => 'DESC')); $checkbox = 0;?>
+<?php $myposts = get_posts(array('showposts' => 10,'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
 
-<ol><?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-				<li><a href="#" data-src="<?php the_field("audio"); ?>"><?php $listado = ++$checkbox; echo $listado;?>.
+<?php
+$audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE idusuario=$usuario" );
+?>
+
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
 					 <?php the_title(); ?></a>
-				</li><aside><input type="checkbox" id="option<?php echo $listado;?>"></aside>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
-</ol></div>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+
+
+</div>
+
+
+
 
 <!--<div id="shortcuts"><div><h1>Keyboard shortcuts:</h1>	<p><em>→</em> Next track</p><p><em>←</em> Previous track</p><p><em>Space</em> Play/pause</p></div></div>-->
 </div>
