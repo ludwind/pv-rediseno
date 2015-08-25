@@ -54,15 +54,17 @@ else
 					<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>
 
 				<section><lable>Peso:</lable>	<div class="medidapeso"> <?php echo "{$medidaGuardada}";?></div>
-					 <input class="intextpvpesos pesoconmedida" vtype="number" name="peso" min="1" max="350"/></section></br>
+					 <input class="intextpvpesos pesoconmedida" type="number" name="peso" min="1" max="350"
+					 onkeypress='return event.charCode >= 48 && event.charCode <= 57'	 maxlength="3"/>
+				 </section></br>
 					<section><lable>Fecha:</lable> <input class="intextpvpesos" type="text" name="fecha" id="datepicker">
 					</section></br>
 
 					<section>	<span>Tipo de dia:</span></br>
-						<input type="radio" name="tipodia" value="1" checked class="tipodiapv ">
-						<div class="biencuidado"> Día bien cuidado</div><br>
-						<input type="radio" name="tipodia" value="2" class="tipodiapv ">
-						<div class="desborde"> Día con desborde</div><br>
+						<input type="radio" name="tipodia" value="1" id="tipodia1" checked class="tipodiapv ">
+						<div class="biencuidado"> <label for="tipodia1">Día bien cuidado</label></div><br>
+						<input type="radio" name="tipodia" value="2" id="tipodia2" class="tipodiapv ">
+						<div class="desborde"> <label for="tipodia2">Día con desborde</label></div><br>
 					</section></br>
 					<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
 				<input type="submit" value="Guardar >" class="guardarpeso">
@@ -174,14 +176,14 @@ else
 						<div class="error-message"></div></div>
 </section></div>
 <div class="playlist">
-	<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
-<?php $myposts = get_posts(array('showposts' => 10,'post_type' => 'audioconferencias', 'orderby' => 'date',
+<?php $audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE idusuario=$usuario" );?>
+
+
+	<?php $myposts = get_posts(array('showposts' => 100,'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
-
-<?php
-$audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE idusuario=$usuario" );
-?>
-
+<?php if (isset($myposts[0])) { ?>
+<section><h1>Basicos PlusVida</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
@@ -194,12 +196,19 @@ $audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE id
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
 
+
+<?php $myposts2 = get_posts(array('showposts' => 100, 'offset' => 100, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+	<?php if (isset($myposts2[0])) { ?>
+<section><h1>Intermedios PlusVida</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
-		<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+		<?php foreach ( $myposts2 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
 					 <?php the_title(); ?></a>
 				</li><aside>
@@ -211,6 +220,147 @@ $audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE id
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
 <input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
+
+
+<?php $myposts3 = get_posts(array('showposts' => 100, 'offset' => 200, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+	<?php if (isset($myposts3[0])) { ?>
+<section><h1>Avanzados PlusVida</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts3 as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
+
+
+<?php $myposts4 = get_posts(array('showposts' => 100, 'offset' => 300, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+	<?php if (isset($myposts4[0])) { ?>
+<section><h1>Herramientas para todos los días</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts4 as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
+
+
+<?php $myposts5 = get_posts(array('showposts' => 100, 'offset' => 400, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+	<?php if (isset($myposts5[0])) { ?>
+<section><h1>La motivación</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts5 as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
+
+
+<?php $myposts6 = get_posts(array('showposts' => 100, 'offset' => 500, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+	<?php if (isset($myposts6[0])) { ?>
+<section><h1>Basicos PlusVida</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts6 as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
+
+
+<?php $myposts7 = get_posts(array('showposts' => 100, 'offset' => 600, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+	<?php if (isset($myposts7[0])) { ?>
+<section><h1>Basicos PlusVida</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts7 as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
+
+
+
+<?php $myposts8 = get_posts(array('showposts' => 100, 'offset' => 700, 'post_type' => 'audioconferencias', 'orderby' => 'date',
+	'order' => 'DESC'));?>
+<?php if (isset($myposts8[0])) { ?>
+<section><h1>Basicos PlusVida</h1>
+<div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
+<form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
+	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
+		<?php foreach ( $myposts8 as $post ) : setup_postdata( $post ); ?>
+				<li><a href="#" data-src="<?php the_field("audio"); ?>">
+					 <?php the_title(); ?></a>
+				</li><aside>
+					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
+					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
+					 </aside>
+				<div class="lineadivisoria-audios"></div>
+			<?php endforeach; wp_reset_postdata();?>
+<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input type="submit" value="Guardar >" class="guardarpeso">
+</ol></form>
+<input type="submit" value="Guardar >" class="guardarpeso"></section>
+<?php } ?>
 
 
 </div>

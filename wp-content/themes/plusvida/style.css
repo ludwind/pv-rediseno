@@ -270,9 +270,9 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
       .asidesinpesos span{color:#000 !important; padding: 10px 0 0 !important; width:100%; clear:both;
         display:block;}
         .form-primer-peso{max-width: 500px; margin:20px auto 0;}
-  .guardarpeso{border-radius:0 !important; background-image: none !important; background-color: #dcdcdc !important;
-                color: #395a83 !important; font-family: 'robotoregular' !important; font-size:18px !important;
-                padding:10px 20px !important; margin: 20px 0 0 !important; }
+  .guardarpeso{border-radius:0 !important; background-image: none !important; background-color:#748bad !important;
+                color: #fff !important; font-family: 'robotoregular' !important; font-size:18px !important;
+                padding:6px 44px !important; margin: 0px 30% 16px !important; }
   .pesoconmedida{width: 63%; margin:-6px 7px 0 0;}
   .selectordedias{width:100%; height:30px; }
   .selectordedias aside {width:37% !important; float:right; background-color:#fff !important;
@@ -370,14 +370,22 @@ bottom:-17px;}
 #grabaciones{ background-color: #e9e8e4; padding:0 0 35px 0;}
 .reproductor {background-color:#3a3a3a;}
   .reproductor section{max-width:470px; margin: 0 auto;}
-.head-playlist{ width:100%; margin:20px 0 0;}
+.head-playlist{ width:100%; padding:15px 0; background-color:#395A83; }
   .head-playlist ul{ list-style:none;}
-  .head-playlist ul li{ list-style:none; display:inline-block; width:48%; text-align:center; color: #000; font-size:13px;}
-.playlist{max-width:470px; margin:0 auto; padding: 0 10px;}
+  .head-playlist ul li{ list-style:none; display:inline-block; width:62%; text-align:center; color: #fff; font-size:13px;}
+  .head-playlist ul li:last-child {width:35%;}
+.playlist{width:100%; margin:0 auto; padding: 0 10px;}
   .playlist a{ color:#3b74a5; text-decoration:none; font-size:16px;}
   .lineadivisoria-audios{width:90%; margin: 0 auto; height: 2px; background-color:#3b74a5; clear:both;}
-  .playlist ol li{width:75%; display:inline-block; }
-  .playlist aside{float:right; display:inline-block; width: 20%; padding:10px 0 0;}
+  .playlist ol{width:100%;}
+    .playlist ol li{width:84%; display:inline-block; }
+  .playlist aside{float:right; display:inline-block; width:13%; padding:10px 0 0;}
+
+  .playlist section{display:inline-block;width:45%; vertical-align: top;  margin: 25px 15px; border: 1px solid #3B74A5;}
+    .playlist section h1{width:100%; padding: 10px 0; text-align: center; background-color:#3B74A5; color:#fff; font-family: 'housegrind_personal_use_onlRg';
+          font-size:25px;}
+    .playlist section form {max-height: 500px;  overflow: scroll;overflow-x: hidden;}
+
 .audiojs audio { position: absolute; left: -1px; }
 .audiojs { width: 460px; height: 36px; background: #404040; overflow: hidden; font-family: monospace; font-size: 12px;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
@@ -1870,6 +1878,7 @@ img#wpstats {
 
 @media only screen and (max-width: 1300px) {
   ul#tabs li a{padding: 18px 26.2px;}
+  .guardarpeso{margin: 33px 9% 16px !important;}
 }
 
 /* Smaller screens | <1120px */
@@ -1899,6 +1908,11 @@ img#wpstats {
   .loginpv aside{padding:31px 28px; width:43%;}
   .loginpv section{padding:21px 43px 32px; width:40%;}
   ul#tabs li a { padding: 18px 18.2px;}
+  #mipeso section  {width: 75%;}
+  .selectordedias{height: 58px;}
+  .ancho-grafico14 { font-size: 8px; width: 39px;}
+  .ancho-grafico29{width: 18px;}
+
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1912,9 +1926,11 @@ img#wpstats {
   .head-front aside{padding:27px 32px 0;}
   .head-front aside ul li{min-height: 38px;}
   .head-front aside ul li span{font-size: 20px;}
+  .ancho-grafico14 { width: 36px;font-size: 7px;}
 }
 
 @media only screen and (max-width: 1000px) {
+.imghead{display:none;}
   .head-front aside{ width: 187px; padding: 16px 0 0;}
   .imghead{width:666px;}
   .bienvenidoinicio ul li{width: 25%;}
@@ -1993,7 +2009,7 @@ img#wpstats {
   .suscribe ul li:first-child span{display: inline-block; margin:0 0 0 8px;}
   .suscribe ul li{width: 100%;}
   .boton-suscripcion{font-size: 16px !important; margin:-48px 0 0;}
-  .suscribeinput{width: 80% !important;height: 41px !important;margin: 3px 0 0;}
+  .suscribeinput{width: 80% !important;heighht: 41px !important;margin: 3px 0 0;}
   footer ul li { width: 57%;}
   footer ul li ul li{ width: 100%;}
   footer ul li ul li:last-child {width: 100%;}
@@ -2010,13 +2026,17 @@ img#wpstats {
   .loginpv aside a{margin: 27px 29% 0;}
   .login-img-banner li{width: 24.5%;}
     .login-img-banner li img{ width:100%;}
+  ul#tabs {padding: 10px 0 0;}
+    ul#tabs li a{padding:18px 17.5px;}
+  .userlinkspv{margin: 24px 0 5px; width: 100%;}
 }
 
 /* Phablets (portrait) | <640px */
 @media only screen and (max-width: 40em) {
-  .imghead{display:none;}
   .head-front{margin:0;}
-  .head-front aside ul li span { font-size: 21px; }
+  .head-front aside{padding: 13px 0 0;}
+    .head-front aside ul li{padding: 0 0 10px;}
+      .head-front aside ul li span { font-size: 21px; }
   .mainmenu ul li {width: 100%; height: 28px; padding: 9px 0 0;}
   .mainmenu ul li a { font-size: 17px;}
   .mmunalinea {height: 27px !important; padding: 10px 0 0 !important;}
@@ -2044,6 +2064,14 @@ img#wpstats {
   .loginpv section { padding: 21px 10px 32px; width: 95%;  }
   .loginpv aside { padding: 31px 10px; width: 95%;}
   .login-img-banner li { width: 24.1%;}
+  ul#tabs { padding: 0;}
+    ul#tabs li{margin: 0;width: 100%;}
+      ul#tabs li a { display: inline-block; padding: 15px 0; text-align: center; width: 100%;}
+  .userlinkspv{margin: 11px 0 10px;}
+  .userlinkspv span{display:none;}
+  .userlinkspv ul{width:100%;}
+    .userlinkspv ul li {width:45% !important;}
+  .usuasriostabs header {font-size: 27px; padding: 20px 0; text-align: center;}
 }
 
 /* Smartphones | <480px */
@@ -2075,10 +2103,11 @@ img#wpstats {
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-  .head-front aside ul li img { width: 42%; }
+  .head-front aside ul li img { width: 35%; }
   footer section { margin: -17px 0 0 20px; padding: 0 0 14px; }
   .boton-suscripcion {margin: -47px 0 0;}
   .front-headtitular aside{font-size: 15px;}
+  .usuasriostabs header{font-size: 21px;}
 }
 
 /* Minimum width of 600 pixels. */
