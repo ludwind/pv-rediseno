@@ -54,8 +54,8 @@ else
 					<input type="hidden" name="usuario" value="<?php echo get_current_user_id( ); ?>"/>
 
 				<section><lable>Peso:</lable>	<div class="medidapeso"> <?php echo "{$medidaGuardada}";?></div>
-					 <input class="intextpvpesos pesoconmedida" type="number" name="peso" min="1" max="350"
-					 onkeypress='return event.charCode >= 48 && event.charCode <= 57'	 maxlength="3"/>
+					 <input class="intextpvpesos pesoconmedida" vtype="number" name="peso" min="1" max="350"
+					maxlength="6"/>
 				 </section></br>
 					<section><lable>Fecha:</lable> <input class="intextpvpesos" type="text" name="fecha" id="datepicker">
 					</section></br>

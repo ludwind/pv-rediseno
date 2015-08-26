@@ -1860,7 +1860,6 @@ img#wpstats {
 	margin: 0 auto 1.714285714rem;
 }
 
-
 /* =Media queries
 -------------------------------------------------------------- */
 
@@ -1879,6 +1878,8 @@ img#wpstats {
 @media only screen and (max-width: 1300px) {
   ul#tabs li a{padding: 18px 26.2px;}
   .guardarpeso{margin: 33px 9% 16px !important;}
+  .ancho-grafico14{ width: 47px;}
+
 }
 
 /* Smaller screens | <1120px */
@@ -1927,10 +1928,14 @@ img#wpstats {
   .head-front aside ul li{min-height: 38px;}
   .head-front aside ul li span{font-size: 20px;}
   .ancho-grafico14 { width: 36px;font-size: 7px;}
+  .pesoconmedida{width: 53% !important;}
+  .intextpvpesos{width: 67%;}
+  .selectordedias aside { padding: 14px 0 0 !important; width: 48% !important;}
+  .barGraph {margin: 23px auto 0 40px;}
+  .ancho-grafico29 { width: 16px;}
 }
 
 @media only screen and (max-width: 1000px) {
-.imghead{display:none;}
   .head-front aside{ width: 187px; padding: 16px 0 0;}
   .imghead{width:666px;}
   .bienvenidoinicio ul li{width: 25%;}
@@ -1944,6 +1949,9 @@ img#wpstats {
   footer ul li:last-child{padding: 43px 22px 0 35px;}
   .contenidofront{font-size: 16px;}
   ul#tabs li a{padding: 18px 14.2px;}
+  .guardarpeso { margin: 33px 0 16px !important;}
+  .ancho-grafico14 { width: 35px; }
+  .ancho-grafico29 { width: 15px; }
 }
 
 /* Tablets (landscape) | <960px */
@@ -1979,7 +1987,13 @@ img#wpstats {
   ul#tabs li a{font-size: 14px;}
   .userlinkspv{margin: 0 0 5px;}
   .userlinkspv span{font-size: 12px;}
-
+  .pesoconmedida { width: 44% !important;}
+  .intextpvpesos { width: 61%;}
+  .guardarpeso  {padding: 6px 29px !important;}
+  #mipeso section {width: 73%;}
+  .selectordedias aside { width: 58% !important; }
+  .ancho-grafico14 { width: 27px; font-size: 6px}
+  .ancho-grafico29 { width: 11px;}
 }
 
 /* Tablets (portrait) | <800px */
@@ -2029,6 +2043,21 @@ img#wpstats {
   ul#tabs {padding: 10px 0 0;}
     ul#tabs li a{padding:18px 17.5px;}
   .userlinkspv{margin: 24px 0 5px; width: 100%;}
+  #mipeso aside{width: 93%;padding: 30px 20px 18px;}
+  #mipeso aside section { margin: 0 22%; width: 49%;}
+  #mipeso aside section span {margin: 6px 0 -10px;}
+  .intextpvpesos {width: 72%;}
+  .pesoconmedida { width: 62% !important;}
+  .tipodiapv { margin: 4px 0 4px 59px; }
+  .guardarpeso { padding: 6px 62px !important; margin: 7px 27% 0 !important; }
+  #mipeso section { width: 99%;padding: 0 0 16px;}
+  .ancho-grafico14 {width: 29px;}
+  .estalasdepeso{padding: 0 0 0 4px;}
+  .playlist section {width: 90%;padding: 0 0 17px;}
+  .userlinkspv span { padding: 0 30px; }
+  .contactousuarios ul li:first-child {width: 81%;padding:20px 55px 37px;}
+  .contactousuarios ul li:first-child h1  {font-size: 40px;padding: 0 0 3px;}
+  .contactousuarios ul li:last-child  {width: 88%;}
 }
 
 /* Phablets (portrait) | <640px */
@@ -2072,6 +2101,17 @@ img#wpstats {
   .userlinkspv ul{width:100%;}
     .userlinkspv ul li {width:45% !important;}
   .usuasriostabs header {font-size: 27px; padding: 20px 0; text-align: center;}
+  #mipeso aside{width: 90%;}
+  #mipeso aside section { margin: 0 16%; width: 59%;}
+  .guardarpeso { margin: 7px 20% 0 !important;}
+  .selectordedias aside { width: 86% !important; }
+  .barGraph{width: 88%;}
+  .ancho-grafico14 { width: 19px;font-size:3px;margin: 0 0 7px;  }
+  .ancho-grafico29 {width: 7px;}
+  .ancho-grafico89 { width: 4px;}
+  .guardarpeso {font-size: 16px !important;padding: 6px 44px !important;margin: 7px 26% 0 !important;}
+  .contactousuarios ul li:first-child{ width: 73%;font-size: 14px;}
+  .contactousuarios ul li:first-child h1 { font-size: 28px;}
 }
 
 /* Smartphones | <480px */
@@ -2099,10 +2139,22 @@ img#wpstats {
   .loginpv aside h1{font-size: 28px;}
   .loginpv aside a { margin: 18px 13% 0;}
   #shortcuts { display: none; }
+  #mipeso aside section { margin: 0 7%; width: 77%; }
+  .guardarpeso{margin: 7px 15% 0 !important;}
+  .estalasdepeso { padding: 0 0 0 2px;}
+  .estalasdepeso ul li{font-size: 8px;}
+  .barGraph {width: 85%; margin: 23px auto 0 33px;}
+  .ancho-grafico14 { font-size: 2px; width: 12px;}
+  .ancho-grafico29 { font-size: 1px; margin: 0 0 8px; width: 3px;}
+  .ancho-grafico89 { margin: 0 0 7px; width: 2px;font-size: 2px;}
+  #mipeso aside span {  font-size: 13px;}
+  .selectordedias aside { width: 95% !important;}
 }
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
+  .head-front aside{display:none;}
+
   .head-front aside ul li img { width: 35%; }
   footer section { margin: -17px 0 0 20px; padding: 0 0 14px; }
   .boton-suscripcion {margin: -47px 0 0;}
