@@ -179,7 +179,9 @@ else
 <?php $audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE idusuario=$usuario" );?>
 
 
-	<?php $myposts = get_posts(array('showposts' => 100,'post_type' => 'audioconferencias', 'orderby' => 'date',
+	<?php
+	$contadorAudios = 1;
+	 $myposts = get_posts(array('showposts' => 100,'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 <?php if (isset($myposts[0])) { ?>
 <section><h1>Basicos PlusVida</h1>
@@ -188,7 +190,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -210,7 +212,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts2 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -218,7 +220,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -233,7 +234,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts3 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -241,7 +242,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -256,7 +256,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts4 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -264,7 +264,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -279,7 +278,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts5 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -287,7 +286,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -302,7 +300,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts6 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -310,7 +308,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -325,7 +322,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts7 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -333,7 +330,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -349,7 +345,7 @@ else
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
 		<?php foreach ( $myposts8 as $post ) : setup_postdata( $post ); ?>
 				<li><a href="#" data-src="<?php the_field("audio"); ?>">
-					 <?php the_title(); ?></a>
+					 <?php echo $contadorAudios++ .'. '; the_title(); ?></a>
 				</li><aside>
 					<?php $idaudios = get_the_ID(); ?><input type="checkbox" name="id-audio[]" value="<?php echo $idaudios; ?>"
 					<?php if (in_array($idaudios, $audiosCheckbox )) echo 'checked';?>>
@@ -357,7 +353,6 @@ else
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
 <input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
-<input type="submit" value="Guardar >" class="guardarpeso">
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>

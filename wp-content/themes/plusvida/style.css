@@ -473,7 +473,7 @@ li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; lin
 .contactousuario-usuario{background-color:#e2e9f0 !important; width: 68% !important; }
   .contactousuarios-mensaje{background-color:#e2e9f0 !important; width: 68% !important; }
     .boton-enviar-contactousuario{  background-color: #748bad !important; background-image: none !important;
-    color: #fff !important; font-size: 18px !important; margin: 20px 35% !important; padding: 7px 0 !important;  width: 171px !important;}
+    color: #fff !important; font-size: 18px !important; margin: 20px 0 20px 35% !important; padding: 7px 0 !important;  width: 171px !important;}
 
 /*---------------- Bloqueo de usuarios ------------------ */
 .usuarios-bloqueados{font-family: "robotoregular";background-color: #3b74a5;width:100%; text-align:center; padding:75px 0; }
@@ -2053,6 +2053,7 @@ img#wpstats {
   #mipeso section { width: 99%;padding: 0 0 16px;}
   .ancho-grafico14 {width: 29px;}
   .estalasdepeso{padding: 0 0 0 4px;}
+  .playlist{width: 93%;}
   .playlist section {width: 90%;padding: 0 0 17px;}
   .userlinkspv span { padding: 0 30px; }
   .contactousuarios ul li:first-child {width: 81%;padding:20px 55px 37px;}
@@ -2101,7 +2102,7 @@ img#wpstats {
   .userlinkspv ul{width:100%;}
     .userlinkspv ul li {width:45% !important;}
   .usuasriostabs header {font-size: 27px; padding: 20px 0; text-align: center;}
-  #mipeso aside{width: 90%;}
+  #mipeso aside{width:86%;}
   #mipeso aside section { margin: 0 16%; width: 59%;}
   .guardarpeso { margin: 7px 20% 0 !important;}
   .selectordedias aside { width: 86% !important; }
@@ -2149,17 +2150,18 @@ img#wpstats {
   .ancho-grafico89 { margin: 0 0 7px; width: 2px;font-size: 2px;}
   #mipeso aside span {  font-size: 13px;}
   .selectordedias aside { width: 95% !important;}
+  .audiojs{width:100%;}
 }
 
 /* Smartphones | <320px */
 @media only screen and (max-width: 20em) {
-  .head-front aside{display:none;}
-
   .head-front aside ul li img { width: 35%; }
   footer section { margin: -17px 0 0 20px; padding: 0 0 14px; }
   .boton-suscripcion {margin: -47px 0 0;}
   .front-headtitular aside{font-size: 15px;}
   .usuasriostabs header{font-size: 21px;}
+  .contactousuarios ul li:first-child{width: 64%;}
+  .contactousuarios ul li:last-child { width: 94%;padding: 35px 0 0;}
 }
 
 /* Minimum width of 600 pixels. */
