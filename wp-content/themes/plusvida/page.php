@@ -31,7 +31,7 @@ get_header(); ?>
 			<option value="lbrs">Libras</option>
 			<option value="kls">Kilogramos</option>
 		</select></section></br>
-
+<input name="referer" type="hidden" value="<?php echo urlencode($_SERVER['HTTP_REFERER']) ?>" />
 		<input type="submit" value="Guardar >" class="guardarpeso">
 		</form>
 
@@ -67,6 +67,7 @@ else
 						<div class="desborde"> <label for="tipodia2">Día con desborde</label></div><br>
 					</section></br>
 					<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
+<input name="referer" type="hidden" value="<?php echo urlencode($_SERVER['HTTP_REFERER']) ?>" />
 				<input type="submit" value="Guardar >" class="guardarpeso">
 				</form>
 </aside>
@@ -184,7 +185,7 @@ else
 	 $myposts = get_posts(array('showposts' => 100,'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 <?php if (isset($myposts[0])) { ?>
-<section><h1>Basicos PlusVida</h1>
+<section><h1>Grabaciones de 1 a 100</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -197,7 +198,6 @@ else
 					 </aside>
 				<div class="lineadivisoria-audios"></div>
 			<?php endforeach; wp_reset_postdata();?>
-<input type='hidden' id='myInput' name='previus' value='".$_SERVER['PHP_SELF']."' />
 </ol></form>
 <input type="submit" value="Guardar >" class="guardarpeso"></section>
 <?php } ?>
@@ -206,7 +206,7 @@ else
 <?php $myposts2 = get_posts(array('showposts' => 100, 'offset' => 100, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 	<?php if (isset($myposts2[0])) { ?>
-<section><h1>Intermedios PlusVida</h1>
+<section><h1>Grabaciones de 101 a 200</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -228,7 +228,7 @@ else
 <?php $myposts3 = get_posts(array('showposts' => 100, 'offset' => 200, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 	<?php if (isset($myposts3[0])) { ?>
-<section><h1>Avanzados PlusVida</h1>
+<section><h1>Grabaciones de 201 a 300</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -250,7 +250,7 @@ else
 <?php $myposts4 = get_posts(array('showposts' => 100, 'offset' => 300, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 	<?php if (isset($myposts4[0])) { ?>
-<section><h1>Herramientas para todos los días</h1>
+<section><h1>Grabaciones de 301 a 400</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -272,7 +272,7 @@ else
 <?php $myposts5 = get_posts(array('showposts' => 100, 'offset' => 400, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 	<?php if (isset($myposts5[0])) { ?>
-<section><h1>La motivación</h1>
+<section><h1>Grabaciones de 401 a 500</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -294,7 +294,7 @@ else
 <?php $myposts6 = get_posts(array('showposts' => 100, 'offset' => 500, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 	<?php if (isset($myposts6[0])) { ?>
-<section><h1>Basicos PlusVida</h1>
+<section><h1>Grabaciones de 501 a 600</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -316,7 +316,7 @@ else
 <?php $myposts7 = get_posts(array('showposts' => 100, 'offset' => 600, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 	<?php if (isset($myposts7[0])) { ?>
-<section><h1>Basicos PlusVida</h1>
+<section><h1>Grabaciones de 601 a 700</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -339,7 +339,7 @@ else
 <?php $myposts8 = get_posts(array('showposts' => 100, 'offset' => 700, 'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 <?php if (isset($myposts8[0])) { ?>
-<section><h1>Basicos PlusVida</h1>
+<section><h1>Grabaciones de 701 a 800</h1>
 <div class="head-playlist"><ul><li>Nombre</li><li>Marcar como ya escuchada</li></ul></div>
 <form action="?page_id=1940" method="post" class="formulario-pesos"><ol>
 	<input type="hidden" name="id-usuario" value="<?php echo get_current_user_id( ); ?>"/>
@@ -368,7 +368,7 @@ else
 
 <!-- -------------------------- Conferencias go to meeting ------------------------------ -->
 <div class="tabContent hide" id="conferencias">
-	<header>Conferencias o reuniones en linea</header>
+	<header>Sesiones en vivo</header>
 	<section>
 		<img src="wp-content/themes/plusvida/img/usuarios/gotomeeting-logo.jpg"/>
 		<p>Ingresa el siguiente número reunión "533-448-909":</p>
@@ -380,20 +380,29 @@ else
 <div class="tabContent hide" id="drpusvida">
 	<header>Recomendaciones Dr. PlusVida</header>
 <div class="recomendaciones-drpv">
+
+	<!-------- Ejemplo  ---
+	<ul><li>1. Recuerda pesarte cada día en el mismo horario!</li>
+	<li>2. No olvides tomar los 4 litros de líquido cada día!</li>
+	<li>3. Pensar no adelgaza!</li>
+	<li>4. No hagas "casi todo" haz Caso a todo!</li></ul>
+	<!-------- Ejemplo  --- -->
+
 	<?php $tiporecomendacion = get_field("recomendacionesdrpv");
 	$recomendaciones = get_posts(array('showposts' => -1,'post_type' => 'recomendacionesdrpv', 'tax_query' => array(
 		array( 'taxonomy' => 'porantiguedad', 'field' => 'slug', 'terms' => $tiporecomendacion )  )));?>
 	<ul><?php foreach ( $recomendaciones as $post ) : setup_postdata( $post ); ?><li>
 		<?php the_content( ); ?>
-	</li> <?php endforeach; wp_reset_postdata();?></ul></div>
+
+	</li> <?php endforeach; wp_reset_postdata();?></ul>
+</div>
 </div>
 
 <!-- -------------------------- Contacto usuarios ------------------------------ -->
 <div class="tabContent hide" id="contacto">
 	<header>Contáctanos</header>
 	<div class="contactousuarios"><ul>
-		<li><h1>disponibles para ti</h1>Puedes contactarnos por cualquier duda sobre
-nuestros servicios y tratamientos </br>Escríbenos:  <a href="mailto:contacto@plusvida.org">contacto@plusvida.org</a></li>
+		<li><h1>911 PlusVida</h1>Atención 24/7 a todas tus consultas y necesidades</br>Llámanos:  <b>+(502) 3092-2286</b></li>
 		<li><span>¿Tienes preguntas? escríbenos:</span></p>
 			<div class="contactoform-usuario"><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 12 ); } ?></div></li>
 	</ul></div>

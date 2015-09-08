@@ -5,8 +5,10 @@
 
 ?>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+<head>
+ <link rel="stylesheet" type="text/css" href="wp-content/themes/plusvida/style.css">
+</head>
+
 
 <?php
 /////////////////////// Variables ///////////////////////
@@ -26,19 +28,13 @@ if ($todosLosAudios != $idAudio)
 			$wpdb->insert( $table_name, array( 'idusuario' => $_POST['id-usuario'], 'idaudio' => $myaudioId) );
 	}
 ?>
+
+<div class="peso-guardado"><section>
 Guardado exitosamente
+</div></section>
 
-<input type="hidden" name="guardarpeso" value="pesoguardado"/>
+<script>
+window.location.href = document.referrer;
+</script>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-				<?php comments_template( '', true ); ?>
-			<?php endwhile; // end of the loop. ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
-
-	<?php
-	 header('Location: ' . $_SERVER['HTTP_REFERER']);
-	get_footer(); ?>
+	<?php 	get_footer(); ?>

@@ -221,6 +221,8 @@ footer section {color:#a9a9a9; font-size:16px; margin:-17px 0 24px 20px; }
 
 /*---------------- Usuiarios ------------------ */
 /*---------tabs--------- */
+.peso-guardado{color:#3B74A5;}
+  .peso-guardado section {text-align:center;padding:50px 0; font-family: 'housegrind_personal_use_onlRg'; font-size:35px}
 .menu-users{width:100%; margin:-3px 0 0px;background-color:#748bad;border-top: 5px solid #384883;min-height: 63px;}
   ul#tabs { list-style-type: none;  padding:14px 0 0; font-size:0px; display:inline-block;
     vertical-align: top;margin:0; }
@@ -457,7 +459,7 @@ li.playing:before { content: '♬'; width: 14px; height: 14px; padding: 3px; lin
 .contactousuarios{ width:100%; background-color:#f5f5f5;}
   .contactousuarios ul{list-style:none;}
     .contactousuarios ul li{list-style:none;display:inline-block; vertical-align:top;}
-    .contactousuarios ul li:first-child{background-color:#7291ab; text-align:center; color:#fff; padding:112px 55px; width:36%;
+    .contactousuarios ul li:first-child{background-color:#7291ab; text-align:center; color:#fff; padding:151px 55px; width:36%;
           font-size:17px; line-height:22px; }
       .contactousuarios ul li:first-child h1{font-family: 'housegrind_personal_use_onlRg'; color:#fff; font-size:53px;font-weight: normal;
           padding:0 0 20px; line-height: 49px;}

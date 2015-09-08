@@ -4,9 +4,9 @@
  */
 
 ?>
-
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
+<head>
+ <link rel="stylesheet" type="text/css" href="wp-content/themes/plusvida/style.css">
+</head>
 
 <?php
 
@@ -30,8 +30,10 @@ $wpdb->delete( $table_name, array( 'fecha' => $fechaPorGuardar, 'usuario' => $us
 $wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
 																		'fecha' => $_POST['fecha'], 'tipodia' => $_POST['tipodia']) );?>
 
+																		<div class="peso-guardado"><section>
+																						Guardado exitosamente
+																	</div></section>
 
-¡Peso sobre-escrito exitosamente!
 
 <?php
 /////////////////////////// si el peso no existe y solo lo guardará
@@ -40,23 +42,23 @@ $wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_P
 		$table_name = "pesos_plusvida";
 		$wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario'], 'peso' => $_POST['peso'],
 																				'fecha' => $_POST['fecha'], 'tipodia' => $_POST['tipodia']) );?>
-Guardado exitosamente
 
-<input type="hidden" name="guardarpeso" value="pesoguardado"/>
+
+
+	<div class="peso-guardado"><section>
+					Guardado exitosamente
+</div></section>
+
+
 
 <?php } ?>
-
-
-
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-				<?php comments_template( '', true ); ?>
-			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
+	<script>
+window.location.href = document.referrer;
+	</script>
 
 	<?php
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
-	get_footer(); ?>
+?>

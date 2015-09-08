@@ -4,9 +4,10 @@
  */
 
 get_header(); ?>
+<head>
+ <link rel="stylesheet" type="text/css" href="wp-content/themes/plusvida/style.css">
+</head>
 
-	<div id="primary" class="site-content">
-		<div id="content" role="main">
 
 <?php
 
@@ -15,17 +16,19 @@ $table_name = "primer_peso_plusvida";
 $wpdb->insert( $table_name, array( 'usuario' => $_POST['usuario-inicial'], 'primerpeso' => $_POST['primer-peso'],
 																		'fecha' => current_time('mysql', 1), 'medidapeso' => $_POST['medida']) );?>
 
+<div class="peso-guardado"><section>
+			Primer peso Guardado exitosamente
+</div></section>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', 'page' ); ?>
-				<?php comments_template( '', true ); ?>
-			<?php endwhile; // end of the loop. ?>
+
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
 
+		<script>
+	window.location.href = document.referrer;
+		</script>
 
 	<?php
-	header('Location: ' . $_SERVER['HTTP_REFERER']);
 	get_footer(); ?>
