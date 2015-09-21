@@ -181,7 +181,7 @@ else
 
 
 	<?php
-	$contadorAudios = 1;
+	$contadorAudios = 0;
 	 $myposts = get_posts(array('showposts' => 100,'post_type' => 'audioconferencias', 'orderby' => 'date',
 	'order' => 'DESC'));?>
 <?php if (isset($myposts[0])) { ?>
