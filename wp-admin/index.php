@@ -95,6 +95,22 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <div class="wrap">
 	<h2><?php echo esc_html( $title ); ?></h2>
 
+<style>
+.tutoriales{ background-color: #fff; margin: 18px 0; padding: 20px; width: 95%;}
+
+</style>
+
+<div class="tutoriales"><center><h3>¿Cómo utilizar el sitio web?</h3></center>
+	<ul>
+		<li><img src="images/">¿Cómo crear usuarios?</li>
+		<li><img src="images/">¿Cómo cargar audios?</li>
+		<li><img src="images/">¿Cómo crear recomendaciones Dr. PlusVida?</li>
+		<li><img src="images/">¿Cómo crear páginas estáticas?</li>
+	</ul>
+</div>
+
+
+
 <?php if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) ) :
 	$classes = 'welcome-panel';
 
@@ -122,6 +138,9 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 <?php endif; ?>
 
 	<div id="dashboard-widgets-wrap">
+
+
+
 	<?php wp_dashboard(); ?>
 	</div><!-- dashboard-widgets-wrap -->
 
