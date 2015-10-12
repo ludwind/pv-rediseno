@@ -106,28 +106,59 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 		<div>
 			<input id="ac-1" name="accordion-1" type="radio" checked />
 			<label for="ac-1">¿Cómo crear usuarios?</label>
-			<article class="ac-small">
-				<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.</p>
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/9aBMWcFRJvA" frameborder="0" allowfullscreen></iframe>
+				<p><ol>
+<li>Haz clic en la sección “Perfil de usuarios” en el menú izquierdo, y luego en el menú o botón “Añadir nueva”.</li>
+<li>Copia y pega el nombre completo del paciente desde tu base de datos personal, dentro del primer campo “Titulo”.</li>
+<li>Asigna la categoría de “Recomendación Dr. PlusVida” que aparecerá en la pestaña  bajo el mismo nombre para el usuario.</li>
+<li>Haz clic en el botón “Publicar”. </li>
+<li>Haz clic en el menú izquierdo “Usuarios” y luego “Añadir nuevo” idealmente en una nueva pestaña, así dejando abierta la pantalla anterior.</li>
+<li>Llenamos toda la información básica de nuestro usuario, dejando como perfil “Suscriptor”.</li>
+<li>Para guardar o publicar hacemos clic en “Añadir nuevo usuario”.</li>
+<li>Una vez creado nuestro usuario, hacemos clic nuevamente en “Editar usuario” lo cual nos llevará a la pantalla previamente vista con algunos agregados, al  bajar hasta la última opción “Redirect to” en el menú expandible seleccionaremos la pantalla que hemos creado con anterioridad bajo el nombre de nuestro paciente, luego hacemos clic en “Actualizar usuario” para guardar nuestros cambios.</li>
+<li>Ahora podemos regresar a nuestra pantalla anterior dentro de “Perfil de usuarios” la cual hemos creado bajo el nombre de nuestro paciente,  dentro del menú derecho en la sección de “Visibilidad” lo cambiaremos de Público a “Privada” para proteger la información de nuestro paciente. Hacemos clic en “Actualizar”.</li>
+<li>Hemos finalizado la creación de nuestro usuario, puedes hacer pruebas cerrando sesión e ingresando desde el sitio web en la pestaña de usuarios.</li>
+				</ol></p>
 			</article>
 		</div>
 		<div>
 			<input id="ac-2" name="accordion-1" type="radio" />
 			<label for="ac-2">¿Cómo cargar audios?</label>
-			<article class="ac-medium">
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/QjpAjaJaMJ0" frameborder="0" allowfullscreen></iframe>
 				<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
 			</article>
 		</div>
 		<div>
 			<input id="ac-3" name="accordion-1" type="radio" />
 			<label for="ac-3">¿Cómo crear recomendaciones Dr. PlusVida?</label>
-			<article class="ac-large">
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/ylJR9Wd_L9w" frameborder="0" allowfullscreen></iframe>
 				<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
 			</article>
 		</div>
 		<div>
 			<input id="ac-4" name="accordion-1" type="radio" />
-			<label for="ac-4">¿Cómo crear páginas estáticas?</label>
-			<article class="ac-large">
+			<label for="ac-4">¿Asignar a usuarios recomendaciones Dr. PlusVida?</label>
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/OPUyz5C6gAg" frameborder="0" allowfullscreen></iframe>
+				<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+			</article>
+		</div>
+		<div>
+			<input id="ac-5" name="accordion-1" type="radio" />
+			<label for="ac-5">¿Cómo crear páginas estáticas?</label>
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/IOnDgDwTG1c" frameborder="0" allowfullscreen></iframe>
+				<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+			</article>
+		</div>
+		<div>
+			<input id="ac-6" name="accordion-1" type="radio" />
+			<label for="ac-6">¿Cómo crear testimonios?</label>
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/hsakZhUjr6o" frameborder="0" allowfullscreen></iframe>
 				<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
 			</article>
 		</div>

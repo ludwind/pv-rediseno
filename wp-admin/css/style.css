@@ -13,6 +13,7 @@
 	margin: 10px auto 30px auto;
 	text-align: left;
 }
+.ac-container iframe{margin: 20px 0 0 20px; float:right;}
 .ac-container label{
 	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 	padding: 5px 20px;
@@ -84,7 +85,7 @@
 	color: #777;
 	line-height: 23px;
 	font-size: 14px;
-	padding: 20px;
+	padding: 1px 20px;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
 .ac-container input:checked ~ article{
@@ -104,3 +105,4 @@
 .ac-container input:checked ~ article.ac-large{
 	height: 230px;
 }
+.ac-container input:checked ~ article.ac-auto{height:auto;}
