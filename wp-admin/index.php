@@ -127,7 +127,18 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			<label for="ac-2">¿Cómo cargar audios?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/QjpAjaJaMJ0" frameborder="0" allowfullscreen></iframe>
-				<p>Like you, I used to think the world was this great place where everybody lived by the same standards I did, then some kid with a nail showed me I was living in his world, a world where chaos rules not order, a world where righteousness is not rewarded. That's Cesar's world, and if you're not willing to play by his rules, then you're gonna have to pay the price. </p>
+				<p><ol>
+<li>Idealmente podamos grabar nuestros audios en formato mp3, de lo contrario recomiendo descargar las siguientes plataformas para convertir audio: <a href="http://es.download.cnet.com/All2MP3/3001-2140_4-190407.html?spi=ddd053586ca36d49756661fd0295a0be" target="_blank">All2mp3</a> o <a href="http://real.com" target="_blank">Real Player</a> que incluye Real Converter.</li>
+<li>Para este caso convertiremos nuestro audio con Real Converter, abrimos nuestra aplicación y arrastramos directamente nuestro audio dentro de la misma. </li>
+<li>Seleccionamos dentro de “Convertir a” la categoría “Audio” el formato MP3, luego en la sección “Guardar en” seleccionamos la carpeta en la cual deseamos guardar nuestro audio, y presionamos el botón “Inicio”.</li>
+<li>Una vez convertido nuestro audio a MP3, regresamos a nuestro sitio web, hacemos clic en el menú izquierdo “Audios” y luego en el botón “Añadir nueva”.</li>
+<li>Colocamos el título de nuestra elección a ser mostrado en nuestro listado de audios.</li>
+<li>En la sección “Audio” hacemos clic en “Añadir archivo” para cargar nuestro audio, ahora es tan fácil como arrastrar el audio hacia nuestra ventana y soltarlo, automáticamente comenzará a subir a nuestro servidor.</li>
+<li>Una vez cargado, hacemos clic en “Elegir” y podremos verificar que nuestro audio fue cargado exitosamente, y por último hacemos clic en “Publicar”.</li>
+<li>Para colocar nuestro audio al final de nuestro listado o en cualquier posición de nuestra elección, vamos a nuestro menú izquierdo en la pestaña “Audios” y luego en el botón “Ordenar Audios”</li>
+<li>En el listado general, encontraremos nuestro nuevo audio al inicio, solamente debemos arrastrarlo a la posición deseada, y hacer clic en “Actualizar”.</li>
+<li>Hemos terminado exitosamente la carga de nuestro nuevo audio.</li>
+				</ol></p>
 			</article>
 		</div>
 		<div>
