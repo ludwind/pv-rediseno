@@ -146,7 +146,22 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			<label for="ac-3">¿Cómo crear recomendaciones Dr. PlusVida?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/ylJR9Wd_L9w" frameborder="0" allowfullscreen></iframe>
-				<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+				<p><b>Categorias Dr. PlusVida</b><ol>
+<li>Haz clic en el menú izquierdo en la opción “Custom Fields”.</li>
+<li>Busca en el listado la opción “Dr. PlusVida”.</li>
+<li>Buscamos la opción “Recomendaciones Dr. PlusVida por Antiguedad” y hacemos clic.</li>
+<li>Busca las la sección de “Opciones” para poder editar, eliminar o agregar las opciones que consideres necesarias, ten en cuenta que no deben contener caracteres especiales ni mayúsculas, así como estar repetido dos veces separado con punto y coma, para conservar su formato original. También toma en cuenta definir desde un comienzo las opciones, y solamente agregar o editar las necesarias y no asignadas previamente, si modificas por ejemplo “Primer-mes” la opción que ha sido asignada a todos los usuarios para el lanzamiento del sitio web, esto afectará globalmente en el despliegue de datos.</li>
+<li>Haz clic en “Actualizar” para guardar exitosamente los cambios en las categorías del Dr. PlusVida.</li>
+</ol>
+<p><b>Agregar o editar consejos Dr. PlusVida</b>
+<ol>
+	<li>Haz clic en el menú izquierdo en la opción “Dr. PlusVida”.</li>
+	<li>Luego haz clic en el botón “Añadir nueva” o bien en la opción que deseas editar dentro del listado.</li>
+	<li>En la sección de título principal, coloca el título que identificará el consejo a nivel interno.</li>
+	<li>En la sección de texto general, puedes colocar el consejo que deseas que aparezca dentro de las recomendaciones del Dr. PlusVida para los pacientes en nuestra plataforma.</li>
+	<li>Recuerda añadir la categoría en la cual deseas que aparezca el consejo, esto definirá para qué usuarios será mostrado el mensaje, se encuentra dentro de la sección “Recomendaciones por antiguedad” haciendo clic en “Elige entre las etiquetas más utilizadas” o bien colocando el nombre directamente, recuerda debe ser tal como lo escribimos con anterioridad (Sin ser duplicado o contener dos puntos).</li>
+	<li>Haz clic en “Publicar” o bien “Actualizar” para consejos ya publicados anteriormente.</li>
+				</ol></p>
 			</article>
 		</div>
 		<div>
@@ -154,7 +169,12 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			<label for="ac-4">¿Asignar a usuarios recomendaciones Dr. PlusVida?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/OPUyz5C6gAg" frameborder="0" allowfullscreen></iframe>
-				<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+				<p><ol>
+<li>Haz clic en “Perfil de usuarios” dentro del menú izquierdo.</li>
+<li>Selecciona el usuario al cual deseas asignarle la nueva categoría de Dr. PlusVida.</li>
+<li>Modifica a la categoría deseada dentro de la sección “Recomendaciones Dr Plus”.</li>
+<li>Por último haz clic en “Actualizar” para guardar todos los cambios.</li>
+				</ol></p>
 			</article>
 		</div>
 		<div>
@@ -162,7 +182,12 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			<label for="ac-5">¿Cómo crear páginas estáticas?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/IOnDgDwTG1c" frameborder="0" allowfullscreen></iframe>
-				<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+				<p><ol>
+<li>Haz clic en el menú izquierdo en la sección “Páginas Website”.</li>
+<li>Encontraras todas las secciones que conforman nuestro sitio web, haz clic en la que deseas editar o bien haz clic en “Añadir nueva”.</li>
+<li>Podrás modificar o agregar las secciones principales tales como la imagen principal, títulos en color celeste y blanco, descripción, texto en el botón y enlace en el botón.</li>
+<li>Por último haz clic en “Actualizar” o “Publicar” para guardar los cambios.</li>
+				</ol></p>
 			</article>
 		</div>
 		<div>
@@ -170,7 +195,12 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			<label for="ac-6">¿Cómo crear testimonios?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/hsakZhUjr6o" frameborder="0" allowfullscreen></iframe>
-				<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+				<p><ol>
+<li>Haz clic en el menú izquierdo en la sección “Testimonios”.</li>
+<li>Selecciona la opción que deseas modificar o bien haz clic en “Añadir nueva”.</li>
+<li>El titular será el texto que aparecerá en nuestra página de inicio, y el contenido dentro de la descripción detallada.</li>
+<li>Haz clic en “Actualizar” o bien “Publicar”.</li>
+				</ol></p>
 			</article>
 		</div>
 	</section>
