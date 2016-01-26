@@ -122,9 +122,46 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 				</ol></p>
 			</article>
 		</div>
+		
 		<div>
-			<input id="ac-2" name="accordion-1" type="radio" />
-			<label for="ac-2">¿Cómo cargar audios?</label>
+			<input id="ac-2" name="accordion-1" type="radio" checked />
+			<label for="ac-2">¿Cómo bloquear usuarios?</label>
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/H4vmXmoBlGQ" frameborder="0" allowfullscreen></iframe>				
+				<p><ol>
+<li>Haz clic en la sección “Usuarios” en el menú izquierdo.</li>
+<li>Realiza una búsquedad de el usuario que deseas encontrar, mediante su usuario para ingrear a PlusVida.</li>
+<li>Al encontrarlo, haz clic en él para editarlo.</li>
+<li>En la página de edición, en la última sección puedes encontrar la página de re-dirección del usuario, haz clic en el menú desplegable
+para visualizar las opciones, debes seleecionar la opción "Desactivado", y actualizar usuario.</li>
+<li>¡Listo! puedes comprobar que el usuario ha sido bloqueado.</li>
+				</ol></p>
+			</article>
+		</div>		
+
+		<div>
+			<input id="ac-3" name="accordion-1" type="radio" checked />
+			<label for="ac-3">¿Cómo re-activar usuarios?</label>
+			<article class="ac-auto">
+<iframe width="320" height="215" src="https://www.youtube.com/embed/G8ricPrqxSg" frameborder="0" allowfullscreen></iframe>				
+				<p><ol>
+<li>Haz clic en la sección “Perfil de usuarios” en el menú izquierdo.</li>
+<li>Realiza una búsquedad de el usuario que deseas encontrar, mediante su nombre completo registrado en PlusVida, o nombre con el que hayas creado su página de perfil anteriormente.</li>
+<li>Luego de encontrarlo, busca la opción en el menú derecho llamada "visibilidad", anteriormente la colocamos como "Privada" ahora por el momento seleccionala como "Público", haz clic en Actualizar.</li>
+<li>En el menú izquierdo haz clic en la pestala "Usuarios"</li>
+<li>Realiza una búsquedad de el usuario que deseas encontrar, mediante su usuario para ingrear a PlusVida.</li>
+<li>Al encontrarlo, haz clic en él para editarlo.</li>
+<li>En la página de edición, en la última sección puedes encontrar la página de re-dirección del usuario, haz clic en el menú desplegable
+para visualizar las opciones, debes seleecionar la opción con el mismo nombre completo registrado en PlusVida,  o nombre con el que hayas creado su página de perfil anteriormente; haz clic en Actualizar usuario.</li>
+<li>Regresa a la pestaña de "Perfil de usuario" y búsca nuevamente a nuestro paciente, editalo y cambia su "Visibilidad" a "Privado" nuevamente.</li>
+<li>¡Listo! nuestro usuario estará activo nuevamente.</li>
+				</ol></p>
+			</article>
+		</div>
+		
+		<div>
+			<input id="ac-4" name="accordion-1" type="radio" />
+			<label for="ac-4">¿Cómo cargar audios?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/QjpAjaJaMJ0" frameborder="0" allowfullscreen></iframe>
 				<p><ol>
@@ -142,8 +179,8 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			</article>
 		</div>
 		<div>
-			<input id="ac-3" name="accordion-1" type="radio" />
-			<label for="ac-3">¿Cómo crear recomendaciones Dr. PlusVida?</label>
+			<input id="ac-5" name="accordion-1" type="radio" />
+			<label for="ac-5">¿Cómo crear recomendaciones Dr. PlusVida?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/ylJR9Wd_L9w" frameborder="0" allowfullscreen></iframe>
 				<p><b>Categorias Dr. PlusVida</b><ol>
@@ -165,8 +202,8 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			</article>
 		</div>
 		<div>
-			<input id="ac-4" name="accordion-1" type="radio" />
-			<label for="ac-4">¿Asignar a usuarios recomendaciones Dr. PlusVida?</label>
+			<input id="ac-6" name="accordion-1" type="radio" />
+			<label for="ac-6">¿Asignar a usuarios recomendaciones Dr. PlusVida?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/OPUyz5C6gAg" frameborder="0" allowfullscreen></iframe>
 				<p><ol>
@@ -178,8 +215,8 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			</article>
 		</div>
 		<div>
-			<input id="ac-5" name="accordion-1" type="radio" />
-			<label for="ac-5">¿Cómo crear páginas estáticas?</label>
+			<input id="ac-7" name="accordion-1" type="radio" />
+			<label for="ac-7">¿Cómo crear páginas estáticas?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/IOnDgDwTG1c" frameborder="0" allowfullscreen></iframe>
 				<p><ol>
@@ -191,8 +228,8 @@ include( ABSPATH . 'wp-admin/admin-header.php' );
 			</article>
 		</div>
 		<div>
-			<input id="ac-6" name="accordion-1" type="radio" />
-			<label for="ac-6">¿Cómo crear testimonios?</label>
+			<input id="ac-8" name="accordion-1" type="radio" />
+			<label for="ac-8">¿Cómo crear testimonios?</label>
 			<article class="ac-auto">
 <iframe width="320" height="215" src="https://www.youtube.com/embed/hsakZhUjr6o" frameborder="0" allowfullscreen></iframe>
 				<p><ol>
