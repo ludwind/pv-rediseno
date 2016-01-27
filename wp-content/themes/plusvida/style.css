@@ -370,6 +370,10 @@ bottom:-17px;}
 
 /*---------------- Audios ------------------ */
 #grabaciones{ background-color: #e9e8e4; padding:0 0 35px 0;}
+.soundcloud3, .soundcloud, .soundcloud2{/*background-color: #000;*/ }
+.soundcloud{float: right; margin:66px 0 0 0; height:101px; width: 1200px; position: absolute;}
+.soundcloud2{float: right; margin:0 0 0 385px; height: 167px; width: 1000px; position: absolute;}
+.soundcloud3{float: left; margin:0 0 0 0; height: 167px; width:168px; position: absolute;}
 .reproductor {background-color:#3a3a3a;}
   .reproductor section{max-width:470px; margin: 0 auto;}
 .head-playlist{ width:100%; padding:15px 0; background-color:#395A83; }
