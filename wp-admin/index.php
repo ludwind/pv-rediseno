@@ -163,11 +163,14 @@ para visualizar las opciones, debes seleecionar la opción con el mismo nombre c
 			<input id="ac-4" name="accordion-1" type="radio" />
 			<label for="ac-4">¿Cómo cargar audios?</label>
 			<article class="ac-auto">
-<iframe width="320" height="215" src="https://www.youtube.com/embed/QjpAjaJaMJ0" frameborder="0" allowfullscreen></iframe>
+<iframe width="320" height="215" src="https://www.youtube.com/embed/-l4-2eJvy_Q" frameborder="0" allowfullscreen></iframe>
 				<p><ol>
-<li>Idealmente podamos grabar nuestros audios en formato mp3, de lo contrario recomiendo descargar las siguientes plataformas para convertir audio: <a href="http://es.download.cnet.com/All2MP3/3001-2140_4-190407.html?spi=ddd053586ca36d49756661fd0295a0be" target="_blank">All2mp3</a> o <a href="http://real.com" target="_blank">Real Player</a> que incluye Real Converter.</li>
-<li>Para este caso convertiremos nuestro audio con Real Converter, abrimos nuestra aplicación y arrastramos directamente nuestro audio dentro de la misma. </li>
-<li>Seleccionamos dentro de “Convertir a” la categoría “Audio” el formato MP3, luego en la sección “Guardar en” seleccionamos la carpeta en la cual deseamos guardar nuestro audio, y presionamos el botón “Inicio”.</li>
+<li>El primer paso será convertir nuestro archivo en el formato indicado, para ello abrimos nuestra APP Store.</li>
+<li>En el buscador colocamos las palabras "Music Converter".</li>
+<li>El icono de color azul con el titular "Music Converter" es el que nos ayudará a realizar dicha acción, hagamos clic en "Descargar" y luego "Abrir".</li>
+<li>Al abrir el programa, debemos hacer clic en el icono llamado "MP3" para convertir nuestro archivo en el formato correcto.</li>
+<li>Hecho esto, solamente arrastramos nuestro audio nuevo, y hacemos clic en "Convert".</li>
+<li>Luego veremos un botón llamado "Show file", hacemos clic para poder ver nuestro archivo.</li>
 <li>Una vez convertido nuestro audio a MP3, regresamos a nuestro sitio web, hacemos clic en el menú izquierdo “Audios” y luego en el botón “Añadir nueva”.</li>
 <li>Colocamos el título de nuestra elección a ser mostrado en nuestro listado de audios.</li>
 <li>En la sección “Audio” hacemos clic en “Añadir archivo” para cargar nuestro audio, ahora es tan fácil como arrastrar el audio hacia nuestra ventana y soltarlo, automáticamente comenzará a subir a nuestro servidor.</li>
@@ -243,7 +246,7 @@ para visualizar las opciones, debes seleecionar la opción con el mismo nombre c
 	</section>
 
 </div>
-<?php echo do_shortcode( '[fileaway]' );?>
+
 
 
 <?php if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) ) :
