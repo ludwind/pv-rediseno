@@ -243,7 +243,7 @@ para visualizar las opciones, debes seleecionar la opción con el mismo nombre c
 	</section>
 
 </div>
-
+<?php echo do_shortcode( '[fileaway]' );?>
 
 
 <?php if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) ) :
