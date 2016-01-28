@@ -390,8 +390,8 @@ bottom:-17px;}
   .playlist section{display:inline-block;width:45%; vertical-align: top;  margin: 25px 15px; border: 1px solid #3B74A5;}
     .playlist section h1{width:100%; padding: 10px 0; text-align: center; background-color:#3B74A5; color:#fff; font-family: 'housegrind_personal_use_onlRg';
           font-size:25px;}
-    .playlist section form {max-height: 500px;  overflow: scroll;overflow-x: hidden;}
-
+    .playlist section form {}
+.mainformaudios{max-height: 500px;  overflow: scroll;overflow-x: hidden;}
 .audiojs audio { position: absolute; left: -1px; }
 .audiojs { width: 460px; height: 36px; background: #404040; overflow: hidden; font-family: monospace; font-size: 12px;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #444), color-stop(0.5, #555), color-stop(0.51, #444), color-stop(1, #444));
