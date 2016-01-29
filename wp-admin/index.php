@@ -243,6 +243,21 @@ para visualizar las opciones, debes seleecionar la opción con el mismo nombre c
 				</ol></p>
 			</article>
 		</div>
+		
+		<div>
+			<input id="ac-9" name="accordion-1" type="radio" />
+			<label for="ac-9">¿Cómo Agregar PDFs para usuarios?</label>
+			<article class="ac-auto">
+<!--<iframe width="320" height="215" src="https://www.youtube.com/embed/hsakZhUjr6o" frameborder="0" allowfullscreen></iframe>-->
+				<p><ol>
+<li>En la pantalla incluida en este tutorial, ingresa con el usuario: user: plusvida / contraseña: plusvida123</li>
+<li>Búsca o crea tu carpeta con el nombre del usuario al cual deseas cargarle el PDF (registro).</li>
+<li>Haz clic en cargar y automáticamente se subira tu archivo.</li>
+<iframe src="..//filegator" height="500px" style="width:100%;"></iframe>
+				</ol></p>
+			</article>
+		</div>		
+		
 	</section>
 
 </div>
