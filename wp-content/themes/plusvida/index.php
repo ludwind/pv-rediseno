@@ -13,30 +13,21 @@
  * @subpackage Twenty_Twelve
  * @since Twenty Twelve 1.0
  */
+?>
 
-get_header(); ?>
 
+<!-- --- Recuerdame user redirection-------- -->
 <?php if ( is_user_logged_in() ) {
+$usuario = get_current_user_id( );
+$redirectId =  $wpdb->get_var( "SELECT meta_value FROM wp_usermeta WHERE meta_key='login_redirect_page' AND user_id=$usuario" );
+$redirectUrl = '?page_id='.$redirectId;
+}; ?>
+<script>
+    window.location.href = '<?php echo $redirectUrl; ?>'; //Don't forget the extra semicolon!
+</script>
+<!-- --- Fin Recuerdame user redirection-------- -->
 
-	$logoutUrl = wp_logout_url( home_url() );
-
-	function Redirect($url, $permanent = false)
-	{
-	    if (headers_sent() === false)
-	    {
-	    	header('Location: ' . $url, true, ($permanent === true) ? 301 : 302);
-	    }
-
-	    exit();
-	}
-
-	Redirect($logoutUrl, false);
-
-	?>
-	<meta http-equiv="Location" content="<?php echo wp_logout_url( home_url() ); ?>">
-<?php } ?>
-
-
+<?php get_header(); ?>
 
 <div class="sliderarea">
 <section><a href="?paginas-website=contacto"><?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '25' ); }
