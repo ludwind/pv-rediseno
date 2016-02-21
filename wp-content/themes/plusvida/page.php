@@ -3,13 +3,15 @@
 /**
  *
  */
+?>
+<div class="reproductor-top"></div>
 
-get_header(); ?>
+ 
+<?php get_header(); ?>
 
 <div class="usuasriostabs">
 <div class="tabContent" id="mipeso">
 <header>gráfica general de peso</header>
-
 
 
 	<?php
@@ -176,6 +178,11 @@ else
 						<div style="width: 14.6113px;" class="loaded"></div></div><div class="time"><em class="played">00:04</em>/<strong class="duration">03:57</strong></div>
 						<div class="error-message"></div></div>
 </section></div>
+
+<script>
+  
+</script>
+
 <div class="playlist">
 <?php $audiosCheckbox =  $wpdb->get_col( "SELECT idaudio FROM audios_plusvida WHERE idusuario=$usuario" );?>
 
@@ -651,6 +658,18 @@ function getHash( url ) {
 	var hashPos = url.lastIndexOf ( '#' );
 	return url.substring( hashPos + 1 );
 }
+
+var $document = $(document);
+
+$document.scroll(function() {
+  if ($document.scrollTop() >= 800) {
+    $('.reproductor-top').css('display','block');
+  } else {
+	$('.reproductor-top').css('display','none');
+  }
+});
+
+
 
 //]]>
 </script>
