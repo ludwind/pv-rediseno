@@ -1,7 +1,6 @@
 <div class="tabContent hide" id="grabaciones">
 <header>Audio Conferencias</header>
 <div class="reproductor"><section><div id="audiojs_wrapper0" classname="audiojs" class="audiojs">
-	<audio src="audio.js_files/01-dead-wrong-intro.mp3" preload=""></audio>
 	          <div class="play-pause"><p class="play"></p><p class="pause"></p><p class="loading"></p><p class="error"></p></div>
 						<div class="scrubber"><div style="width: 5.26193px;" class="progress"></div>
 						<div style="width: 14.6113px;" class="loaded"></div></div><div class="time"><em class="played">00:04</em>/<strong class="duration">03:57</strong></div>

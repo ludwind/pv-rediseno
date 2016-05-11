@@ -1,4 +1,18 @@
+	/////////////////// Audio scroll persistent bar //////////////////////////	
+	
+var $document = $(document);
 
+  $document.scroll(function() {
+    if ($document.scrollTop() >= 800) {
+      $('.reproductor').addClass('reproductor-top');
+    } else {
+      $('.reproductor').removeClass('reproductor-top');
+    }
+  });
+
+	
+ 	/////////////////// reproductor //////////////////////////	
+   
 $(function() {
 		// Setup the player to autoplay the next track
 		var a = audiojs.createAll({
@@ -44,31 +58,7 @@ $(function() {
 		})
 	});
 
-	/////////////////// Audio scroll persistent bar //////////////////////////	
-	
-var $document = $(document);
 
-if ( $(window).width() > 800) {     
-  $document.scroll(function() {
-    if ($document.scrollTop() >= 800) {
-      $('.reproductor').addClass('reproductor-top');
-    } else {
-      $('.reproductor').removeClass('reproductor-top');
-    }
-  });
-}
-else {
-  $document.scroll(function() {
-    if ($document.scrollTop() >= 800) {
-      $('.reproductor').addClass('reproductor-top');
-    } else {
-      $('.reproductor').removeClass('reproductor-top');
-    }
-  });
-}
-
-
-	
 	/////////////////// checkbox //////////////////////////
 
 	$("#checkAll").on("change", function() {

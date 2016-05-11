@@ -119,4 +119,4 @@ function printGraph()
 <script src="http://cdn.jsdelivr.net/jquery.cookie/1.4.0/jquery.cookie.min.js"></script>
 
 <!------------------------------ Customs JS ------------------------------- -->
-<script type="text/javascript" src="wp-content/themes/plusvida/js/custom.js"></script>
+<script src="wp-content/themes/plusvida/js/custom.js"></script>
