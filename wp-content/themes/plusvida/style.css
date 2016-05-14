@@ -2065,6 +2065,8 @@ img#wpstats {
   .contactousuarios ul li:first-child {width: 81%;padding:20px 55px 37px;}
   .contactousuarios ul li:first-child h1  {font-size: 40px;padding: 0 0 3px;}
   .contactousuarios ul li:last-child  {width: 88%;}
+  .soundcloud{width: 95%;}
+  .soundcloud2{width: 500px; margin: 0 0 0 227px;}
 }
 
 /* Phablets (portrait) | <640px */
@@ -2157,6 +2159,7 @@ img#wpstats {
   #mipeso aside span {  font-size: 13px;}
   .selectordedias aside { width: 95% !important;}
   .audiojs{width:100%;}
+  .soundcloud2{width: 140px;}
 }
 
 /* Smartphones | <320px */
